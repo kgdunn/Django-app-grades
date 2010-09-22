@@ -27,7 +27,7 @@ from grades.student.models import Student, Grade, Question, WorkUnit, Category, 
 
 # Settings
 website_base = 'http://grades.modelling3e4.connectmv.com/tokens/'
-media_prefix = '/media/grades'        # where the summary PNG files are stored
+media_prefix = '/media/grades/'        # end with trailing slash; points to location where the summary PNG files are stored
 
 email_server = 'smtp.webfaction.com'
 email_port   = 25
