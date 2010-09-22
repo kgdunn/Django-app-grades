@@ -1,18 +1,52 @@
 #!/usr/bin/python
 
+import os
+import sys
 import csv
+import fnmatch as fnmatch
 from hashlib import md5
 from collections import defaultdict
-import fnmatch as fnmatch
+
 import numpy as np
 from scipy.stats import stats  
 from matplotlib.figure import Figure  # for plotting
 
-import sys, os
-sys.path.append('/home/kevindunn/webapps/modelling3e4_grades')
+# =========
+# SETTINGS
+# =========
+django_dir = '/home/kevindunn/webapps/modelling3e4_grades'
+
+# Categories for the course, as a list of 2-element tuples, containing the fraction of the grade 
+course_categories = [   ('Tutorials', 0.1), 
+                        ('Assignments', 0.2), 
+                        ('Midterm: take-home', 0.1), 
+                        ('Midterm: written', 0.15), 
+                        ('Final exam', 0.45)
+                    ]
+                    
+# How are the columns layed out in the spreadsheet?
+column_layout = {'last_name': 0,
+                 'first_name': 1,
+                 'email_address': 2,
+                 'student_number': 3,
+                 'grad_student': 4,         # column can be left empty for undergraduates
+                 'special_case': 5,         # must be "Yes" or blank.  If "Yes", then provide an entry in the ``manual_grades`` list below
+                }
+                
+row_layout = {   'category': 0,             # must be spelt exactly like entries in ``course_categories``
+                 'work_unit': 1,            # e.g. "Tutorial 1", or "Assignment 2"
+                 'max_grades': 2,           # for the work unit. e.g. "3" or "[2,1]"  <---- used for [400,600] courses
+                 'question_name': 3,        # e.g. "Question 1"
+                 'max_question_grade': 4,   # for the question.  e.g. "3" or "[2,1]"  <---- used for [400,600] courses
+             }
+
+# Manual final grades (if required adjustment)
+#                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
+manual_grades = [ ('GURVEER', 'DHANOA', '0655007', 72.785, 'dhanoag@mcmaster.ca', False,       True)]
+
+sys.path.append(django_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 from grades.student.models import Grade, Question, WorkUnit, Category, Student, GradeSummary, WorkUnitSummary, CategorySummary, Token
-
 from django.contrib.auth.models import User
 
 # TODO:
@@ -117,6 +151,8 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
     index = 0
     headers = []
     grading = []
+    
+    # Split the rows in teh CSV:  the first few rows are "headers", the rest are grades for the students
     for row in csvf:
         if index < skip_header_rows:
             headers.append(row)
@@ -124,36 +160,36 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
         else:
             grading.append(row)
     
-    # Create the categories manually      
-    Category.objects.get_or_create(name="Assignments", fraction=0.2)
-    Category.objects.get_or_create(name="In-class quizzes", fraction=0.05)
-    Category.objects.get_or_create(name="Mini-project", fraction=0.1)
-    Category.objects.get_or_create(name="Midterm: take-home", fraction=0.15)
-    Category.objects.get_or_create(name="Midterm: written", fraction=0.15)
-    Category.objects.get_or_create(name="Final: take-home", fraction=0.15)
-    Category.objects.get_or_create(name="Final: written", fraction=0.25)
+    # Create the categories
+    # Example: Category.objects.get_or_create(name="In-class quizzes", fraction=0.05)
+    for entry in course_categories:
+        Category.objects.get_or_create(name=entry[0], fraction=entry[1])
     
-    Student.objects.get_or_create(  first_name = 'GURVEER', last_name='DHANOA', student_number = '0655007', 
-                                    manual_grade=72.785,  email_address = 'dhanoag@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
-    Student.objects.get_or_create(  first_name = 'BONOLO', last_name='MOKENTI', student_number = '0569803', 
-                                    manual_grade=62.685,  email_address = 'mokentb@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
-    Student.objects.get_or_create(  first_name = 'SOCRAT', last_name='SALMAN', student_number = '0642589', 
-                                    manual_grade=90.2725,  email_address = 'salmas2@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
-    Student.objects.get_or_create(  first_name = 'SAIF', last_name='MANKO', student_number = '0569807', 
-                                    manual_grade=86.38,  email_address = 'mankos@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
-    Student.objects.get_or_create(  first_name = 'GHAJANIYA', last_name='VIJAYENTHIRAN', student_number = '0646777', 
-                                    manual_grade=80.44,  email_address = 'vijayeg@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
-  
-
+    
+    # Manual override for manual final-grade 
+    # Example: Student.objects.get_or_create(  first_name = 'GURVEER', last_name='DHANOA', student_number = '0655007', 
+    #                                    manual_grade=72.785,  email_address = 'dhanoag@mcmaster.ca', has_password=False, grad_student=False, special_case=True)
+    for override in manual_grades:
+         Student.objects.get_or_create( first_name=override[0], 
+                                        last_name=override[1],
+                                        student_number=override[2],
+                                        manual_grade=override[3],
+                                        email_address=override[4],
+                                        has_password=False,
+                                        grad_student=override[5],
+                                        special_case=override[6]
+                                      )    
     for student in grading:
         # First create the student, if they don't already exist:
-        last_name = student[0].strip()
-        first_name = student[1].strip()
-        email_address = student[2].strip() + '@mcmaster.ca'
-        student_number = student[3].strip()
+        last_name = student[column_layout['last_name']].strip()
+        first_name = student[column_layout['first_name']].strip()
+        email_address = student[column_layout['email_address']].strip() + '@mcmaster.ca'
+        student_number = student[column_layout['student_number']].strip()
+        if len(student_number) == 6:
+            student_number = '0' + student_number
         has_password = False
-        grad_student = student[4].strip() == '600'
-        special_case = student[5].strip() == 'Yes'
+        grad_student = student[column_layout['grad_student']].strip() == '600'
+        special_case = student[column_layout['special_case']].strip() == 'Yes'
         Student.objects.get_or_create(first_name = first_name,
                         last_name=last_name,
                         student_number = student_number,
@@ -166,29 +202,43 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
         # Create a user name for the student in the Django site: this is used later for authentication
         create_student_as_user(student_number, first_name, last_name, email_address)
         
-    #Create any new work units (the Category to which the WorkUnit belongs must already exist: use the Admin Interface to create it!)
-    for index, entry in enumerate(headers[1]):
+    #Create any new work units (the Category to which the WorkUnit belongs must already exist)
+    for index, entry in enumerate(headers[row_layout['work_unit']]):
         if entry:
-            category = headers[0][index]
-            max_grades = headers[2][index].split(',')
-            max_grade_400 = float(max_grades[0][1:])
-            max_grade_600 = float(max_grades[1][0:-1])
-            WorkUnit.objects.get_or_create(name=entry, max_grade_400=max_grade_400, max_grade_600=max_grade_600, category=Category.objects.filter(name=category)[0])
+            category = headers[row_layout['category']][index]
+            max_grades = headers[row_layout['max_grades']][index].split(',')
+            if len(max_grades) > 1:
+                max_grade_400 = float(max_grades[0][1:])
+                max_grade_600 = float(max_grades[1][0:-1])
+            else:
+                max_grade_400 = max_grade_600 = float(max_grades[0])
+            WorkUnit.objects.get_or_create( name=entry, 
+                                            max_grade_400=max_grade_400, 
+                                            max_grade_600=max_grade_600, 
+                                            category=Category.objects.filter(name=category)[0])
             
-    #Create any new work units (the Category to which the WorkUnit belongs must already exist: use the Admin Interface to create it!)
-    for index, entry in enumerate(headers[3]):
+    #Create any new questions (the Work_unit to which it belongs must already exist - previous step)
+    for index, entry in enumerate(headers[row_layout['question_name']]):  
         if entry:
-            work_unit = headers[1][index]
-            max_grades = headers[4][index].split(',')
-            max_grade_400 = float(max_grades[0][1:])
-            max_grade_600 = float(max_grades[1][0:-1])
-            q, created = Question.objects.get_or_create(name=entry, max_grade_400=max_grade_400, max_grade_600=max_grade_600, workunit=WorkUnit.objects.filter(name=work_unit)[0])
+            work_unit = headers[row_layout['work_unit']][index]
+            max_question_grade = headers[row_layout['max_question_grade']][index].split(',') 
+            if len(max_question_grade) > 1:
+                max_grade_400 = float(max_question_grade[0][1:])
+                max_grade_600 = float(max_question_grade[1][0:-1])
+            else:
+                max_grade_400 = max_grade_600 = float(max_question_grade[0])
+            q, created = Question.objects.get_or_create(name=entry, 
+                                                        max_grade_400=max_grade_400, 
+                                                        max_grade_600=max_grade_600, 
+                                                        workunit=WorkUnit.objects.filter(name=work_unit)[0])
             
             print entry
             
             # Import all the grades, going along the columns:
             for row in grading:
-                student_number = row[3].strip()
+                student_number = row[column_layout['student_number']].strip()
+                if len(student_number) == 6:
+                    student_number = '0' + student_number
                 student_object = Student.objects.filter(student_number=student_number)[0] 
                 grade_string = row[index]
                 if grade_string == '':
