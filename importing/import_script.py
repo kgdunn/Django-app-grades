@@ -94,7 +94,6 @@ def create_image(data, image_type='default'):
     else:
         data_string = data
     filename = md5(data_string+image_type).hexdigest() + '.png'
-    print(data_string+image_type)
     if image_type.lower() == 'greek':
         fig = Figure(figsize=(2,1))
         rect = [0.2, 0.20, 0.75, 0.80]  # Left, bottom, width, height
@@ -316,7 +315,6 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                     GradeSummary.objects.get_or_create(question=question, levels=4, level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts=counts, url_string=url_string)
                 else:
                     summary_str = grade_matrix[:, col]
-                    print(summary_str)
                     url_string = create_image(summary_str)
                     GradeSummary.objects.get_or_create(question=question, levels=0, summary_str=summary_string(summary_str), url_string=url_string)
                     
