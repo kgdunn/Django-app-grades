@@ -6,6 +6,7 @@ import csv
 import fnmatch as fnmatch
 from hashlib import md5
 from collections import defaultdict
+from django.db.utils import IntegrityError
 
 import numpy as np
 from scipy.stats import stats  
@@ -64,7 +65,7 @@ def create_student_as_user(student_number, first_name, last_name, email):
     user.is_active = True
     try:
         user.save()    
-    except sqlite3.IntegrityError:
+    except IntegrityError:
         pass
         
 def summary_string(data):
