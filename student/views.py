@@ -363,7 +363,7 @@ def sign_in(request, next_page=''):
     
     # Non-POST access of the sign-in page: display the login page to the user
     else:
-        my_logger.debug('Non-POST sign-in')
+        my_logger.debug('Non-POST sign-in page request')
         page_content = {}
         page_content.update(csrf(request))
         return render_to_response('sign_in_form.html', page_content)

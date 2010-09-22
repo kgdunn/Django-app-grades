@@ -25,6 +25,8 @@ course_categories = [   ('Tutorials', 0.1),
                         ('Final exam', 0.45)
                     ]
                     
+greek_categories = ['Tutorials', 'Assignments']
+                    
 # How are the columns layed out in the spreadsheet?
 column_layout = {'last_name': 0,
                  'first_name': 1,
@@ -81,7 +83,7 @@ def create_image(data, image_type='default'):
     """
     Creates an image from the `data`, depending on the image_type.  
     
-        image_type = 'assignment': creates an [alpha, beta, gamma, NA] barplot of counts
+        image_type = 'greek': creates an [alpha, beta, gamma, NA] barplot of counts
                                    data is expected to be a string, e.g. '80,23,12,9' (no brackets, just a comma separated string)
         image_type = 'default': creates a horizontal histogram from the np array in `data`
         
@@ -92,7 +94,7 @@ def create_image(data, image_type='default'):
     else:
         data_string = data
     filename = md5(data_string+image_type).hexdigest() + '.png'
-    if image_type.lower() == 'assignment':
+    if image_type.lower() == 'greek':
         fig = Figure(figsize=(2,1))
         rect = [0.2, 0.20, 0.75, 0.80]  # Left, bottom, width, height
         ax = fig.add_axes(rect, frameon=False)
@@ -307,9 +309,9 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                     student_grade[row, 0] += student_wu_grade
                     
                 # We've got all the student grades for this question, now compute the summary (just for that question) 
-                if category.name == 'Assignments':
+                if category.name in greek_categories:
                     counts = '%s,%s,%s,%s' % (level_alpha, level_beta, level_gamma, level_NA)
-                    url_string = create_image(counts, image_type='assignment')
+                    url_string = create_image(counts, image_type='greek')
                     GradeSummary.objects.get_or_create(question=question, levels=4, level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts=counts, url_string=url_string)
                 else:
                     summary_str = grade_matrix[:, col]
