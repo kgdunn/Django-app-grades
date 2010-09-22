@@ -129,8 +129,16 @@ def create_image(data, image_type='default'):
         rect = [0.2, 0.20, 0.75, 0.70]  # Left, bottom, width, height
         ax = fig.add_axes(rect, frameon=False)
         
-        n, bins, patches = ax.hist(data[np.isfinite(data)], bins=10, range=None, normed=False, cumulative=False, bottom=None, histtype='bar', align='mid', 
-                            orientation='horizontal', rwidth=None, log=False, color='blue', edgecolor="blue", linewidth=0)
+        # Handle a vector of NaN's: happens when there is an empty work unit
+        if len(data[np.isfinite(data)]) == 0:
+            n = len(data)
+        else:
+            n, bins, patches = ax.hist(data[np.isfinite(data)], 
+                                bins=10, range=None, normed=False, 
+                                cumulative=False, bottom=None, histtype='bar', 
+                                align='mid', orientation='horizontal', 
+                                rwidth=None, log=False, color='blue', 
+                                edgecolor="blue", linewidth=0)
         ax.yaxis.set_ticks([mind, maxd])
         ax.set_yticklabels((str(mind), str(maxd)), fontsize=13)
 
