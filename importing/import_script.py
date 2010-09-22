@@ -44,6 +44,7 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
 # Manual final grades (if required adjustment)
 #                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
 manual_grades = [ ('GURVEER', 'DHANOA', '0655007', 72.785, 'dhanoag@mcmaster.ca', False,       True)]
+manual_grades = [ ]
 
 sys.path.append(django_dir)
 sys.path.append(app_dir)
@@ -274,7 +275,7 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                 level_NA = 0
                 for row, student in enumerate(students):
                     student_wu_grade = 0.0
-                    grade_item = Grade.objects.filter(question=question, student=student)[0]    
+                    grade_item = Grade.objects.filter(question=question, student=student)[0]
                     
                     # The maximum grade is the higher of either one; since 400 students are awarded 600-level grades
                     # if they attempt those questions
