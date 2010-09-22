@@ -8,7 +8,7 @@ from django.db.models import F
 import numpy as np
 
 # Logging
-LOG_FILENAME = '/var/django-projects/grades/logfile.log'
+LOG_FILENAME = '/home/kevindunn/webapps/modelling3e4_grades/grades/django-log.log'
 import logging.handlers
 my_logger = logging.getLogger('MyLogger')   
 my_logger.setLevel(logging.DEBUG)
