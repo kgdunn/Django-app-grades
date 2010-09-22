@@ -219,6 +219,8 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
             
     #Create any new questions (the Work_unit to which it belongs must already exist - previous step)
     for index, entry in enumerate(headers[row_layout['question_name']]):  
+        
+        # Won't deal with any columns where the question name is empty
         if entry:
             work_unit = headers[row_layout['work_unit']][index]
             max_question_grade = headers[row_layout['max_question_grade']][index].split(',') 
