@@ -22,8 +22,7 @@ my_logger.debug('A new call to the views.py file')
 from grades.student.models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 # TODO: 
-# Check email sending back to smtplib alone
-
+# Change email sending to using DJANGO's EMAIL_XXXXX settings
 
 # Settings
 website_base = 'http://grades.modelling3e4.connectmv.com/tokens/'
@@ -120,6 +119,13 @@ def calculate_assignment_grade(grade_list=None, best_n=5):
     best = np.sort(grades)[len(grades)-best_n:]
     return(best, np.mean(best))
     
+def calculate_tutorial_grade(grade_list=None):
+    """ Calculates the average of all tutorials.   Tutorials not handed in are counted as 0.0.
+
+    Returns a tuple: (list of top N assignments, average of the top N assignments)
+    """
+    return np.mean(np.array(grade_list))
+    
 def get_workunit_list(student_number, categories):
     """ 
     Workunit = e.g. Assignment 4
@@ -168,9 +174,9 @@ def get_workunit_list(student_number, categories):
                         if grade_item.grade_char == 'a':
                             student_wu_grade += 1.00 * student_max_question_grade
                         elif grade_item.grade_char == 'b':
-                            student_wu_grade += 0.75 * student_max_question_grade
+                            student_wu_grade += 0.65 * student_max_question_grade
                         elif grade_item.grade_char == 'g':
-                            student_wu_grade += 0.50 * student_max_question_grade
+                            student_wu_grade += 0.40 * student_max_question_grade
                 else:
                     student_wu_grade += grade_item.grade
           
@@ -200,6 +206,13 @@ def get_workunit_list(student_number, categories):
                 if entry['cattype'] == 'Assignments':
                     assignment_grade_list.append(entry['grade_numeric'])   
             catdict['best_assignments'], cat_grade = calculate_assignment_grade(assignment_grade_list)
+            
+        elif cat_name == 'Tutorials':
+            tutorial_grade_list = []
+            for entry in workunits:
+                if entry['cattype'] == 'Tutorials':
+                    tutorial_grade_list.append(entry['grade_numeric'])   
+            cat_grade = calculate_tutorial_grade(tutorial_grade_list)
 
         else:
             for entry in workunits:
