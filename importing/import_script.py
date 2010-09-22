@@ -6,7 +6,6 @@ import csv
 import fnmatch as fnmatch
 from hashlib import md5
 from collections import defaultdict
-from django.db.utils import IntegrityError
 
 import numpy as np
 from scipy.stats import stats  
@@ -49,8 +48,11 @@ manual_grades = [ ('GURVEER', 'DHANOA', '0655007', 72.785, 'dhanoag@mcmaster.ca'
 sys.path.append(django_dir)
 sys.path.append(app_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
+
+# You can only perform these imports after specifying the SETTINGS_MODULE above
 from grades.student.models import Grade, Question, WorkUnit, Category, Student, GradeSummary, WorkUnitSummary, CategorySummary, Token
 from django.contrib.auth.models import User
+from django.db.utils import IntegrityError
 
 # TODO:
 # * calculate the average grade for all work units in this category
