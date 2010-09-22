@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import csv
-import md5 as md5
+from hashlib import md5
 from collections import defaultdict
 import fnmatch as fnmatch
 import numpy as np
@@ -9,7 +9,7 @@ from scipy.stats import stats
 from matplotlib.figure import Figure  # for plotting
 
 import sys, os
-sys.path.extend(['/var/django-projects/'])
+sys.path.append('/home/kevindunn/webapps/modelling3e4_grades')
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 from grades.student.models import Grade, Question, WorkUnit, Category, Student, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
@@ -51,7 +51,7 @@ def create_image(data, image_type='default'):
         data_string = data.tostring()
     else:
         data_string = data
-    filename = md5.md5(data_string+image_type).hexdigest() + '.png'
+    filename = md5(data_string+image_type).hexdigest() + '.png'
     if image_type.lower() == 'assignment':
         fig = Figure(figsize=(2,1))
         rect = [0.2, 0.20, 0.75, 0.80]  # Left, bottom, width, height
