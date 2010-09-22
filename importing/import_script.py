@@ -130,29 +130,27 @@ def create_image(data, image_type='default'):
         ax = fig.add_axes(rect, frameon=False)
         
         # Handle a vector of NaN's: happens when there is an empty work unit
-        if len(data[np.isfinite(data)]) == 0:
-            n = len(data)
-        else:
+        if len(data[np.isfinite(data)]) != 0:
             n, bins, patches = ax.hist(data[np.isfinite(data)], 
                                 bins=10, range=None, normed=False, 
                                 cumulative=False, bottom=None, histtype='bar', 
                                 align='mid', orientation='horizontal', 
                                 rwidth=None, log=False, color='blue', 
                                 edgecolor="blue", linewidth=0)
-        ax.yaxis.set_ticks([mind, maxd])
-        ax.set_yticklabels((str(mind), str(maxd)), fontsize=13)
+            ax.yaxis.set_ticks([mind, maxd])
+            ax.set_yticklabels((str(mind), str(maxd)), fontsize=13)
 
-        # No tick marks (does not remove the ticklabels!)
-        ax.xaxis.set_ticks_position('bottom')
-        ax.yaxis.set_ticks_position('left')
-        max_tick = int(np.ceil(np.max(n)/10.0)*10.0)
-        ax.xaxis.set_ticks([0, max_tick])
-        ax.set_xticklabels(('0', str(max_tick)), fontsize=13)
+            # No tick marks (does not remove the ticklabels!)
+            ax.xaxis.set_ticks_position('bottom')
+            ax.yaxis.set_ticks_position('left')
+            max_tick = int(np.ceil(np.max(n)/10.0)*10.0)
+            ax.xaxis.set_ticks([0, max_tick])
+            ax.set_xticklabels(('0', str(max_tick)), fontsize=13)
         
-        # Grid lines
-        ax.grid(color='r', linestyle='-.', linewidth=1)
-        for grid in ax.yaxis.get_gridlines():
-            grid.set_visible(False)
+            # Grid lines
+            ax.grid(color='r', linestyle='-.', linewidth=1)
+            for grid in ax.yaxis.get_gridlines():
+                grid.set_visible(False)
 
         from matplotlib.backends.backend_agg import FigureCanvasAgg
         canvas=FigureCanvasAgg(fig)
