@@ -5,6 +5,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from django.contrib.auth.models import User
 from django.db.models import F
+from django.core.context_processors import csrf
 import numpy as np
 
 # Logging
@@ -362,6 +363,8 @@ def sign_in(request, next_page=''):
     
     # Non-POST access of the sign-in page: display the login page to the user
     else:
-        my_logger.debug('Non-POST sign-in')        
-        return render_to_response('sign_in_form.html')
+        my_logger.debug('Non-POST sign-in')
+        page_content = {}
+        page_content.update(csrf(request) 
+        return render_to_response('sign_in_form.html', page_content)
 
