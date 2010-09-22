@@ -351,15 +351,15 @@ def sign_in(request, next_page=''):
             the_student = Student.objects.get(student_number=form_student_number)
         except Student.DoesNotExist:
             # If student number not in list, tell them they are not registered
-            return HttpResponseRedirect('/grades/not-registered')
+            return HttpResponseRedirect('/not-registered')
         else:
             token_address = generate_random_token(website_base)
             Token.objects.get_or_create(token_address=token_address, student=the_student, has_been_used=False)
             result = email_token_to_student(the_student.email_address, token_address)
             if result:
-                return HttpResponseRedirect('/grades/sent-email')
+                return HttpResponseRedirect('/sent-email')
             else:
-                return HttpResponseRedirect('/grades/error')
+                return HttpResponseRedirect('/error')
     
     # Non-POST access of the sign-in page: display the login page to the user
     else:
