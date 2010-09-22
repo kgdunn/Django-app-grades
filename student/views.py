@@ -26,12 +26,15 @@ from grades.student.models import Student, Grade, Question, WorkUnit, Category, 
 
 
 # Settings
-website_base = 'http://stats4.eng.mcmaster.ca/grades/tokens/'
-media_prefix = '/media/'        # where the summary PNG files are stored
-email_server = 'univmail.cis.mcmaster.ca'
+website_base = 'http://grades.modelling3e4.connectmv.com/tokens/'
+media_prefix = '/media/grades'        # where the summary PNG files are stored
+
+email_server = 'smtp.webfaction.com'
 email_port   = 25
-email_username = 'dunnkg'
+email_username = 'kevindunn'
 email_password = 'DrAD4dra'
+email_from = '3E4 course <kevin.dunn@connectmv.com>'
+
 token_length = 42
 
 def generate_random_token(base_address):
@@ -44,28 +47,25 @@ def email_token_to_student(to_address, token_address):
     
     message = '''\
 From: dunnkg@mcmaster.ca
-Subject: Web address to access 4C3/6C3 grades
+Subject: Access your 3E4 course grades
 
-This message has been sent, at your request, to retrieve your grades for the course CHE4C3/6C3.
+This message has been sent, at your request, to retrieve your grades for the course CHE3E4.
 
 The web address will only work once: ''' + token_address + '''\
 
 You can re-request your grades as many times as you like.  There is no need to log in or log out afterwards - just close the web page.
 
-The http://stats4.eng.mcmaster.ca web server.
+The http://modelling3e4.connectmv.com web server.
 '''
 
-    import email, smtplib   
-    sender = "dunnkg@mcmaster.ca"
+    import email, smtplib
     m = email.message_from_string(message)
     m.set_charset('iso-8859-1')
-    #m['to'] = 'kgdunn@gmail.com'
-    #m['from'] = 'dunnkg@mcmaster.ca'
     s = smtplib.SMTP()
     s.connect(email_server, port=email_port)
     s.login(user=email_username, password=email_password)
     
-    out = s.sendmail(sender, to_address, m.as_string())
+    out = s.sendmail(email_from, to_address, m.as_string())
     s.quit()
     if len(out) == 0:
         my_logger.debug('Email sent successfully to student: ' + to_address)
