@@ -281,7 +281,7 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                 level_NA = 0
                 for row, student in enumerate(students):
                     student_wu_grade = 0.0
-                    grade_item = Grade.objects.filter(question=question, student=student)[0]
+                    grade_item = Grade.objects.filter(question=question, student=student)[0]    
                     
                     # The maximum grade is the higher of either one; since 400 students are awarded 600-level grades
                     # if they attempt those questions
