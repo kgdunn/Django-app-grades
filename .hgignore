@@ -3,4 +3,5 @@
 importing/.*\.png
 manage.py
 settings.py
+grades.db
 __init__.py

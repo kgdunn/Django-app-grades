@@ -12,7 +12,7 @@ import numpy as np
 LOG_FILENAME = '/home/kevindunn/webapps/modelling3e4_grades/grades/django-log.log'
 import logging.handlers
 my_logger = logging.getLogger('MyLogger')   
-my_logger.setLevel(logging.DEBUG)
+my_logger.setLevel(logging.INFO)
 fh = logging.handlers.RotatingFileHandler(LOG_FILENAME, maxBytes=5000000, backupCount=5)
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 fh.setFormatter(formatter)
@@ -67,7 +67,7 @@ The http://modelling3e4.connectmv.com web server.
     out = s.sendmail(email_from, to_address, m.as_string())
     s.quit()
     if len(out) == 0:
-        my_logger.debug('Email sent successfully to student: ' + to_address)
+        my_logger.info('Email sent successfully to student: ' + to_address)
         return True
     else:
         return False
@@ -222,10 +222,10 @@ def get_workunit_list(student_number, categories):
         catdict['grade'] = cat_grade
                 
         # Sum up the final grade      
-        #my_logger.debug('Cat=' + cat_name +'; weight=' + str(cat_weight) + '; grade=' +str(cat_grade))
+        my_logger.debug('Cat=' + cat_name +'; weight=' + str(cat_weight) + '; grade=' +str(cat_grade))
         final_grade += cat_weight*cat_grade
                 
-    my_logger.debug("Time to process student's grades = " + str(time()-t))
+    my_logger.info("Time to process student's grades = " + str(time()-t))
     return workunits, categories, final_grade
     
 def generic_error(request):
@@ -256,13 +256,13 @@ def process_token(request, token):
 
     if len(token_item) == 0:
         # Invalid token
-        my_logger.debug('Invalid token received: ' + token)
+        my_logger.info('Invalid token received: ' + token)
         t = loader.get_template("invalid_token.html")
         c = Context({})
         return HttpResponse(t.render(c))
     elif token_item[0].has_been_used:
         # Used token
-        my_logger.debug('Used token received: ' + token)
+        my_logger.info('Used token received: ' + token)
         t = loader.get_template("token_has_expired.html")
         c = Context({})
         return HttpResponse(t.render(c))
@@ -279,7 +279,7 @@ def process_token(request, token):
         token_item[0].save()
         
         the_student = Student.objects.get(student_number=student_number)
-        my_logger.debug('Deactivated token; verified ' + the_student.first_name + ' ' + the_student.last_name + ': showing grades')
+        my_logger.info('Deactivated token; verified ' + the_student.first_name + ' ' + the_student.last_name + ': showing grades')
                 
         if the_student.grad_student:
             level = '600'
@@ -358,7 +358,7 @@ def sign_in(request, next_page=''):
     my_logger.debug('Sign-in')
     if request.method == 'POST':
         form_student_number = request.POST.get('student_number', '')
-        my_logger.debug('POST-studentnum: ' + form_student_number)
+        my_logger.info('POST-studentnum: ' + form_student_number)
 
         try:
             the_student = Student.objects.get(student_number=form_student_number)
