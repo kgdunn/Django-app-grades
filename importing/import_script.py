@@ -15,6 +15,7 @@ from matplotlib.figure import Figure  # for plotting
 # SETTINGS
 # =========
 django_dir = '/home/kevindunn/webapps/modelling3e4_grades'
+app_dir    = '/home/kevindunn/webapps/modelling3e4_grades/grades/student'
 
 # Categories for the course, as a list of 2-element tuples, containing the fraction of the grade 
 course_categories = [   ('Tutorials', 0.1), 
@@ -45,6 +46,7 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
 manual_grades = [ ('GURVEER', 'DHANOA', '0655007', 72.785, 'dhanoag@mcmaster.ca', False,       True)]
 
 sys.path.append(django_dir)
+sys.path.append(app_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 from grades.student.models import Grade, Question, WorkUnit, Category, Student, GradeSummary, WorkUnitSummary, CategorySummary, Token
 from django.contrib.auth.models import User
