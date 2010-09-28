@@ -15,3 +15,480 @@
 2010-09-22 15:16:01,823 - MyLogger - INFO - POST-studentnum: 1111111
 2010-09-22 15:16:01,966 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
 2010-09-22 15:16:16,620 - MyLogger - INFO - Used token received: MZxHs5QPQbaeTck5eKVH9Ca9efNVbCxWzc9dTqThKW
+2010-09-22 15:43:59,691 - MyLogger - INFO - POST-studentnum: 0862133
+2010-09-22 15:44:16,749 - MyLogger - INFO - POST-studentnum: 0862113
+2010-09-22 15:44:16,961 - MyLogger - INFO - Email sent successfully to student: panchasp@mcmaster.ca
+2010-09-22 15:45:57,158 - MyLogger - INFO - POST-studentnum: 0746613
+2010-09-22 15:45:57,285 - MyLogger - INFO - Email sent successfully to student: charlos@mcmaster.ca
+2010-09-22 15:46:18,050 - MyLogger - INFO - POST-studentnum: 0870262
+2010-09-22 15:46:18,375 - MyLogger - INFO - Email sent successfully to student: leekl5@mcmaster.ca
+2010-09-22 15:54:31,115 - MyLogger - INFO - POST-studentnum: 0870262
+2010-09-22 15:54:31,412 - MyLogger - INFO - Email sent successfully to student: leekl5@mcmaster.ca
+2010-09-22 15:56:42,993 - MyLogger - INFO - POST-studentnum: 0860062
+2010-09-22 15:56:43,182 - MyLogger - INFO - Email sent successfully to student: khantm2@mcmaster.ca
+2010-09-22 16:05:18,891 - MyLogger - INFO - Deactivated token; verified KOK LEE: showing grades
+2010-09-22 16:05:19,116 - MyLogger - INFO - Time to process student's grades = 0.223821163177
+2010-09-22 16:07:35,178 - MyLogger - INFO - POST-studentnum: 0845714
+2010-09-22 16:07:35,519 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-09-22 16:09:46,839 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-09-22 16:09:47,066 - MyLogger - INFO - Time to process student's grades = 0.225412130356
+2010-09-22 16:09:49,451 - MyLogger - INFO - Invalid token received: zcwtZbAzd2MeTcQYyCyLKYWgPNEspKdjWQVzRF9R58/fancybox/fancy_close.png
+2010-09-22 16:20:34,669 - MyLogger - INFO - POST-studentnum: 0851344
+2010-09-22 16:20:34,795 - MyLogger - INFO - Email sent successfully to student: nichoc3@mcmaster.ca
+2010-09-22 16:32:43,286 - MyLogger - INFO - POST-studentnum: 0847172
+2010-09-22 16:32:43,659 - MyLogger - INFO - Email sent successfully to student: skwarkp@mcmaster.ca
+2010-09-22 16:35:47,180 - MyLogger - INFO - POST-studentnum: 0841588
+2010-09-22 16:36:03,380 - MyLogger - INFO - POST-studentnum: 841588
+2010-09-22 16:36:13,956 - MyLogger - INFO - POST-studentnum: 0841588
+2010-09-22 16:36:31,764 - MyLogger - INFO - POST-studentnum: 841588
+2010-09-22 16:44:38,453 - MyLogger - INFO - POST-studentnum: 0864523
+2010-09-22 16:44:38,882 - MyLogger - INFO - Email sent successfully to student: alnachy@mcmaster.ca
+2010-09-22 16:52:59,412 - MyLogger - INFO - Deactivated token; verified YAMAN AL-NACHAWATI: showing grades
+2010-09-22 16:52:59,501 - MyLogger - INFO - Time to process student's grades = 0.0877830982208
+2010-09-22 16:59:52,135 - MyLogger - INFO - POST-studentnum: 1111111
+2010-09-22 16:59:52,440 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-09-22 17:00:59,171 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-09-22 17:00:59,374 - MyLogger - INFO - Time to process student's grades = 0.20161819458
+2010-09-22 17:01:59,504 - MyLogger - INFO - Deactivated token; verified YAMAN AL-NACHAWATI: showing grades
+2010-09-22 17:01:59,726 - MyLogger - INFO - Time to process student's grades = 0.219916820526
+2010-09-22 17:03:14,454 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-09-22 17:03:14,676 - MyLogger - INFO - Time to process student's grades = 0.220499038696
+2010-09-22 17:03:42,775 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-09-22 17:03:42,993 - MyLogger - INFO - Time to process student's grades = 0.217707872391
+2010-09-22 17:04:11,008 - MyLogger - INFO - Used token received: nprMPmkuGyCGHSSaWBy6aJkVvu6FHhje46B3dJfBhV
+2010-09-22 17:04:18,751 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-09-22 17:04:18,974 - MyLogger - INFO - Time to process student's grades = 0.221931934357
+2010-09-22 17:32:41,508 - MyLogger - INFO - POST-studentnum: 0858811
+2010-09-22 17:32:41,777 - MyLogger - INFO - Email sent successfully to student: yej3@mcmaster.ca
+2010-09-22 18:01:25,822 - MyLogger - INFO - POST-studentnum: 0845096
+2010-09-22 18:01:26,115 - MyLogger - INFO - Email sent successfully to student: grayc7@mcmaster.ca
+2010-09-22 18:45:43,215 - MyLogger - INFO - POST-studentnum: 0762486
+2010-09-22 18:45:43,565 - MyLogger - INFO - Email sent successfully to student: simj3@mcmaster.ca
+2010-09-22 18:48:54,764 - MyLogger - INFO - Deactivated token; verified JACQUELINE SIM: showing grades
+2010-09-22 18:48:54,988 - MyLogger - INFO - Time to process student's grades = 0.223148822784
+2010-09-22 19:29:54,230 - MyLogger - INFO - POST-studentnum: 0752835
+2010-09-22 19:29:54,557 - MyLogger - INFO - Email sent successfully to student: yuanx3@mcmaster.ca
+2010-09-22 19:34:25,973 - MyLogger - INFO - POST-studentnum: 0668046
+2010-09-22 19:34:26,184 - MyLogger - INFO - Email sent successfully to student: anwarbf@mcmaster.ca
+2010-09-22 19:35:15,464 - MyLogger - INFO - Deactivated token; verified FIZZA ANWAR: showing grades
+2010-09-22 19:35:15,689 - MyLogger - INFO - Time to process student's grades = 0.224231958389
+2010-09-22 19:35:16,712 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_close.png
+2010-09-22 19:35:16,827 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_loading.png
+2010-09-22 19:35:16,947 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_n.png
+2010-09-22 19:35:17,076 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_ne.png
+2010-09-22 19:35:17,198 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_e.png
+2010-09-22 19:35:17,320 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_se.png
+2010-09-22 19:35:17,443 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_s.png
+2010-09-22 19:35:17,573 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_sw.png
+2010-09-22 19:35:17,703 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_w.png
+2010-09-22 19:35:17,824 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_shadow_nw.png
+2010-09-22 19:35:17,941 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_nav_left.png
+2010-09-22 19:35:18,059 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_nav_right.png
+2010-09-22 19:36:01,023 - MyLogger - INFO - Invalid token received: dEMTUmaeKpMs5gJSgA2TKzYnw3rPw8yZfdwxpjKyJb/fancybox/fancy_title_over.png
+2010-09-22 19:39:30,662 - MyLogger - INFO - POST-studentnum: 0867967
+2010-09-22 19:39:30,761 - MyLogger - INFO - Email sent successfully to student: nataray@mcmaster.ca
+2010-09-22 19:40:31,986 - MyLogger - INFO - Deactivated token; verified YASHODINI NATARAJAN: showing grades
+2010-09-22 19:40:32,210 - MyLogger - INFO - Time to process student's grades = 0.222491025925
+2010-09-22 19:40:33,404 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_loading.png
+2010-09-22 19:40:33,562 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_close.png
+2010-09-22 19:40:34,054 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_n.png
+2010-09-22 19:40:34,203 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_ne.png
+2010-09-22 19:40:34,364 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_e.png
+2010-09-22 19:40:34,509 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_se.png
+2010-09-22 19:40:34,658 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_s.png
+2010-09-22 19:40:34,804 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_sw.png
+2010-09-22 19:40:34,950 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_w.png
+2010-09-22 19:40:35,092 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_shadow_nw.png
+2010-09-22 19:40:35,250 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_nav_left.png
+2010-09-22 19:40:35,398 - MyLogger - INFO - Invalid token received: YG6EUfNtrxAHAhThpZnhpYbgdtwnAktcjmyyTjkre3/fancybox/fancy_nav_right.png
+2010-09-22 20:10:43,682 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-09-22 20:10:43,905 - MyLogger - INFO - Time to process student's grades = 0.221914052963
+2010-09-22 20:22:05,071 - MyLogger - INFO - Deactivated token; verified XIN YUAN: showing grades
+2010-09-22 20:22:05,294 - MyLogger - INFO - Time to process student's grades = 0.220790863037
+2010-09-22 20:22:06,962 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_close.png
+2010-09-22 20:22:07,081 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_loading.png
+2010-09-22 20:22:07,199 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_n.png
+2010-09-22 20:22:07,324 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_ne.png
+2010-09-22 20:22:07,440 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_e.png
+2010-09-22 20:22:07,558 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_se.png
+2010-09-22 20:22:07,675 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_s.png
+2010-09-22 20:22:07,796 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_sw.png
+2010-09-22 20:22:07,926 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_w.png
+2010-09-22 20:22:08,081 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_shadow_nw.png
+2010-09-22 20:22:08,210 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_nav_left.png
+2010-09-22 20:22:08,324 - MyLogger - INFO - Invalid token received: sgLmNBze6gJTf6MSJkyb2YaWT2HhZuWnxd4UZ3uwCr/fancybox/fancy_nav_right.png
+2010-09-22 20:41:57,489 - MyLogger - INFO - POST-studentnum: 0644743
+2010-09-22 20:41:57,907 - MyLogger - INFO - Email sent successfully to student: custaral@mcmaster.ca
+2010-09-22 20:42:31,091 - MyLogger - INFO - POST-studentnum: 0754439
+2010-09-22 20:42:31,301 - MyLogger - INFO - Email sent successfully to student: vanh@mcmaster.ca
+2010-09-22 20:44:10,065 - MyLogger - INFO - Deactivated token; verified HEATHER VAN: showing grades
+2010-09-22 20:44:10,292 - MyLogger - INFO - Time to process student's grades = 0.226386070251
+2010-09-22 21:32:58,827 - MyLogger - INFO - Deactivated token; verified ALICE CUSTARD: showing grades
+2010-09-22 21:32:59,164 - MyLogger - INFO - Time to process student's grades = 0.243305921555
+2010-09-22 21:45:52,295 - MyLogger - INFO - POST-studentnum: 0843453
+2010-09-22 21:45:52,595 - MyLogger - INFO - Email sent successfully to student: deletss@mcmaster.ca
+2010-09-22 21:46:42,523 - MyLogger - INFO - Deactivated token; verified CLYDE DELETSU: showing grades
+2010-09-22 21:46:42,748 - MyLogger - INFO - Time to process student's grades = 0.223435878754
+2010-09-22 21:46:44,952 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_close.png
+2010-09-22 21:46:45,151 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_loading.png
+2010-09-22 21:46:45,324 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_n.png
+2010-09-22 21:46:45,506 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_ne.png
+2010-09-22 21:46:45,692 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_e.png
+2010-09-22 21:46:45,893 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_se.png
+2010-09-22 21:46:46,097 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_s.png
+2010-09-22 21:46:46,278 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_sw.png
+2010-09-22 21:46:46,460 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_w.png
+2010-09-22 21:46:46,618 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_nw.png
+2010-09-22 21:46:46,763 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_nav_left.png
+2010-09-22 21:46:46,906 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_nav_right.png
+2010-09-22 21:49:14,391 - MyLogger - INFO - Used token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE
+2010-09-22 21:49:15,108 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_close.png
+2010-09-22 21:49:15,302 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_loading.png
+2010-09-22 21:49:15,520 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_n.png
+2010-09-22 21:49:15,723 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_ne.png
+2010-09-22 21:49:15,905 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_e.png
+2010-09-22 21:49:16,097 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_se.png
+2010-09-22 21:49:16,296 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_s.png
+2010-09-22 21:49:16,477 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_sw.png
+2010-09-22 21:49:16,705 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_w.png
+2010-09-22 21:49:16,895 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_shadow_nw.png
+2010-09-22 21:49:17,076 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_nav_left.png
+2010-09-22 21:49:17,262 - MyLogger - INFO - Invalid token received: wrpjuF584FRf3ANYEA4C9LjCNBafRGwXVswscmtZBE/fancybox/fancy_nav_right.png
+2010-09-22 21:50:18,408 - MyLogger - INFO - POST-studentnum: 0843453
+2010-09-22 21:50:18,745 - MyLogger - INFO - Email sent successfully to student: deletss@mcmaster.ca
+2010-09-22 21:51:17,797 - MyLogger - INFO - Deactivated token; verified CLYDE DELETSU: showing grades
+2010-09-22 21:51:18,021 - MyLogger - INFO - Time to process student's grades = 0.222747087479
+2010-09-22 21:51:20,184 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_close.png
+2010-09-22 21:51:20,391 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_loading.png
+2010-09-22 21:51:20,559 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_n.png
+2010-09-22 21:51:20,743 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_ne.png
+2010-09-22 21:51:20,958 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_e.png
+2010-09-22 21:51:21,160 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_se.png
+2010-09-22 21:51:21,356 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_s.png
+2010-09-22 21:51:21,579 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_sw.png
+2010-09-22 21:51:21,755 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_w.png
+2010-09-22 21:51:21,944 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_shadow_nw.png
+2010-09-22 21:51:22,119 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_nav_left.png
+2010-09-22 21:51:22,363 - MyLogger - INFO - Invalid token received: FxQ5HfKHkFyfWCb4FMkT54PsTJua3MwA5sE38hgLHg/fancybox/fancy_nav_right.png
+2010-09-22 21:55:16,872 - MyLogger - INFO - POST-studentnum: 0843473
+2010-09-22 21:55:17,238 - MyLogger - INFO - Email sent successfully to student: zehnalgp@mcmaster.ca
+2010-09-22 21:55:36,431 - MyLogger - INFO - POST-studentnum: 0751430
+2010-09-22 21:55:36,560 - MyLogger - INFO - Email sent successfully to student: pateln53@mcmaster.ca
+2010-09-22 21:55:37,132 - MyLogger - INFO - Deactivated token; verified CLYDE DELETSU: showing grades
+2010-09-22 21:55:37,358 - MyLogger - INFO - Time to process student's grades = 0.224585056305
+2010-09-22 21:56:51,837 - MyLogger - INFO - Deactivated token; verified NISHIT PATEL: showing grades
+2010-09-22 21:56:51,927 - MyLogger - INFO - Time to process student's grades = 0.0899159908295
+2010-09-22 22:28:15,003 - MyLogger - INFO - POST-studentnum: 1111111
+2010-09-22 22:28:15,302 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-09-22 23:23:32,802 - MyLogger - INFO - POST-studentnum: 0863580
+2010-09-22 23:23:32,946 - MyLogger - INFO - Email sent successfully to student: lits@mcmaster.ca
+2010-09-22 23:29:49,995 - MyLogger - INFO - POST-studentnum: 0844511
+2010-09-22 23:29:50,105 - MyLogger - INFO - Email sent successfully to student: qiaoy2@mcmaster.ca
+2010-09-22 23:34:41,391 - MyLogger - INFO - Deactivated token; verified YAN QIAO: showing grades
+2010-09-22 23:34:41,613 - MyLogger - INFO - Time to process student's grades = 0.221369028091
+2010-09-22 23:35:40,345 - MyLogger - INFO - Used token received: khpWRjgHfKkrvuewjFuZwUtfShJQzqnMA2sfqk4ed9
+2010-09-22 23:40:49,480 - MyLogger - INFO - Deactivated token; verified THOMAS LI: showing grades
+2010-09-22 23:40:49,732 - MyLogger - INFO - Time to process student's grades = 0.249662160873
+2010-09-22 23:40:51,808 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_loading.png
+2010-09-22 23:40:51,990 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_close.png
+2010-09-22 23:40:52,448 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_n.png
+2010-09-22 23:40:52,689 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_ne.png
+2010-09-22 23:40:52,848 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_e.png
+2010-09-22 23:40:53,014 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_se.png
+2010-09-22 23:40:53,182 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_s.png
+2010-09-22 23:40:53,342 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_sw.png
+2010-09-22 23:40:53,485 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_w.png
+2010-09-22 23:40:53,631 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_shadow_nw.png
+2010-09-22 23:40:53,766 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_nav_left.png
+2010-09-22 23:40:53,981 - MyLogger - INFO - Invalid token received: gjB6TfA6cnMzdh2rBGUtR3kwcVmx5JP5u6pgEydykM/fancybox/fancy_nav_right.png
+2010-09-22 23:45:02,440 - MyLogger - INFO - Deactivated token; verified PATRYK SKWARKO: showing grades
+2010-09-22 23:45:02,721 - MyLogger - INFO - Time to process student's grades = 0.279484033585
+2010-09-23 00:16:14,037 - MyLogger - INFO - POST-studentnum: 0745141
+2010-09-23 00:16:14,137 - MyLogger - INFO - Email sent successfully to student: dipietcv@mcmaster.ca
+2010-09-23 00:20:56,739 - MyLogger - INFO - Deactivated token; verified CAMERON DIPIETRO: showing grades
+2010-09-23 00:20:56,962 - MyLogger - INFO - Time to process student's grades = 0.221681118011
+2010-09-23 00:46:36,078 - MyLogger - INFO - POST-studentnum: 0750439
+2010-09-23 00:46:36,349 - MyLogger - INFO - Email sent successfully to student: dacaae@mcmaster.ca
+2010-09-23 00:49:04,281 - MyLogger - INFO - Deactivated token; verified ADRIANA DACA: showing grades
+2010-09-23 00:49:04,504 - MyLogger - INFO - Time to process student's grades = 0.221267938614
+2010-09-23 01:15:59,173 - MyLogger - INFO - POST-studentnum: 0854685
+2010-09-23 01:15:59,277 - MyLogger - INFO - Email sent successfully to student: alkazwh@mcmaster.ca
+2010-09-23 01:16:47,574 - MyLogger - INFO - Deactivated token; verified HAWRA AL-KAZWINI: showing grades
+2010-09-23 01:16:47,795 - MyLogger - INFO - Time to process student's grades = 0.220180988312
+2010-09-23 08:50:50,599 - MyLogger - INFO - POST-studentnum: 0860741
+2010-09-23 08:50:50,778 - MyLogger - INFO - Email sent successfully to student: learyjg@mcmaster.ca
+2010-09-23 08:52:09,875 - MyLogger - INFO - Deactivated token; verified JUSTIN LEARY: showing grades
+2010-09-23 08:52:10,100 - MyLogger - INFO - Time to process student's grades = 0.223629951477
+2010-09-23 09:01:27,275 - MyLogger - INFO - Deactivated token; verified SARAH CHARLONG: showing grades
+2010-09-23 09:01:27,497 - MyLogger - INFO - Time to process student's grades = 0.220371961594
+2010-09-23 09:42:35,154 - MyLogger - INFO - Used token received: dTWCjAwekSAHystXzGyecYLTShzCCneB4asZBJUhxf
+2010-09-23 11:27:32,215 - MyLogger - INFO - POST-studentnum: 0845714
+2010-09-23 11:27:32,398 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-09-23 11:28:06,564 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-09-23 11:28:06,787 - MyLogger - INFO - Time to process student's grades = 0.222046852112
+2010-09-23 11:54:11,272 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-09-23 11:54:11,500 - MyLogger - INFO - Time to process student's grades = 0.226905822754
+2010-09-23 17:09:42,256 - MyLogger - INFO - Deactivated token; verified CAMERON GRAY: showing grades
+2010-09-23 17:09:42,481 - MyLogger - INFO - Time to process student's grades = 0.223695039749
+2010-09-23 17:46:41,560 - MyLogger - INFO - Invalid token received: zcwtZbAzd2MeTcQYyCyLKYWgPNEspKdjWQVzRF9R58/fancybox/fancy_close.png
+2010-09-23 19:26:28,646 - MyLogger - INFO - Used token received: VMUGKrezsNgJfJqq8U5NsvaRRBv9pKdxSYcNJFbkZP
+2010-09-23 19:26:31,957 - MyLogger - INFO - POST-studentnum: 0841588
+2010-09-23 19:26:39,528 - MyLogger - INFO - POST-studentnum: zhaomc
+2010-09-23 19:26:55,217 - MyLogger - INFO - POST-studentnum: 841588
+2010-09-23 20:58:24,636 - MyLogger - INFO - POST-studentnum: 0844926
+2010-09-23 20:58:25,009 - MyLogger - INFO - Email sent successfully to student: alsaiga@mcmaster.ca
+2010-09-23 20:59:37,942 - MyLogger - INFO - Deactivated token; verified AMINA AL-SAIGH: showing grades
+2010-09-23 20:59:38,166 - MyLogger - INFO - Time to process student's grades = 0.221780061722
+2010-09-23 21:02:42,247 - MyLogger - INFO - POST-studentnum: 
+2010-09-23 21:02:59,953 - MyLogger - INFO - POST-studentnum: 0801031
+2010-09-23 22:42:45,967 - MyLogger - INFO - POST-studentnum: 0857495
+2010-09-23 22:42:46,163 - MyLogger - INFO - Email sent successfully to student: zweepkt@mcmaster.ca
+2010-09-23 22:44:03,272 - MyLogger - INFO - Deactivated token; verified KYLE ZWEEP: showing grades
+2010-09-23 22:44:03,495 - MyLogger - INFO - Time to process student's grades = 0.221765041351
+2010-09-24 00:59:40,226 - MyLogger - INFO - POST-studentnum: 0761261
+2010-09-24 00:59:40,613 - MyLogger - INFO - Email sent successfully to student: wijesekn@mcmaster.ca
+2010-09-24 01:00:18,860 - MyLogger - INFO - Deactivated token; verified KUSHLANI WIJESEKERA: showing grades
+2010-09-24 01:00:19,083 - MyLogger - INFO - Time to process student's grades = 0.221733093262
+2010-09-24 09:09:32,407 - MyLogger - INFO - POST-studentnum: 0746230
+2010-09-24 09:09:32,679 - MyLogger - INFO - Email sent successfully to student: seguindp@mcmaster.ca
+2010-09-24 22:32:46,513 - MyLogger - INFO - POST-studentnum: 0668046
+2010-09-24 22:32:46,681 - MyLogger - INFO - Email sent successfully to student: anwarbf@mcmaster.ca
+2010-09-24 22:33:18,635 - MyLogger - INFO - Deactivated token; verified FIZZA ANWAR: showing grades
+2010-09-24 22:33:18,906 - MyLogger - INFO - Time to process student's grades = 0.27020406723
+2010-09-24 22:33:19,790 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_close.png
+2010-09-24 22:33:20,015 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_loading.png
+2010-09-24 22:33:20,163 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_n.png
+2010-09-24 22:33:20,320 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_ne.png
+2010-09-24 22:33:20,470 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_e.png
+2010-09-24 22:33:20,635 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_se.png
+2010-09-24 22:33:20,786 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_s.png
+2010-09-24 22:33:20,929 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_sw.png
+2010-09-24 22:33:21,080 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_w.png
+2010-09-24 22:33:21,237 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_shadow_nw.png
+2010-09-24 22:33:21,410 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_nav_left.png
+2010-09-24 22:33:21,576 - MyLogger - INFO - Invalid token received: 3ZGStZrj5eUPjnFGANUaKraWFN9RcwV6VBqGv8LAdd/fancybox/fancy_nav_right.png
+2010-09-24 22:35:18,344 - MyLogger - INFO - POST-studentnum: 0845714
+2010-09-24 22:35:18,481 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-09-24 22:35:56,707 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-09-24 22:35:56,930 - MyLogger - INFO - Time to process student's grades = 0.221747875214
+2010-09-24 22:46:31,557 - MyLogger - INFO - POST-studentnum: 0845935
+2010-09-24 22:46:31,865 - MyLogger - INFO - Email sent successfully to student: kasime@mcmaster.ca
+2010-09-25 09:14:48,683 - MyLogger - INFO - Deactivated token; verified GREG ZEHNAL: showing grades
+2010-09-25 09:14:48,908 - MyLogger - INFO - Time to process student's grades = 0.2231528759
+2010-09-25 11:16:31,224 - MyLogger - INFO - POST-studentnum: 0871369
+2010-09-25 11:16:31,556 - MyLogger - INFO - Email sent successfully to student: hochail@mcmaster.ca
+2010-09-25 11:18:47,958 - MyLogger - INFO - Deactivated token; verified LYNN HOCHAIME: showing grades
+2010-09-25 11:18:48,184 - MyLogger - INFO - Time to process student's grades = 0.224903821945
+2010-09-25 11:18:49,382 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_loading.png
+2010-09-25 11:18:49,514 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_close.png
+2010-09-25 11:18:49,815 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_n.png
+2010-09-25 11:18:49,953 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_ne.png
+2010-09-25 11:18:50,085 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_e.png
+2010-09-25 11:18:50,213 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_se.png
+2010-09-25 11:18:50,350 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_s.png
+2010-09-25 11:18:50,475 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_sw.png
+2010-09-25 11:18:50,602 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_w.png
+2010-09-25 11:18:50,738 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_shadow_nw.png
+2010-09-25 11:18:50,897 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_nav_left.png
+2010-09-25 11:18:51,026 - MyLogger - INFO - Invalid token received: np8BKnEmSyugbqFWhJGTaYpYYcjebktzMEXPyEznUU/fancybox/fancy_nav_right.png
+2010-09-25 11:41:09,073 - MyLogger - INFO - POST-studentnum: 1111111
+2010-09-25 11:41:09,349 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-09-25 11:44:39,364 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-09-25 11:44:39,585 - MyLogger - INFO - Time to process student's grades = 0.220278024673
+2010-09-25 11:57:59,903 - MyLogger - INFO - POST-studentnum: 0841588
+2010-09-25 12:20:26,154 - MyLogger - INFO - POST-studentnum: 0864127
+2010-09-25 12:20:26,552 - MyLogger - INFO - Email sent successfully to student: homertg@mcmaster.ca
+2010-09-25 14:35:40,905 - MyLogger - INFO - POST-studentnum: 0867166
+2010-09-25 14:35:41,219 - MyLogger - INFO - Email sent successfully to student: anuarssd@mcmaster.ca
+2010-09-25 15:19:57,945 - MyLogger - INFO - POST-studentnum: 0854685
+2010-09-25 15:19:58,259 - MyLogger - INFO - Email sent successfully to student: alkazwh@mcmaster.ca
+2010-09-25 15:21:48,151 - MyLogger - INFO - Deactivated token; verified HAWRA AL-KAZWINI: showing grades
+2010-09-25 15:21:48,374 - MyLogger - INFO - Time to process student's grades = 0.221801996231
+2010-09-25 15:28:15,503 - MyLogger - INFO - POST-studentnum: 0862562
+2010-09-25 15:28:15,856 - MyLogger - INFO - Email sent successfully to student: obhraia@mcmaster.ca
+2010-09-25 15:30:25,211 - MyLogger - INFO - Deactivated token; verified AKSHAY OBHRAI: showing grades
+2010-09-25 15:30:25,434 - MyLogger - INFO - Time to process student's grades = 0.221848964691
+2010-09-25 16:49:14,505 - MyLogger - INFO - POST-studentnum: 0660006
+2010-09-25 16:49:14,940 - MyLogger - INFO - Email sent successfully to student: marwayhs@mcmaster.ca
+2010-09-25 16:50:06,885 - MyLogger - INFO - Deactivated token; verified HEERA MARWAY: showing grades
+2010-09-25 16:50:07,108 - MyLogger - INFO - Time to process student's grades = 0.220942020416
+2010-09-25 16:51:45,778 - MyLogger - INFO - Used token received: ALaUHPBL54HLv4VpVMHptdvEf2ZshsBVcsY23vxcHg
+2010-09-25 19:19:57,436 - MyLogger - INFO - Deactivated token; verified ELAF KASIM: showing grades
+2010-09-25 19:19:57,663 - MyLogger - INFO - Time to process student's grades = 0.225059986115
+2010-09-25 21:04:17,756 - MyLogger - INFO - POST-studentnum: 0843610
+2010-09-25 21:04:17,980 - MyLogger - INFO - Email sent successfully to student: tissa@mcmaster.ca
+2010-09-25 21:05:56,416 - MyLogger - INFO - Deactivated token; verified AMINE TISS: showing grades
+2010-09-25 21:05:56,659 - MyLogger - INFO - Time to process student's grades = 0.240794181824
+2010-09-25 22:06:15,078 - MyLogger - INFO - Deactivated token; verified SHAFFERINA ANUAR SHARUDDIN: showing grades
+2010-09-25 22:06:15,308 - MyLogger - INFO - Time to process student's grades = 0.223540067673
+2010-09-25 23:21:50,948 - MyLogger - INFO - POST-studentnum: 0865591
+2010-09-25 23:21:51,169 - MyLogger - INFO - Email sent successfully to student: scottimr@mcmaster.ca
+2010-09-25 23:28:29,873 - MyLogger - INFO - Deactivated token; verified MATTHEW SCOTTIE: showing grades
+2010-09-25 23:28:30,095 - MyLogger - INFO - Time to process student's grades = 0.221262216568
+2010-09-25 23:28:31,101 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_close.png
+2010-09-25 23:29:52,913 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_nav_right.png
+2010-09-25 23:29:53,048 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_nav_left.png
+2010-09-25 23:29:53,185 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_nw.png
+2010-09-25 23:29:53,319 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_w.png
+2010-09-25 23:29:53,453 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_sw.png
+2010-09-25 23:29:53,589 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_s.png
+2010-09-25 23:29:53,724 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_se.png
+2010-09-25 23:29:53,859 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_e.png
+2010-09-25 23:29:54,000 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_ne.png
+2010-09-25 23:29:54,141 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_shadow_n.png
+2010-09-25 23:29:54,284 - MyLogger - INFO - Invalid token received: bmkRQMYeE25hMXmXtHjLsAry84bfWxX6NN4jMvATUg/fancybox/fancy_loading.png
+2010-09-26 00:00:44,591 - MyLogger - INFO - POST-studentnum: 0871883
+2010-09-26 00:00:44,821 - MyLogger - INFO - Email sent successfully to student: cheouxm@mcmaster.ca
+2010-09-26 00:06:13,500 - MyLogger - INFO - Deactivated token; verified XIAO MIN CHEOU: showing grades
+2010-09-26 00:06:13,723 - MyLogger - INFO - Time to process student's grades = 0.220985889435
+2010-09-26 00:07:37,099 - MyLogger - INFO - Used token received: JYsTrPkdgWTvFJ3SnqTbeGnFZYzVvewUewc8KWV4nw
+2010-09-26 08:11:38,394 - MyLogger - INFO - POST-studentnum: 0456846
+2010-09-26 08:11:38,897 - MyLogger - INFO - Email sent successfully to student: shamshss@mcmaster.ca
+2010-09-26 12:23:39,338 - MyLogger - INFO - POST-studentnum: 0762086
+2010-09-26 12:23:39,691 - MyLogger - INFO - Email sent successfully to student: benacqdj@mcmaster.ca
+2010-09-26 12:38:42,337 - MyLogger - INFO - POST-studentnum: 0644998
+2010-09-26 12:38:42,449 - MyLogger - INFO - Email sent successfully to student: antonca@mcmaster.ca
+2010-09-26 13:04:31,530 - MyLogger - INFO - POST-studentnum: 0842095
+2010-09-26 13:04:31,654 - MyLogger - INFO - Email sent successfully to student: campioe@mcmaster.ca
+2010-09-26 13:06:30,807 - MyLogger - INFO - Deactivated token; verified EMILE CAMPIONI: showing grades
+2010-09-26 13:06:30,908 - MyLogger - INFO - Time to process student's grades = 0.100241184235
+2010-09-26 13:32:07,003 - MyLogger - INFO - POST-studentnum: 0843336
+2010-09-26 13:32:07,649 - MyLogger - INFO - Email sent successfully to student: yuebh@mcmaster.ca
+2010-09-26 13:33:39,099 - MyLogger - INFO - Deactivated token; verified BRYAN YUE: showing grades
+2010-09-26 13:33:39,330 - MyLogger - INFO - Time to process student's grades = 0.229741811752
+2010-09-26 14:14:31,559 - MyLogger - INFO - POST-studentnum: 0845714
+2010-09-26 14:14:31,695 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-09-26 14:20:08,804 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-09-26 14:20:09,029 - MyLogger - INFO - Time to process student's grades = 0.223974943161
+2010-09-26 14:24:54,996 - MyLogger - INFO - Deactivated token; verified DEREK SEGUIN: showing grades
+2010-09-26 14:24:55,218 - MyLogger - INFO - Time to process student's grades = 0.220582008362
+2010-09-26 15:00:16,832 - MyLogger - INFO - POST-studentnum: 0869722
+2010-09-26 15:00:16,980 - MyLogger - INFO - Email sent successfully to student: hainea2@mcmaster.ca
+2010-09-26 15:00:28,052 - MyLogger - INFO - POST-studentnum: 0869722
+2010-09-26 15:00:28,251 - MyLogger - INFO - Email sent successfully to student: hainea2@mcmaster.ca
+2010-09-26 15:06:16,461 - MyLogger - INFO - Deactivated token; verified ANDREW HAINES: showing grades
+2010-09-26 15:06:16,684 - MyLogger - INFO - Time to process student's grades = 0.221131801605
+2010-09-26 15:51:09,057 - MyLogger - INFO - Used token received: 3zu8g9M6bf2mVeY2PfTKawkHLaapWSFM2PTspx8UfJ
+2010-09-26 15:51:20,058 - MyLogger - INFO - POST-studentnum: 0851344
+2010-09-26 15:51:20,265 - MyLogger - INFO - Email sent successfully to student: nichoc3@mcmaster.ca
+2010-09-26 16:49:50,642 - MyLogger - INFO - POST-studentnum: 0653184
+2010-09-26 16:49:51,032 - MyLogger - INFO - Email sent successfully to student: hallere@mcmaster.ca
+2010-09-26 17:14:30,240 - MyLogger - INFO - POST-studentnum: 0759139
+2010-09-26 17:14:30,560 - MyLogger - INFO - Email sent successfully to student: rowanma@mcmaster.ca
+2010-09-26 17:32:47,194 - MyLogger - INFO - Deactivated token; verified ELIZABETH HALLERAN: showing grades
+2010-09-26 17:32:47,282 - MyLogger - INFO - Time to process student's grades = 0.0873620510101
+2010-09-26 18:28:34,185 - MyLogger - INFO - POST-studentnum: 0844511
+2010-09-26 18:28:34,369 - MyLogger - INFO - Email sent successfully to student: qiaoy2@mcmaster.ca
+2010-09-26 18:29:07,363 - MyLogger - INFO - Deactivated token; verified YAN QIAO: showing grades
+2010-09-26 18:29:07,587 - MyLogger - INFO - Time to process student's grades = 0.222590923309
+2010-09-26 18:49:29,670 - MyLogger - INFO - POST-studentnum: 0748368
+2010-09-26 18:49:29,955 - MyLogger - INFO - Email sent successfully to student: obermejm@mcmaster.ca
+2010-09-26 19:04:29,472 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-09-26 19:04:29,687 - MyLogger - INFO - Time to process student's grades = 0.213613986969
+2010-09-26 19:23:44,642 - MyLogger - INFO - Deactivated token; verified MICHAEL ROWAN: showing grades
+2010-09-26 19:23:44,866 - MyLogger - INFO - Time to process student's grades = 0.222877979279
+2010-09-26 19:47:18,634 - MyLogger - INFO - POST-studentnum: 0853140
+2010-09-26 19:47:19,071 - MyLogger - INFO - Email sent successfully to student: khanra2@mcmaster.ca
+2010-09-26 20:16:15,226 - MyLogger - INFO - POST-studentnum: 0851200
+2010-09-26 20:16:15,337 - MyLogger - INFO - Email sent successfully to student: popovisr@mcmaster.ca
+2010-09-26 20:17:06,823 - MyLogger - INFO - Deactivated token; verified SCOTT POPOVIC: showing grades
+2010-09-26 20:17:07,045 - MyLogger - INFO - Time to process student's grades = 0.221067905426
+2010-09-26 20:45:58,506 - MyLogger - INFO - Deactivated token; verified AHILUN ANTONCHRISTY: showing grades
+2010-09-26 20:45:58,730 - MyLogger - INFO - Time to process student's grades = 0.222599983215
+2010-09-26 20:46:00,505 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_close.png
+2010-09-26 20:46:00,657 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_loading.png
+2010-09-26 20:46:00,791 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_n.png
+2010-09-26 20:46:00,916 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_ne.png
+2010-09-26 20:46:01,041 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_e.png
+2010-09-26 20:46:01,165 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_se.png
+2010-09-26 20:46:01,304 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_s.png
+2010-09-26 20:46:01,438 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_sw.png
+2010-09-26 20:46:01,563 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_w.png
+2010-09-26 20:46:01,689 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_shadow_nw.png
+2010-09-26 20:46:01,813 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_nav_left.png
+2010-09-26 20:46:01,940 - MyLogger - INFO - Invalid token received: 3xTGrM4kjMgsfkdbhd486UW55qCyTMf9NtAgWFpCPR/fancybox/fancy_nav_right.png
+2010-09-26 20:47:35,453 - MyLogger - INFO - POST-studentnum: 0744167
+2010-09-26 20:47:35,607 - MyLogger - INFO - Email sent successfully to student: johnss45@mcmaster.ca
+2010-09-26 21:10:50,902 - MyLogger - INFO - Deactivated token; verified RAHEEL KHAN: showing grades
+2010-09-26 21:10:51,127 - MyLogger - INFO - Time to process student's grades = 0.223359107971
+2010-09-26 21:14:55,677 - MyLogger - INFO - POST-studentnum: 0744959
+2010-09-26 21:14:56,003 - MyLogger - INFO - Email sent successfully to student: contara@mcmaster.ca
+2010-09-26 21:17:29,341 - MyLogger - INFO - Deactivated token; verified SEAN JOHNSTONE: showing grades
+2010-09-26 21:17:29,564 - MyLogger - INFO - Time to process student's grades = 0.221796989441
+2010-09-26 21:19:23,149 - MyLogger - INFO - Deactivated token; verified ANAHI CONTARTESE: showing grades
+2010-09-26 21:19:23,236 - MyLogger - INFO - Time to process student's grades = 0.08656001091
+2010-09-26 23:17:05,381 - MyLogger - INFO - Used token received: X9skt9K9XeW9HvHh4vVpRaQWGJRskaMcEnbhSKW2fh
+2010-09-27 08:15:48,309 - MyLogger - INFO - Deactivated token; verified SANA SHAMSHER: showing grades
+2010-09-27 08:15:48,534 - MyLogger - INFO - Time to process student's grades = 0.223498821259
+2010-09-27 09:21:19,902 - MyLogger - INFO - Used token received: SJWgt2vK9eBaS9tnQckZ58AdsNApX8Zkjy4ESa8QsZ
+2010-09-27 10:43:17,501 - MyLogger - INFO - POST-studentnum: 0747907
+2010-09-27 10:43:17,651 - MyLogger - INFO - Email sent successfully to student: maitladm@mcmaster.ca
+2010-09-27 10:44:27,756 - MyLogger - INFO - Deactivated token; verified DANIELLE MAITLAND: showing grades
+2010-09-27 10:44:27,987 - MyLogger - INFO - Time to process student's grades = 0.228738069534
+2010-09-27 12:00:52,471 - MyLogger - INFO - POST-studentnum: 0668046
+2010-09-27 12:00:53,038 - MyLogger - INFO - Email sent successfully to student: anwarbf@mcmaster.ca
+2010-09-27 12:02:03,084 - MyLogger - INFO - Deactivated token; verified FIZZA ANWAR: showing grades
+2010-09-27 12:02:03,390 - MyLogger - INFO - Time to process student's grades = 0.304352998734
+2010-09-27 12:02:05,108 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_close.png
+2010-09-27 12:02:05,479 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_loading.png
+2010-09-27 12:02:05,760 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_n.png
+2010-09-27 12:02:06,041 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_ne.png
+2010-09-27 12:02:06,344 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_e.png
+2010-09-27 12:02:06,626 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_se.png
+2010-09-27 12:02:06,908 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_s.png
+2010-09-27 12:02:07,230 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_sw.png
+2010-09-27 12:02:07,524 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_w.png
+2010-09-27 12:02:07,824 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_shadow_nw.png
+2010-09-27 12:02:08,145 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_nav_left.png
+2010-09-27 12:02:08,419 - MyLogger - INFO - Invalid token received: CMm4vFfdjrMcuMBevJRbPzbwyMMgSmX53ZXfpZhvcV/fancybox/fancy_nav_right.png
+2010-09-27 14:06:16,331 - MyLogger - INFO - POST-studentnum: 0858931
+2010-09-27 14:06:16,662 - MyLogger - INFO - Email sent successfully to student: choudr@mcmaster.ca
+2010-09-27 14:13:26,787 - MyLogger - INFO - POST-studentnum: alnachy
+2010-09-27 14:20:51,117 - MyLogger - INFO - POST-studentnum: 0864523
+2010-09-27 14:20:51,269 - MyLogger - INFO - Email sent successfully to student: alnachy@mcmaster.ca
+2010-09-27 14:22:02,778 - MyLogger - INFO - Deactivated token; verified YAMAN AL-NACHAWATI: showing grades
+2010-09-27 14:22:03,040 - MyLogger - INFO - Time to process student's grades = 0.259944915771
+2010-09-27 14:38:59,357 - MyLogger - INFO - POST-studentnum: 0857383
+2010-09-27 14:38:59,867 - MyLogger - INFO - Email sent successfully to student: marathp@mcmaster.ca
+2010-09-27 15:30:42,117 - MyLogger - INFO - POST-studentnum: 0748566
+2010-09-27 15:30:42,291 - MyLogger - INFO - Email sent successfully to student: roccake@mcmaster.ca
+2010-09-27 15:31:50,424 - MyLogger - INFO - Deactivated token; verified KRISTEN ROCCA: showing grades
+2010-09-27 15:31:50,651 - MyLogger - INFO - Time to process student's grades = 0.225766897202
+2010-09-27 15:36:48,783 - MyLogger - INFO - POST-studentnum: 0864118
+2010-09-27 15:36:53,908 - MyLogger - INFO - Email sent successfully to student: umehmi@mcmaster.ca
+2010-09-27 15:37:58,092 - MyLogger - INFO - Deactivated token; verified MAXIMUS UMEH: showing grades
+2010-09-27 15:37:58,315 - MyLogger - INFO - Time to process student's grades = 0.221220016479
+2010-09-27 15:38:02,962 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_close.png
+2010-09-27 15:38:03,377 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_loading.png
+2010-09-27 15:38:03,683 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_n.png
+2010-09-27 15:38:04,154 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_ne.png
+2010-09-27 15:38:04,467 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_e.png
+2010-09-27 15:38:04,807 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_se.png
+2010-09-27 15:38:05,146 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_s.png
+2010-09-27 15:38:05,589 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_sw.png
+2010-09-27 15:38:06,802 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_w.png
+2010-09-27 15:38:07,110 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_shadow_nw.png
+2010-09-27 15:38:07,432 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_nav_left.png
+2010-09-27 15:38:07,744 - MyLogger - INFO - Invalid token received: 8qabYW8fPjfTFSmKu9gEeTw94PHXZZmyFV63p9Rqnq/fancybox/fancy_nav_right.png
+2010-09-27 16:21:54,986 - MyLogger - INFO - POST-studentnum: 0841588
+2010-09-27 17:00:53,107 - MyLogger - INFO - POST-studentnum: 0845714
+2010-09-27 17:00:54,670 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-09-27 17:01:30,056 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-09-27 17:01:30,281 - MyLogger - INFO - Time to process student's grades = 0.223995923996
+2010-09-27 17:27:52,766 - MyLogger - INFO - Used token received: EefeAUjqPmRWEpXFxEQ9RfR4dsGnuQMEsfz3n658Z9
+2010-09-27 17:59:05,831 - MyLogger - INFO - POST-studentnum: 0851200
+2010-09-27 17:59:06,091 - MyLogger - INFO - Email sent successfully to student: popovisr@mcmaster.ca
+2010-09-27 18:00:42,755 - MyLogger - INFO - Deactivated token; verified SCOTT POPOVIC: showing grades
+2010-09-27 18:00:42,978 - MyLogger - INFO - Time to process student's grades = 0.222415924072
+2010-09-27 18:58:48,502 - MyLogger - INFO - Deactivated token; verified TAIMOOR KHAN: showing grades
+2010-09-27 18:58:48,725 - MyLogger - INFO - Time to process student's grades = 0.221029996872
+2010-09-27 19:49:47,560 - MyLogger - INFO - POST-studentnum: 0843453
+2010-09-27 19:49:47,853 - MyLogger - INFO - Email sent successfully to student: deletss@mcmaster.ca
+2010-09-27 19:53:07,985 - MyLogger - INFO - POST-studentnum: 0843453
+2010-09-27 19:53:08,714 - MyLogger - INFO - Email sent successfully to student: deletss@mcmaster.ca
+2010-09-28 00:30:10,264 - MyLogger - INFO - POST-studentnum: 0864523
+2010-09-28 00:30:10,572 - MyLogger - INFO - Email sent successfully to student: alnachy@mcmaster.ca
+2010-09-28 00:31:02,912 - MyLogger - INFO - Deactivated token; verified YAMAN AL-NACHAWATI: showing grades
+2010-09-28 00:31:03,136 - MyLogger - INFO - Time to process student's grades = 0.222569942474
+2010-09-28 10:12:42,705 - MyLogger - INFO - Deactivated token; verified JIACHENG YE: showing grades
+2010-09-28 10:12:42,793 - MyLogger - INFO - Time to process student's grades = 0.0877540111542

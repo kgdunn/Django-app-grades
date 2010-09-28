@@ -1,12 +1,14 @@
-#!/usr/bin/env python
+#!/usr/local/bin/python2.6
 import sys, os
-from  collections import defaultdict
-sys.path.extend(['/var/django-projects/'])
-os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
+from collections import defaultdict
 import numpy as np
 
-from grades.student.models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/'])
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades/student'])
+os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
+from grades.student.models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 def convert_percentage_to_letter(grade):
    
