@@ -297,10 +297,10 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                                 student_wu_grade = 1.00 * student_max_question_grade
                                 level_alpha += 1
                             elif grade_item.grade_char == 'b':
-                                student_wu_grade = 0.75 * student_max_question_grade
+                                student_wu_grade = 0.65 * student_max_question_grade
                                 level_beta += 1
                             elif grade_item.grade_char == 'g':
-                                student_wu_grade = 0.50 * student_max_question_grade
+                                student_wu_grade = 0.40 * student_max_question_grade
                                 level_gamma += 1
                     else:
                         student_wu_grade = grade_item.grade
