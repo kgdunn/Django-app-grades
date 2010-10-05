@@ -41,12 +41,14 @@
 	<td>100%</td>
 	<td>{{Student.final_grade|floatformat:1}}%  {% if Student.special %}*{%endif%}</td>
 	</tr>
-	<tr class="total-line">
+<!--	<tr class="total-line">
 	<td>Final grade (transcript record)</td>
 	<td></td>
 	<td>{{Student.final_grade_letter}}</td> 
-	</tr>
-</table>
+	</tr>   
+-->
+
+</table> 
 {% if Student.special %}
 <div class="special-case">
 <b>My records show that you have missed work forms or doctor's notes.  Your written final exam was weighted as 40%; the written midterm was weighted as 0%.</b>
@@ -59,7 +61,7 @@
     <tr>
     <th>Category</th>
     <th>Question</th>
-    <th>Weight [400,600]</th>
+    <th>Weight <!--[400,600]--></th>
     <th>Your grade</th>
     <th>Class summary</th>
     </tr>
