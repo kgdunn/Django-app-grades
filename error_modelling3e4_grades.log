@@ -11,3 +11,13 @@
 [Wed Sep 22 14:06:14 2010] [warn] mod_wsgi: Compiled for Python/2.6.
 [Wed Sep 22 14:06:14 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
 [Wed Sep 22 14:06:14 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations
+[Tue Oct 05 09:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 09:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 09:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 09:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 09:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 10:11:36 2010] [error] Exception KeyError: KeyError(-1208965440,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Tue Oct 05 09:11:36 2010] [notice] caught SIGTERM, shutting down
+[Tue Oct 05 09:11:38 2010] [warn] mod_wsgi: Compiled for Python/2.6.
+[Tue Oct 05 09:11:38 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
+[Tue Oct 05 09:11:38 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations
