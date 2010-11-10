@@ -3464,3 +3464,17 @@
 2010-11-10 01:40:30,911 - MyLogger - INFO - Time to process student's grades = 0.686478853226
 2010-11-10 11:10:22,993 - MyLogger - INFO - Used token received: RahQBE4ww4VmVVMMKkWWTSedGb3mRn4W4XLakYFsKP
 2010-11-10 11:22:06,034 - MyLogger - INFO - POST-studentnum: 
+2010-11-10 12:46:34,666 - MyLogger - INFO - POST-studentnum: 1111111
+2010-11-10 12:46:34,774 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-11-10 12:50:16,895 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-11-10 12:50:17,466 - MyLogger - INFO - Time to process student's grades = 0.57008600235
+2010-11-10 13:15:45,568 - MyLogger - INFO - POST-studentnum: 0845714
+2010-11-10 13:15:45,679 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-11-10 13:16:32,203 - MyLogger - INFO - POST-studentnum: 0844511
+2010-11-10 13:16:32,328 - MyLogger - INFO - Email sent successfully to student: qiaoy2@mcmaster.ca
+2010-11-10 13:16:39,788 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-11-10 13:16:40,392 - MyLogger - INFO - Time to process student's grades = 0.602772951126
+2010-11-10 13:17:02,992 - MyLogger - INFO - Deactivated token; verified YAN QIAO: showing grades
+2010-11-10 13:17:03,524 - MyLogger - INFO - Time to process student's grades = 0.530719995499
+2010-11-10 13:18:48,174 - MyLogger - INFO - POST-studentnum: 0864523
+2010-11-10 13:18:48,463 - MyLogger - INFO - Email sent successfully to student: alnachy@mcmaster.ca
