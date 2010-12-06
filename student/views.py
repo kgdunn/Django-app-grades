@@ -381,3 +381,59 @@ def sign_in(request, next_page=''):
         page_content.update(csrf(request))
         return render_to_response('sign_in_form.html', page_content)
 
+def process_student(student_number):
+    """
+    Get the grades for the student
+    """
+    the_student = Student.objects.get(student_number=student_number)            
+    if the_student.grad_student:
+        level = '600'
+    else:
+        level = '400'
+    student = {'name': the_student.first_name + ' ' + the_student.last_name,
+               'lastname': the_student.last_name,
+               'level': level, 
+               'number': student_number, 
+               'email': the_student.email_address, 
+               'special': the_student.special_case}
+
+    categories = []
+    for item in Category.objects.all():
+        categories.append({'name': item.name, 'weight': item.fraction, 'grade': 'N/A', 'maxgrade': str(int(item.fraction*100)) + '%', 'summary': 'Summary coming soon'})
+
+    workunits, categories, final_grade = get_workunit_list(student_number = student_number, categories=categories)
+        
+    if the_student.special_case:
+        student['final_grade'] = the_student.manual_grade
+    else:
+        student['final_grade'] = final_grade  
+        
+    # Rounding to the second decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
+    student['final_grade'] = np.round(student['final_grade'], 1)
+
+    return student
+    
+def process_all_students():
+    """ 
+    Gets a list of all students, calculates their grades, shows the list and makes a CSV file
+    """
+    all_students = Student.objects.all()
+    output = {}
+    lastnames = []
+    grade_letters = defaultdict(int)
+    for student in all_students:
+        result = process_student(student.student_number)
+        letter_grade = convert_percentage_to_letter(result['final_grade'])
+        grade_letters[letter_grade] += 1
+        output[result['lastname']] = '%0.50s: %0.7s: %0.2f: %0.3s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
+        lastnames.append(result['lastname'])
+        print(output[result['lastname']])
+    
+    for student in sorted(lastnames):
+        print(output[student])
+
+    print(grade_letters)
+
+if __name__ == '__main__':
+    process_all_students()
+
