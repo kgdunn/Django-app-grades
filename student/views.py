@@ -1,8 +1,9 @@
+#!/usr/local/bin/python2.6
+
 # Command line use
 import sys, os
 sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/'])
-#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
-#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades/student'])
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
 from django.template import loader, Context
@@ -389,11 +390,11 @@ def sign_in(request, next_page=''):
         page_content.update(csrf(request))
         return render_to_response('sign_in_form.html', page_content)
 
-def process_student(student_number):
+def process_student(the_student):
     """
     Get the grades for the student
     """
-    the_student = Student.objects.get(student_number=student_number)            
+    #the_student = Student.objects.filter(student_number=student_number)[0]
     if the_student.grad_student:
         level = '600'
     else:
@@ -401,7 +402,7 @@ def process_student(student_number):
     student = {'name': the_student.first_name + ' ' + the_student.last_name,
                'lastname': the_student.last_name,
                'level': level, 
-               'number': student_number, 
+               'number': the_student.student_number, 
                'email': the_student.email_address, 
                'special': the_student.special_case}
 
@@ -409,7 +410,7 @@ def process_student(student_number):
     for item in Category.objects.all():
         categories.append({'name': item.name, 'weight': item.fraction, 'grade': 'N/A', 'maxgrade': str(int(item.fraction*100)) + '%', 'summary': 'Summary coming soon'})
 
-    workunits, categories, final_grade = get_workunit_list(student_number = student_number, categories=categories)
+    workunits, categories, final_grade = get_workunit_list(student_number = the_student.student_number, categories=categories)
         
     if the_student.special_case:
         student['final_grade'] = the_student.manual_grade
@@ -430,7 +431,7 @@ def process_all_students():
     lastnames = []
     grade_letters = defaultdict(int)
     for student in all_students:
-        result = process_student(student.student_number)
+        result = process_student(student)
         letter_grade = convert_percentage_to_letter(result['final_grade'])
         grade_letters[letter_grade] += 1
         output[result['lastname']] = '%0.50s: %0.7s: %0.2f: %0.3s:' % (result['name'], result['number'], result['final_grade'], letter_grade)

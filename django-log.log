@@ -4909,3 +4909,17 @@
 2010-12-05 20:20:55,807 - MyLogger - INFO - Invalid token received: Y5Myksaq33Gx2LFKuKeACqGBCy4zASg9Sq5wRac934/fancybox/fancy_shadow_nw.png
 2010-12-05 20:20:55,940 - MyLogger - INFO - Invalid token received: Y5Myksaq33Gx2LFKuKeACqGBCy4zASg9Sq5wRac934/fancybox/fancy_nav_left.png
 2010-12-05 20:20:56,080 - MyLogger - INFO - Invalid token received: Y5Myksaq33Gx2LFKuKeACqGBCy4zASg9Sq5wRac934/fancybox/fancy_nav_right.png
+2010-12-05 21:25:56,002 - MyLogger - INFO - Time to process student's grades = 0.6706199646
+2010-12-05 21:25:56,642 - MyLogger - INFO - Time to process student's grades = 0.638428926468
+2010-12-05 21:25:57,069 - MyLogger - INFO - Time to process student's grades = 0.425690889359
+2010-12-05 21:25:57,318 - MyLogger - INFO - Time to process student's grades = 0.247877120972
+2010-12-05 21:25:57,576 - MyLogger - INFO - Time to process student's grades = 0.257725000381
+2010-12-05 21:25:57,825 - MyLogger - INFO - Time to process student's grades = 0.248360157013
+2010-12-05 21:25:58,074 - MyLogger - INFO - Time to process student's grades = 0.248178005219
+2010-12-05 21:25:58,323 - MyLogger - INFO - Time to process student's grades = 0.248064994812
+2010-12-05 21:25:58,571 - MyLogger - INFO - Time to process student's grades = 0.248208045959
+2010-12-05 21:25:58,820 - MyLogger - INFO - Time to process student's grades = 0.247963190079
+2010-12-05 21:26:36,647 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-12-05 21:26:37,299 - MyLogger - INFO - Time to process student's grades = 0.650446891785
+2010-12-05 21:27:17,426 - MyLogger - INFO - Deactivated token; verified HAWRA AL-KAZWINI: showing grades
+2010-12-05 21:27:18,088 - MyLogger - INFO - Time to process student's grades = 0.661440134048
