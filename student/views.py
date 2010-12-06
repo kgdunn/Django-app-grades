@@ -8,6 +8,14 @@ from django.db.models import F
 from django.core.context_processors import csrf
 import numpy as np
 
+
+# Command line use
+import sys, os
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/'])
+#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
+#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades/student'])
+os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
+
 # Logging
 LOG_FILENAME = '/home/kevindunn/webapps/modelling3e4_grades/grades/django-log.log'
 import logging.handlers
