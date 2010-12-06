@@ -56,6 +56,13 @@ def calculate_assignment_grade(grade_list=None, best_n=5):
     best = np.sort(grades)[len(grades)-best_n:]
     return(best, np.mean(best))
     
+def calculate_tutorial_grade(grade_list=None):
+    """ Calculates the average of all tutorials.   Tutorials not handed in are counted as 0.0.
+
+    Returns a tuple: (list of top N assignments, average of the top N assignments)
+    """
+    return np.mean(np.array(grade_list))
+    
 def get_workunit_list(student_number, categories):
     """ 
     Workunit = e.g. Assignment 4
@@ -137,6 +144,13 @@ def get_workunit_list(student_number, categories):
                     assignment_grade_list.append(entry['grade_numeric'])   
             catdict['best_assignments'], cat_grade = calculate_assignment_grade(assignment_grade_list)
 
+        elif cat_name == 'Tutorials':
+            tutorial_grade_list = []
+            for entry in workunits:
+                if entry['cattype'] == 'Tutorials':
+                    tutorial_grade_list.append(entry['grade_numeric'])   
+            cat_grade = calculate_tutorial_grade(tutorial_grade_list)
+
         else:
             for entry in workunits:
                 if entry['cattype'] == cat_name:
@@ -145,6 +159,7 @@ def get_workunit_list(student_number, categories):
         catdict['grade'] = cat_grade
                 
         # Sum up the final grade      
+        my_logger.debug('Cat=' + cat_name +'; weight=' + str(cat_weight) + '; grade=' +str(cat_grade))
         final_grade += cat_weight*cat_grade
                 
     
