@@ -104,9 +104,9 @@ def get_workunit_list(student_number, categories):
                         if grade_item.grade_char == 'a':
                             student_wu_grade += 1.00 * student_max_question_grade
                         elif grade_item.grade_char == 'b':
-                            student_wu_grade += 0.75 * student_max_question_grade
+                            student_wu_grade += 0.65 * student_max_question_grade
                         elif grade_item.grade_char == 'g':
-                            student_wu_grade += 0.50 * student_max_question_grade
+                            student_wu_grade += 0.40 * student_max_question_grade
                 else:
                     student_wu_grade += grade_item.grade
           
