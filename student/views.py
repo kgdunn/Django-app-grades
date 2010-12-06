@@ -1,3 +1,10 @@
+# Command line use
+import sys, os
+sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/'])
+#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
+#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades/student'])
+os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
+
 from django.template import loader, Context
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
@@ -7,14 +14,7 @@ from django.contrib.auth.models import User
 from django.db.models import F
 from django.core.context_processors import csrf
 import numpy as np
-
-
-# Command line use
-import sys, os
-sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/'])
-#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades'])
-#sys.path.extend(['/home/kevindunn/webapps/modelling3e4_grades/grades/student'])
-os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
+from collections import defaultdict
 
 # Logging
 LOG_FILENAME = '/home/kevindunn/webapps/modelling3e4_grades/grades/django-log.log'
