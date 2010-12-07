@@ -133,7 +133,12 @@ def calculate_tutorial_grade(grade_list=None):
 
     Returns a tuple: (list of top N assignments, average of the top N assignments)
     """
+    best_n = 6
+    grades = np.array(grade_list)
+    best = np.sort(grades)[len(grades)-best_n:]
     return np.mean(np.array(grade_list))
+    #print(best)
+    #return np.mean(best)
     
 def get_workunit_list(student_number, categories):
     """ 
@@ -434,13 +439,14 @@ def process_all_students():
         result = process_student(student)
         letter_grade = convert_percentage_to_letter(result['final_grade'])
         grade_letters[letter_grade] += 1
-        output[result['lastname']] = '%0.50s: %0.7s: %0.2f: %0.3s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
+        output[result['lastname']] = '%25s: %25s: %10.2f: %5s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
+        #output[result['lastname']] = '%0.2f' % (result['final_grade'])
         lastnames.append(result['lastname'])
-        print(output[result['lastname']])
+        #print(output[result['lastname']])
     
     for student in sorted(lastnames):
         print(output[student])
-
+    print('\n')
     print(grade_letters)
 
 if __name__ == '__main__':

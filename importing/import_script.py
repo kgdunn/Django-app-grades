@@ -46,7 +46,6 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
 # Manual final grades (if required adjustment)
 #                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
 manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 0.0,    'coutod@mcmaster.ca',  False,       True)]
-manual_grades = [ ]
 
 sys.path.append(django_dir)
 sys.path.append(app_dir)
