@@ -11437,3 +11437,102 @@
 [Thu Dec 16 10:30:34 2010] [error] [ 100.          100.          100.          109.16666667  109.28571429
 [Thu Dec 16 10:30:34 2010] [error]   125.        ]
 [Thu Dec 16 10:34:21 2010] [error] [ 100.          100.          109.16666667  109.28571429  112.5         116.25      ]
+[Thu Dec 16 10:53:26 2010] [error] [  95.          100.          100.          109.28571429  116.25        150.        ]
+[Thu Dec 16 11:07:34 2010] [error] [  95.          100.          100.          101.25        114.28571429
+[Thu Dec 16 11:07:34 2010] [error]   126.66666667]
+[Thu Dec 16 11:12:39 2010] [error] [  76.66666667   82.5         100.          100.          100.          105.        ]
+[Thu Dec 16 11:15:35 2010] [error] [  66.66666667   99.28571429  100.          107.5         108.125
+[Thu Dec 16 11:15:35 2010] [error]   109.16666667]
+[Thu Dec 16 11:33:43 2010] [error] [  94.28571429  100.          100.          100.          125.          150.        ]
+[Thu Dec 16 11:46:30 2010] [error] [  65.           82.5         100.          100.          100.
+[Thu Dec 16 11:46:30 2010] [error]   109.16666667]
+[Thu Dec 16 12:15:24 2010] [error] [  80.          100.          100.          114.28571429  116.25
+[Thu Dec 16 12:15:24 2010] [error]   126.66666667]
+[Thu Dec 16 12:55:54 2010] [error] [  86.875        91.25         94.28571429   97.5         100.          100.        ]
+[Thu Dec 16 13:18:58 2010] [error] [ 100.          100.          100.          107.5         109.28571429
+[Thu Dec 16 13:18:58 2010] [error]   112.5       ]
+[Thu Dec 16 13:24:48 2010] [error] [  70.   100.   100.   100.   107.5  150. ]
+[Thu Dec 16 14:29:26 2010] [error] [  78.125        92.22222222  100.          100.          100.
+[Thu Dec 16 14:29:26 2010] [error]   114.28571429]
+[Thu Dec 16 14:51:36 2010] [error] [  73.75        100.          112.5         114.28571429  125.
+[Thu Dec 16 14:51:36 2010] [error]   126.66666667]
+[Thu Dec 16 14:53:21 2010] [error] [  78.125       100.          100.          109.16666667  114.28571429
+[Thu Dec 16 14:53:21 2010] [error]   116.25      ]
+[Thu Dec 16 14:56:25 2010] [error] [  20.           53.33333333   64.375        91.25         94.28571429
+[Thu Dec 16 14:56:25 2010] [error]   132.5       ]
+[Thu Dec 16 15:27:59 2010] [error] [  88.33333333  100.          100.          109.16666667  110.
+[Thu Dec 16 15:27:59 2010] [error]   114.28571429]
+[Thu Dec 16 15:35:55 2010] [error] [  65.           76.66666667  100.          100.          100.          100.        ]
+[Thu Dec 16 16:18:17 2010] [error] [ 100.          100.          109.16666667  112.5         114.28571429
+[Thu Dec 16 16:18:17 2010] [error]   125.        ]
+[Thu Dec 16 16:24:53 2010] [error] [  94.28571429  100.          100.          100.          100.
+[Thu Dec 16 16:24:53 2010] [error]   109.16666667]
+[Thu Dec 16 16:48:44 2010] [error] [  82.5          86.875        92.5          98.75        100.
+[Thu Dec 16 16:48:44 2010] [error]   114.28571429]
+[Thu Dec 16 17:04:03 2010] [error] [  90.625        92.22222222  100.          107.5         109.28571429
+[Thu Dec 16 17:04:03 2010] [error]   115.        ]
+[Thu Dec 16 17:51:56 2010] [error] [  57.5          60.           77.5          96.66666667  100.          100.        ]
+[Thu Dec 16 18:03:16 2010] [error] [  78.125       100.          100.          109.16666667  114.28571429
+[Thu Dec 16 18:03:16 2010] [error]   116.25      ]
+[Thu Dec 16 18:04:58 2010] [error] [  78.125        80.          100.          100.          100.
+[Thu Dec 16 18:04:58 2010] [error]   109.16666667]
+[Thu Dec 16 18:06:44 2010] [error] [  73.75         76.66666667   78.125        80.          100.          100.        ]
+[Thu Dec 16 18:16:25 2010] [error] [  75.           80.83333333   94.28571429  100.          100.          116.25      ]
+[Thu Dec 16 18:18:31 2010] [error] [  75.           80.83333333   94.28571429  100.          100.          116.25      ]
+[Thu Dec 16 18:31:24 2010] [error] [   0.     65.     91.25  100.    100.    100.  ]
+[Thu Dec 16 18:42:29 2010] [error] [  86.875  100.     100.     100.     100.     150.   ]
+[Thu Dec 16 18:49:24 2010] [error] [  73.75        100.          112.5         114.28571429  125.
+[Thu Dec 16 18:49:24 2010] [error]   126.66666667]
+[Thu Dec 16 18:54:19 2010] [error] [ 100.          100.          100.          114.28571429  125.
+[Thu Dec 16 18:54:19 2010] [error]   126.66666667]
+[Thu Dec 16 19:50:14 2010] [error] [  90.625        92.22222222  100.          107.5         109.28571429
+[Thu Dec 16 19:50:14 2010] [error]   115.        ]
+[Thu Dec 16 19:52:17 2010] [error] [  75.           80.83333333   94.28571429  100.          100.          116.25      ]
+[Thu Dec 16 20:48:00 2010] [error] [   0.           91.25         92.22222222  100.          112.5
+[Thu Dec 16 20:48:00 2010] [error]   126.66666667]
+[Thu Dec 16 21:29:26 2010] [error] [ 100.          100.          109.16666667  112.5         114.28571429
+[Thu Dec 16 21:29:26 2010] [error]   125.        ]
+[Thu Dec 16 21:30:03 2010] [error] [ 100.          100.          109.16666667  112.5         114.28571429
+[Thu Dec 16 21:30:03 2010] [error]   125.        ]
+[Thu Dec 16 21:40:10 2010] [error] [  76.66666667   77.5          88.33333333   91.25         92.5
+[Thu Dec 16 21:40:10 2010] [error]   114.28571429]
+[Thu Dec 16 21:50:47 2010] [error] [  82.5          86.875       100.          100.          109.16666667
+[Thu Dec 16 21:50:47 2010] [error]   116.25      ]
+[Thu Dec 16 22:31:34 2010] [error] [ 100.          100.          109.16666667  112.5         114.28571429
+[Thu Dec 16 22:31:34 2010] [error]   125.        ]
+[Thu Dec 16 22:49:24 2010] [error] [ 100.          100.          100.          107.5         109.28571429
+[Thu Dec 16 22:49:24 2010] [error]   126.66666667]
+[Fri Dec 17 00:16:16 2010] [error] [  76.66666667   78.125        86.875        88.33333333  114.28571429
+[Fri Dec 17 00:16:16 2010] [error]   132.5       ]
+[Fri Dec 17 00:28:51 2010] [error] [  89.28571429   91.25         92.5         100.          100.          108.125     ]
+[Fri Dec 17 01:27:04 2010] [error] [  73.75        100.          100.          109.16666667  109.28571429
+[Fri Dec 17 01:27:04 2010] [error]   112.5       ]
+[Fri Dec 17 01:32:08 2010] [error] [  85.           86.875        90.625       100.          100.
+[Fri Dec 17 01:32:08 2010] [error]   109.16666667]
+[Fri Dec 17 04:08:24 2010] [error] [  65.           76.66666667  100.          100.          100.          100.        ]
+[Fri Dec 17 09:20:21 2010] [error] [  80.           98.75        100.          100.          114.28571429
+[Fri Dec 17 09:20:21 2010] [error]   132.5       ]
+[Fri Dec 17 09:35:09 2010] [error] [  82.5         100.          100.          109.16666667  109.28571429
+[Fri Dec 17 09:35:09 2010] [error]   125.        ]
+[Fri Dec 17 09:49:45 2010] [error] [  65.           84.44444444   86.875       100.          100.
+[Fri Dec 17 09:49:45 2010] [error]   109.16666667]
+[Fri Dec 17 09:50:22 2010] [error] [  82.5         100.          100.          109.16666667  109.28571429
+[Fri Dec 17 09:50:22 2010] [error]   125.        ]
+[Fri Dec 17 09:51:11 2010] [error] [  86.875  100.     100.     100.     100.     150.   ]
+[Fri Dec 17 09:56:25 2010] [error] [  78.125        82.5         100.          100.          114.28571429
+[Fri Dec 17 09:56:25 2010] [error]   132.5       ]
+[Fri Dec 17 09:57:58 2010] [error] [  92.22222222  100.          100.          114.28571429  125.          150.        ]
+[Fri Dec 17 08:59:52 2010] [error] Exception KeyError: KeyError(-1208817984,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 08:59:52 2010] [error] Exception KeyError: KeyError(-1208817984,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 09:59:52 2010] [error] Exception KeyError: KeyError(-1208817984,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 08:59:52 2010] [notice] caught SIGTERM, shutting down
+[Fri Dec 17 08:59:54 2010] [warn] mod_wsgi: Compiled for Python/2.6.
+[Fri Dec 17 08:59:54 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
+[Fri Dec 17 08:59:54 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations
+[Fri Dec 17 09:01:21 2010] [error] Exception KeyError: KeyError(-1209084224,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 09:01:21 2010] [error] Exception KeyError: KeyError(-1209084224,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 10:01:21 2010] [error] Exception KeyError: KeyError(-1209084224,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Fri Dec 17 09:01:21 2010] [notice] caught SIGTERM, shutting down
+[Fri Dec 17 09:01:23 2010] [warn] mod_wsgi: Compiled for Python/2.6.
+[Fri Dec 17 09:01:23 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
+[Fri Dec 17 09:01:23 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations
