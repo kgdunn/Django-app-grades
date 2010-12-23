@@ -11536,3 +11536,10 @@
 [Fri Dec 17 09:01:23 2010] [warn] mod_wsgi: Compiled for Python/2.6.
 [Fri Dec 17 09:01:23 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
 [Fri Dec 17 09:01:23 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations
+[Thu Dec 23 11:54:33 2010] [error] Exception KeyError: KeyError(-1208125760,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Thu Dec 23 11:54:33 2010] [error] Exception KeyError: KeyError(-1208125760,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Thu Dec 23 12:54:33 2010] [error] Exception KeyError: KeyError(-1208125760,) in <module 'threading' from '/usr/local/lib/python2.6/threading.pyc'> ignored
+[Thu Dec 23 11:54:34 2010] [notice] caught SIGTERM, shutting down
+[Thu Dec 23 11:54:35 2010] [warn] mod_wsgi: Compiled for Python/2.6.
+[Thu Dec 23 11:54:35 2010] [warn] mod_wsgi: Runtime using Python/2.6.5.
+[Thu Dec 23 11:54:35 2010] [notice] Apache/2.2.15 (Unix) mod_wsgi/3.2 Python/2.6.5 configured -- resuming normal operations

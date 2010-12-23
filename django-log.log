@@ -7721,3 +7721,489 @@
 2010-12-22 23:26:11,880 - MyLogger - INFO - Time to process student's grades = 0.872330904007
 2010-12-22 23:28:49,879 - MyLogger - INFO - Deactivated token; verified DAVID BENACQUISTA: showing grades
 2010-12-22 23:28:50,742 - MyLogger - INFO - Time to process student's grades = 0.861930847168
+2010-12-22 23:32:24,948 - MyLogger - INFO - Deactivated token; verified JONATHAN MONSTER: showing grades
+2010-12-22 23:32:25,343 - MyLogger - INFO - Time to process student's grades = 0.394383907318
+2010-12-22 23:32:58,105 - MyLogger - INFO - POST-studentnum: 1111111
+2010-12-22 23:32:58,270 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-12-22 23:33:34,479 - MyLogger - INFO - POST-studentnum: 0860062
+2010-12-22 23:33:34,602 - MyLogger - INFO - Email sent successfully to student: khantm2@mcmaster.ca
+2010-12-22 23:34:08,805 - MyLogger - INFO - Deactivated token; verified CRAIG NAZARETH: showing grades
+2010-12-22 23:34:09,175 - MyLogger - INFO - Time to process student's grades = 0.370187997818
+2010-12-22 23:34:34,373 - MyLogger - INFO - Deactivated token; verified ROHIT CHOUDHARY: showing grades
+2010-12-22 23:34:35,233 - MyLogger - INFO - Time to process student's grades = 0.857863903046
+2010-12-22 23:44:25,226 - MyLogger - INFO - Deactivated token; verified TYLER HOMER: showing grades
+2010-12-22 23:44:26,088 - MyLogger - INFO - Time to process student's grades = 0.861371040344
+2010-12-22 23:45:15,906 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-12-22 23:45:16,766 - MyLogger - INFO - Time to process student's grades = 0.85911488533
+2010-12-22 23:45:20,141 - MyLogger - INFO - POST-studentnum: 0754439
+2010-12-22 23:45:20,319 - MyLogger - INFO - Email sent successfully to student: vanh@mcmaster.ca
+2010-12-22 23:45:39,644 - MyLogger - INFO - Deactivated token; verified XIN YUAN: showing grades
+2010-12-22 23:45:40,553 - MyLogger - INFO - Time to process student's grades = 0.907016038895
+2010-12-22 23:46:01,322 - MyLogger - INFO - Deactivated token; verified HEATHER VAN: showing grades
+2010-12-22 23:46:02,217 - MyLogger - INFO - Time to process student's grades = 0.893918037415
+2010-12-22 23:46:28,384 - MyLogger - INFO - Deactivated token; verified TAIMOOR KHAN: showing grades
+2010-12-22 23:46:29,246 - MyLogger - INFO - Time to process student's grades = 0.861084938049
+2010-12-22 23:48:05,583 - MyLogger - INFO - POST-studentnum: 0853140
+2010-12-22 23:48:05,716 - MyLogger - INFO - Email sent successfully to student: khanra2@mcmaster.ca
+2010-12-22 23:48:57,199 - MyLogger - INFO - Deactivated token; verified RAHEEL KHAN: showing grades
+2010-12-22 23:48:58,006 - MyLogger - INFO - Time to process student's grades = 0.806192874908
+2010-12-22 23:49:22,845 - MyLogger - INFO - Deactivated token; verified HEATHER VAN: showing grades
+2010-12-22 23:49:23,688 - MyLogger - INFO - Time to process student's grades = 0.842321872711
+2010-12-22 23:50:05,017 - MyLogger - INFO - Deactivated token; verified SEAN JOHNSTONE: showing grades
+2010-12-22 23:50:05,737 - MyLogger - INFO - Time to process student's grades = 0.718986988068
+2010-12-22 23:50:06,280 - MyLogger - INFO - Used token received: UPTnmNvugJPaVuzaTVsZgfmH43TJczuyaRpnqExxEQ
+2010-12-22 23:54:03,245 - MyLogger - INFO - POST-studentnum: 0841588
+2010-12-22 23:54:03,365 - MyLogger - INFO - Email sent successfully to student: zhaomc@mcmaster.ca
+2010-12-22 23:55:26,165 - MyLogger - INFO - POST-studentnum: 0845714
+2010-12-22 23:55:26,307 - MyLogger - INFO - POST-studentnum: 0841588
+2010-12-22 23:55:26,349 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-12-22 23:55:26,411 - MyLogger - INFO - Email sent successfully to student: zhaomc@mcmaster.ca
+2010-12-22 23:56:51,578 - MyLogger - INFO - POST-studentnum: 0841588
+2010-12-22 23:56:51,749 - MyLogger - INFO - Email sent successfully to student: zhaomc@mcmaster.ca
+2010-12-22 23:56:53,514 - MyLogger - INFO - POST-studentnum: 0746230
+2010-12-22 23:56:53,774 - MyLogger - INFO - Email sent successfully to student: seguindp@mcmaster.ca
+2010-12-22 23:57:16,842 - MyLogger - INFO - Deactivated token; verified MOCHAO ZHAO: showing grades
+2010-12-22 23:57:17,706 - MyLogger - INFO - Time to process student's grades = 0.863455057144
+2010-12-22 23:57:29,667 - MyLogger - INFO - Deactivated token; verified DEREK SEGUIN: showing grades
+2010-12-22 23:57:30,559 - MyLogger - INFO - Time to process student's grades = 0.890100002289
+2010-12-22 23:57:31,130 - MyLogger - INFO - POST-studentnum: 0845714
+2010-12-22 23:57:31,416 - MyLogger - INFO - Email sent successfully to student: ahmedsu@mcmaster.ca
+2010-12-22 23:57:43,304 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-12-22 23:57:44,166 - MyLogger - INFO - Time to process student's grades = 0.860846996307
+2010-12-22 23:57:48,859 - MyLogger - INFO - POST-studentnum: 0845935
+2010-12-22 23:57:48,966 - MyLogger - INFO - Email sent successfully to student: kasime@mcmaster.ca
+2010-12-22 23:59:02,950 - MyLogger - INFO - POST-studentnum: 0854685
+2010-12-22 23:59:03,134 - MyLogger - INFO - Email sent successfully to student: alkazwh@mcmaster.ca
+2010-12-22 23:59:20,955 - MyLogger - INFO - Deactivated token; verified ELAF KASIM: showing grades
+2010-12-22 23:59:21,724 - MyLogger - INFO - Time to process student's grades = 0.767147064209
+2010-12-23 00:00:19,759 - MyLogger - INFO - Deactivated token; verified HAWRA AL-KAZWINI: showing grades
+2010-12-23 00:00:20,623 - MyLogger - INFO - Time to process student's grades = 0.863318920135
+2010-12-23 00:00:50,142 - MyLogger - INFO - POST-studentnum: 0861357
+2010-12-23 00:00:50,241 - MyLogger - INFO - Email sent successfully to student: najibs@mcmaster.ca
+2010-12-23 00:02:06,404 - MyLogger - INFO - Deactivated token; verified SARAH NAJIB: showing grades
+2010-12-23 00:02:07,268 - MyLogger - INFO - Time to process student's grades = 0.86240696907
+2010-12-23 00:05:04,932 - MyLogger - INFO - POST-studentnum: 0843453
+2010-12-23 00:05:05,075 - MyLogger - INFO - Email sent successfully to student: deletss@mcmaster.ca
+2010-12-23 00:05:39,909 - MyLogger - INFO - Deactivated token; verified CLYDE DELETSU: showing grades
+2010-12-23 00:05:40,813 - MyLogger - INFO - Time to process student's grades = 0.902616977692
+2010-12-23 00:05:43,651 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_close.png
+2010-12-23 00:05:44,004 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_loading.png
+2010-12-23 00:05:44,140 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_n.png
+2010-12-23 00:05:44,272 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_ne.png
+2010-12-23 00:05:44,401 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_e.png
+2010-12-23 00:05:44,533 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_se.png
+2010-12-23 00:05:44,664 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_s.png
+2010-12-23 00:05:44,794 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_sw.png
+2010-12-23 00:05:44,933 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_w.png
+2010-12-23 00:05:45,068 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_shadow_nw.png
+2010-12-23 00:05:45,213 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_nav_left.png
+2010-12-23 00:05:45,347 - MyLogger - INFO - Invalid token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z/fancybox/fancy_nav_right.png
+2010-12-23 00:06:06,038 - MyLogger - INFO - POST-studentnum: 0866509
+2010-12-23 00:06:06,150 - MyLogger - INFO - Email sent successfully to student: siddiql@mcmaster.ca
+2010-12-23 00:06:55,114 - MyLogger - INFO - Deactivated token; verified LAILA SIDDIQUI: showing grades
+2010-12-23 00:06:55,972 - MyLogger - INFO - Time to process student's grades = 0.856161832809
+2010-12-23 00:10:34,673 - MyLogger - INFO - POST-studentnum: 0843473
+2010-12-23 00:10:34,874 - MyLogger - INFO - Email sent successfully to student: zehnalgp@mcmaster.ca
+2010-12-23 00:11:10,430 - MyLogger - INFO - Deactivated token; verified GREG ZEHNAL: showing grades
+2010-12-23 00:11:11,381 - MyLogger - INFO - Time to process student's grades = 0.949979066849
+2010-12-23 00:12:24,738 - MyLogger - INFO - POST-studentnum: 0854685
+2010-12-23 00:12:24,932 - MyLogger - INFO - Email sent successfully to student: alkazwh@mcmaster.ca
+2010-12-23 00:13:05,677 - MyLogger - INFO - Deactivated token; verified HAWRA AL-KAZWINI: showing grades
+2010-12-23 00:13:06,523 - MyLogger - INFO - Time to process student's grades = 0.844735860825
+2010-12-23 00:13:53,578 - MyLogger - INFO - POST-studentnum: 0843653
+2010-12-23 00:13:53,750 - MyLogger - INFO - Email sent successfully to student: kafiejs@mcmaster.ca
+2010-12-23 00:14:38,254 - MyLogger - INFO - Deactivated token; verified JOSE KAFIE: showing grades
+2010-12-23 00:14:39,142 - MyLogger - INFO - Time to process student's grades = 0.887130022049
+2010-12-23 00:18:25,200 - MyLogger - INFO - POST-studentnum: 0754439
+2010-12-23 00:18:25,376 - MyLogger - INFO - Email sent successfully to student: vanh@mcmaster.ca
+2010-12-23 00:19:20,754 - MyLogger - INFO - Used token received: cwXECCFxq3g9rTPNgCL5XsxLhTwxNUnrWWTSa9fY9z
+2010-12-23 00:24:57,013 - MyLogger - INFO - POST-studentnum: 0845935
+2010-12-23 00:24:57,145 - MyLogger - INFO - Email sent successfully to student: kasime@mcmaster.ca
+2010-12-23 00:25:29,683 - MyLogger - INFO - POST-studentnum: 0750439
+2010-12-23 00:25:29,896 - MyLogger - INFO - Email sent successfully to student: dacaae@mcmaster.ca
+2010-12-23 00:25:37,092 - MyLogger - INFO - Used token received: jk9pxha6puRZaCk8uvqra9rZj5HbuyWP5b33CYvLUJ
+2010-12-23 00:25:53,157 - MyLogger - INFO - Deactivated token; verified ELAF KASIM: showing grades
+2010-12-23 00:25:54,010 - MyLogger - INFO - Time to process student's grades = 0.851613998413
+2010-12-23 00:26:22,791 - MyLogger - INFO - Deactivated token; verified ADRIANA DACA: showing grades
+2010-12-23 00:26:23,644 - MyLogger - INFO - Time to process student's grades = 0.852439165115
+2010-12-23 00:33:22,650 - MyLogger - INFO - POST-studentnum: 0747735
+2010-12-23 00:33:22,764 - MyLogger - INFO - Email sent successfully to student: montgmj@mcmaster.ca
+2010-12-23 00:34:48,883 - MyLogger - INFO - Deactivated token; verified MILES MONTGOMERY: showing grades
+2010-12-23 00:34:49,750 - MyLogger - INFO - Time to process student's grades = 0.865392923355
+2010-12-23 00:37:05,738 - MyLogger - INFO - POST-studentnum: 0859909
+2010-12-23 00:37:05,842 - MyLogger - INFO - Email sent successfully to student: deolmk@mcmaster.ca
+2010-12-23 00:38:30,463 - MyLogger - INFO - Deactivated token; verified MANJOT DEOL: showing grades
+2010-12-23 00:38:31,355 - MyLogger - INFO - Time to process student's grades = 0.889983892441
+2010-12-23 00:38:41,759 - MyLogger - INFO - POST-studentnum: 0870262
+2010-12-23 00:38:41,874 - MyLogger - INFO - Email sent successfully to student: leekl5@mcmaster.ca
+2010-12-23 00:39:39,600 - MyLogger - INFO - Deactivated token; verified KOK LEE: showing grades
+2010-12-23 00:39:40,458 - MyLogger - INFO - Time to process student's grades = 0.856562137604
+2010-12-23 00:41:54,401 - MyLogger - INFO - POST-studentnum: 0761261
+2010-12-23 00:41:54,638 - MyLogger - INFO - Email sent successfully to student: wijesekn@mcmaster.ca
+2010-12-23 00:42:35,579 - MyLogger - INFO - Deactivated token; verified KUSHLANI WIJESEKERA: showing grades
+2010-12-23 00:42:36,455 - MyLogger - INFO - Time to process student's grades = 0.874368906021
+2010-12-23 00:42:48,250 - MyLogger - INFO - POST-studentnum: 0749232
+2010-12-23 00:42:48,359 - MyLogger - INFO - Email sent successfully to student: riddolda@mcmaster.ca
+2010-12-23 00:44:02,160 - MyLogger - INFO - POST-studentnum: 0744161
+2010-12-23 00:44:16,152 - MyLogger - INFO - POST-studentnum: 0744167
+2010-12-23 00:44:16,328 - MyLogger - INFO - Email sent successfully to student: johnss45@mcmaster.ca
+2010-12-23 00:44:29,354 - MyLogger - INFO - POST-studentnum: 0871883
+2010-12-23 00:44:29,477 - MyLogger - INFO - Email sent successfully to student: cheouxm@mcmaster.ca
+2010-12-23 00:44:37,535 - MyLogger - INFO - Deactivated token; verified DEANNA RIDDOLLS: showing grades
+2010-12-23 00:44:38,398 - MyLogger - INFO - Time to process student's grades = 0.861347913742
+2010-12-23 00:45:02,530 - MyLogger - INFO - Deactivated token; verified SEAN JOHNSTONE: showing grades
+2010-12-23 00:45:03,433 - MyLogger - INFO - Time to process student's grades = 0.900827884674
+2010-12-23 00:46:06,372 - MyLogger - INFO - Deactivated token; verified XIAO MIN CHEOU: showing grades
+2010-12-23 00:46:07,228 - MyLogger - INFO - Time to process student's grades = 0.855381011963
+2010-12-23 01:36:13,755 - MyLogger - INFO - POST-studentnum: 0644743
+2010-12-23 01:36:14,085 - MyLogger - INFO - Email sent successfully to student: custaral@mcmaster.ca
+2010-12-23 01:36:53,650 - MyLogger - INFO - Deactivated token; verified ALICE CUSTARD: showing grades
+2010-12-23 01:36:54,687 - MyLogger - INFO - Time to process student's grades = 1.03559494019
+2010-12-23 02:02:01,294 - MyLogger - INFO - POST-studentnum: 0844926
+2010-12-23 02:02:01,417 - MyLogger - INFO - Email sent successfully to student: alsaiga@mcmaster.ca
+2010-12-23 02:02:41,803 - MyLogger - INFO - Deactivated token; verified AMINA AL-SAIGH: showing grades
+2010-12-23 02:02:42,676 - MyLogger - INFO - Time to process student's grades = 0.871964931488
+2010-12-23 02:04:46,243 - MyLogger - INFO - POST-studentnum: 0759139
+2010-12-23 02:04:46,352 - MyLogger - INFO - Email sent successfully to student: rowanma@mcmaster.ca
+2010-12-23 02:05:18,711 - MyLogger - INFO - Deactivated token; verified MICHAEL ROWAN: showing grades
+2010-12-23 02:05:19,573 - MyLogger - INFO - Time to process student's grades = 0.861088037491
+2010-12-23 04:51:34,063 - MyLogger - INFO - POST-studentnum: 0867166
+2010-12-23 04:51:34,348 - MyLogger - INFO - Email sent successfully to student: anuarssd@mcmaster.ca
+2010-12-23 04:52:09,786 - MyLogger - INFO - Deactivated token; verified SHAFFERINA ANUAR SHARUDDIN: showing grades
+2010-12-23 04:52:10,656 - MyLogger - INFO - Time to process student's grades = 0.869548082352
+2010-12-23 08:35:41,367 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-12-23 08:35:42,266 - MyLogger - INFO - Time to process student's grades = 0.897214889526
+2010-12-23 08:40:02,263 - MyLogger - INFO - Deactivated token; verified SYED AHMED: showing grades
+2010-12-23 08:40:03,128 - MyLogger - INFO - Time to process student's grades = 0.863544225693
+2010-12-23 09:11:17,058 - MyLogger - INFO - Deactivated token; verified KUSHLANI WIJESEKERA: showing grades
+2010-12-23 09:11:17,990 - MyLogger - INFO - Time to process student's grades = 0.931135892868
+2010-12-23 09:12:22,692 - MyLogger - INFO - Deactivated token; verified ANDREW HAINES: showing grades
+2010-12-23 09:12:23,407 - MyLogger - INFO - Time to process student's grades = 0.713694095612
+2010-12-23 09:12:41,591 - MyLogger - INFO - Deactivated token; verified PRATIK MARATHE: showing grades
+2010-12-23 09:12:42,123 - MyLogger - INFO - Time to process student's grades = 0.530664920807
+2010-12-23 09:18:26,502 - MyLogger - INFO - Deactivated token; verified MICHAEL ROWAN: showing grades
+2010-12-23 09:18:27,357 - MyLogger - INFO - Time to process student's grades = 0.853564023972
+2010-12-23 09:26:02,365 - MyLogger - INFO - Deactivated token; verified AMINA AL-SAIGH: showing grades
+2010-12-23 09:26:03,226 - MyLogger - INFO - Time to process student's grades = 0.859269857407
+2010-12-23 10:44:45,319 - MyLogger - INFO - Deactivated token; verified CLYDE DELETSU: showing grades
+2010-12-23 10:44:46,181 - MyLogger - INFO - Time to process student's grades = 0.860159873962
+2010-12-23 10:54:32,661 - MyLogger - INFO - Time to process student's grades = 0.987715005875
+2010-12-23 10:54:33,351 - MyLogger - INFO - Time to process student's grades = 0.687963962555
+2010-12-23 10:54:33,723 - MyLogger - INFO - Time to process student's grades = 0.372080087662
+2010-12-23 10:54:34,064 - MyLogger - INFO - Time to process student's grades = 0.339787006378
+2010-12-23 10:54:34,482 - MyLogger - INFO - Time to process student's grades = 0.417474985123
+2010-12-23 10:54:35,002 - MyLogger - INFO - Time to process student's grades = 0.51887011528
+2010-12-23 10:54:35,893 - MyLogger - INFO - Time to process student's grades = 0.890216112137
+2010-12-23 10:54:36,545 - MyLogger - INFO - Time to process student's grades = 0.649981975555
+2010-12-23 10:54:37,303 - MyLogger - INFO - Time to process student's grades = 0.75706911087
+2010-12-23 10:54:37,923 - MyLogger - INFO - Time to process student's grades = 0.618735790253
+2010-12-23 10:54:38,316 - MyLogger - INFO - Time to process student's grades = 0.377850055695
+2010-12-23 10:54:38,934 - MyLogger - INFO - Time to process student's grades = 0.617441892624
+2010-12-23 10:54:39,282 - MyLogger - INFO - Time to process student's grades = 0.347256183624
+2010-12-23 10:54:39,672 - MyLogger - INFO - Time to process student's grades = 0.389336109161
+2010-12-23 10:54:40,053 - MyLogger - INFO - Time to process student's grades = 0.379733085632
+2010-12-23 10:54:40,439 - MyLogger - INFO - Time to process student's grades = 0.385251045227
+2010-12-23 10:54:40,850 - MyLogger - INFO - Time to process student's grades = 0.41042304039
+2010-12-23 10:54:41,198 - MyLogger - INFO - Time to process student's grades = 0.34770488739
+2010-12-23 10:54:41,689 - MyLogger - INFO - Time to process student's grades = 0.411561965942
+2010-12-23 10:54:42,081 - MyLogger - INFO - Time to process student's grades = 0.391736984253
+2010-12-23 10:54:42,461 - MyLogger - INFO - Time to process student's grades = 0.379575967789
+2010-12-23 10:54:42,812 - MyLogger - INFO - Time to process student's grades = 0.350075960159
+2010-12-23 10:54:43,185 - MyLogger - INFO - Time to process student's grades = 0.372187852859
+2010-12-23 10:54:43,538 - MyLogger - INFO - Time to process student's grades = 0.352835893631
+2010-12-23 10:54:43,890 - MyLogger - INFO - Time to process student's grades = 0.350984811783
+2010-12-23 10:54:44,249 - MyLogger - INFO - Time to process student's grades = 0.3583548069
+2010-12-23 10:54:44,645 - MyLogger - INFO - Time to process student's grades = 0.395291805267
+2010-12-23 10:54:45,310 - MyLogger - INFO - Time to process student's grades = 0.66433095932
+2010-12-23 10:54:46,222 - MyLogger - INFO - Time to process student's grades = 0.910809993744
+2010-12-23 10:54:46,625 - MyLogger - INFO - Time to process student's grades = 0.401413917542
+2010-12-23 10:54:47,275 - MyLogger - INFO - Time to process student's grades = 0.631129980087
+2010-12-23 10:54:47,956 - MyLogger - INFO - Time to process student's grades = 0.679612159729
+2010-12-23 10:54:48,298 - MyLogger - INFO - Time to process student's grades = 0.341336011887
+2010-12-23 10:54:48,639 - MyLogger - INFO - Time to process student's grades = 0.340850114822
+2010-12-23 10:54:48,717 - MyLogger - INFO - POST-studentnum: 0660006
+2010-12-23 10:54:48,895 - MyLogger - INFO - Email sent successfully to student: marwayhs@mcmaster.ca
+2010-12-23 10:54:48,986 - MyLogger - INFO - Time to process student's grades = 0.346184015274
+2010-12-23 10:54:49,446 - MyLogger - INFO - Time to process student's grades = 0.459844112396
+2010-12-23 10:54:49,987 - MyLogger - INFO - Time to process student's grades = 0.538491010666
+2010-12-23 10:54:50,373 - MyLogger - INFO - Time to process student's grades = 0.385312080383
+2010-12-23 10:54:50,771 - MyLogger - INFO - Time to process student's grades = 0.397416114807
+2010-12-23 10:54:51,190 - MyLogger - INFO - Time to process student's grades = 0.418444871902
+2010-12-23 10:54:51,590 - MyLogger - INFO - Time to process student's grades = 0.39904499054
+2010-12-23 10:54:51,995 - MyLogger - INFO - Time to process student's grades = 0.404386043549
+2010-12-23 10:54:52,399 - MyLogger - INFO - Time to process student's grades = 0.402992963791
+2010-12-23 10:54:52,827 - MyLogger - INFO - Time to process student's grades = 0.427227973938
+2010-12-23 10:54:53,235 - MyLogger - INFO - Time to process student's grades = 0.407418012619
+2010-12-23 10:54:53,634 - MyLogger - INFO - Time to process student's grades = 0.397778987885
+2010-12-23 10:54:54,033 - MyLogger - INFO - Time to process student's grades = 0.398654937744
+2010-12-23 10:54:54,426 - MyLogger - INFO - Time to process student's grades = 0.391667127609
+2010-12-23 10:54:54,805 - MyLogger - INFO - Time to process student's grades = 0.370428085327
+2010-12-23 10:54:55,197 - MyLogger - INFO - Time to process student's grades = 0.391113996506
+2010-12-23 10:54:55,575 - MyLogger - INFO - Time to process student's grades = 0.377241849899
+2010-12-23 10:54:55,972 - MyLogger - INFO - Time to process student's grades = 0.396461963654
+2010-12-23 10:54:56,342 - MyLogger - INFO - Time to process student's grades = 0.369223117828
+2010-12-23 10:54:56,707 - MyLogger - INFO - Time to process student's grades = 0.364795923233
+2010-12-23 10:54:57,070 - MyLogger - INFO - Time to process student's grades = 0.362403869629
+2010-12-23 10:54:57,444 - MyLogger - INFO - Time to process student's grades = 0.37254691124
+2010-12-23 10:54:57,876 - MyLogger - INFO - Time to process student's grades = 0.431460142136
+2010-12-23 10:54:58,248 - MyLogger - INFO - Time to process student's grades = 0.370903015137
+2010-12-23 10:54:58,610 - MyLogger - INFO - Time to process student's grades = 0.361383914948
+2010-12-23 10:54:58,995 - MyLogger - INFO - Time to process student's grades = 0.384844064713
+2010-12-23 10:54:59,387 - MyLogger - INFO - Time to process student's grades = 0.390985965729
+2010-12-23 10:54:59,747 - MyLogger - INFO - Time to process student's grades = 0.358884811401
+2010-12-23 10:55:00,097 - MyLogger - INFO - Time to process student's grades = 0.350026130676
+2010-12-23 10:55:00,434 - MyLogger - INFO - Time to process student's grades = 0.335782051086
+2010-12-23 10:55:00,790 - MyLogger - INFO - Time to process student's grades = 0.355908870697
+2010-12-23 10:55:01,129 - MyLogger - INFO - Time to process student's grades = 0.33794593811
+2010-12-23 10:55:01,458 - MyLogger - INFO - Time to process student's grades = 0.32876086235
+2010-12-23 10:55:01,794 - MyLogger - INFO - Time to process student's grades = 0.334594964981
+2010-12-23 10:55:02,166 - MyLogger - INFO - Time to process student's grades = 0.371407985687
+2010-12-23 10:55:02,511 - MyLogger - INFO - Time to process student's grades = 0.344434976578
+2010-12-23 10:55:02,843 - MyLogger - INFO - Time to process student's grades = 0.332132816315
+2010-12-23 10:55:03,176 - MyLogger - INFO - Time to process student's grades = 0.331726074219
+2010-12-23 10:55:03,520 - MyLogger - INFO - Time to process student's grades = 0.344051122665
+2010-12-23 10:55:03,858 - MyLogger - INFO - Time to process student's grades = 0.336660861969
+2010-12-23 10:55:04,206 - MyLogger - INFO - Time to process student's grades = 0.347357988358
+2010-12-23 10:55:04,561 - MyLogger - INFO - Time to process student's grades = 0.355010986328
+2010-12-23 10:55:04,906 - MyLogger - INFO - Time to process student's grades = 0.344022989273
+2010-12-23 10:55:05,237 - MyLogger - INFO - Time to process student's grades = 0.330290794373
+2010-12-23 10:55:05,579 - MyLogger - INFO - Time to process student's grades = 0.341349124908
+2010-12-23 10:55:05,913 - MyLogger - INFO - Time to process student's grades = 0.333233118057
+2010-12-23 10:55:06,255 - MyLogger - INFO - Time to process student's grades = 0.34086894989
+2010-12-23 10:55:06,598 - MyLogger - INFO - Time to process student's grades = 0.34238409996
+2010-12-23 10:55:06,941 - MyLogger - INFO - Time to process student's grades = 0.342918872833
+2010-12-23 10:55:07,289 - MyLogger - INFO - Time to process student's grades = 0.347701072693
+2010-12-23 10:55:07,633 - MyLogger - INFO - Time to process student's grades = 0.342768907547
+2010-12-23 10:55:07,988 - MyLogger - INFO - Time to process student's grades = 0.354520797729
+2010-12-23 10:55:08,328 - MyLogger - INFO - Time to process student's grades = 0.339262962341
+2010-12-23 10:55:08,675 - MyLogger - INFO - Time to process student's grades = 0.345881938934
+2010-12-23 10:55:09,027 - MyLogger - INFO - Time to process student's grades = 0.351672887802
+2010-12-23 10:55:09,372 - MyLogger - INFO - Time to process student's grades = 0.344856977463
+2010-12-23 10:55:09,710 - MyLogger - INFO - Time to process student's grades = 0.336745023727
+2010-12-23 10:55:10,041 - MyLogger - INFO - Time to process student's grades = 0.330290079117
+2010-12-23 10:55:10,398 - MyLogger - INFO - Time to process student's grades = 0.356140136719
+2010-12-23 10:55:10,758 - MyLogger - INFO - Time to process student's grades = 0.360002040863
+2010-12-23 10:55:11,130 - MyLogger - INFO - Time to process student's grades = 0.370799064636
+2010-12-23 10:55:11,516 - MyLogger - INFO - Time to process student's grades = 0.385721921921
+2010-12-23 10:55:11,858 - MyLogger - INFO - Time to process student's grades = 0.341166973114
+2010-12-23 10:55:12,209 - MyLogger - INFO - Time to process student's grades = 0.350193977356
+2010-12-23 10:55:12,557 - MyLogger - INFO - Time to process student's grades = 0.347406148911
+2010-12-23 10:55:12,720 - MyLogger - INFO - Deactivated token; verified HEERA MARWAY: showing grades
+2010-12-23 10:55:12,899 - MyLogger - INFO - Time to process student's grades = 0.341689109802
+2010-12-23 10:55:13,234 - MyLogger - INFO - Time to process student's grades = 0.513142108917
+2010-12-23 10:55:52,205 - MyLogger - INFO - POST-studentnum: 086071
+2010-12-23 10:56:01,988 - MyLogger - INFO - POST-studentnum: 0860741
+2010-12-23 10:56:02,239 - MyLogger - INFO - Email sent successfully to student: learyjg@mcmaster.ca
+2010-12-23 10:57:11,700 - MyLogger - INFO - Deactivated token; verified JUSTIN LEARY: showing grades
+2010-12-23 10:57:12,552 - MyLogger - INFO - Time to process student's grades = 0.850945949554
+2010-12-23 11:20:01,153 - MyLogger - INFO - POST-studentnum: 0864523
+2010-12-23 11:20:01,276 - MyLogger - INFO - Email sent successfully to student: alnachy@mcmaster.ca
+2010-12-23 11:20:32,934 - MyLogger - INFO - Deactivated token; verified YAMAN AL-NACHAWATI: showing grades
+2010-12-23 11:20:33,727 - MyLogger - INFO - Time to process student's grades = 0.791284799576
+2010-12-23 11:25:52,831 - MyLogger - INFO - Used token received: gHTs459CgHgYwMHvQcNrwsvwGj94CqJHjuhKq3K4sS
+2010-12-23 11:41:15,943 - MyLogger - INFO - POST-studentnum: 0762486
+2010-12-23 11:41:16,054 - MyLogger - INFO - Email sent successfully to student: simj3@mcmaster.ca
+2010-12-23 11:42:15,565 - MyLogger - INFO - Deactivated token; verified JACQUELINE SIM: showing grades
+2010-12-23 11:42:16,398 - MyLogger - INFO - Time to process student's grades = 0.831445217133
+2010-12-23 11:45:08,672 - MyLogger - INFO - POST-studentnum: 0745141
+2010-12-23 11:45:08,868 - MyLogger - INFO - Email sent successfully to student: dipietcv@mcmaster.ca
+2010-12-23 11:45:48,750 - MyLogger - INFO - Deactivated token; verified CAMERON DIPIETRO: showing grades
+2010-12-23 11:45:49,633 - MyLogger - INFO - Time to process student's grades = 0.8822889328
+2010-12-23 11:49:11,620 - MyLogger - INFO - POST-studentnum: 0842245
+2010-12-23 11:49:11,758 - MyLogger - INFO - Email sent successfully to student: krolickc@mcmaster.ca
+2010-12-23 11:59:47,157 - MyLogger - INFO - POST-studentnum: 0748368
+2010-12-23 11:59:47,377 - MyLogger - INFO - Email sent successfully to student: obermejm@mcmaster.ca
+2010-12-23 12:06:16,153 - MyLogger - INFO - Deactivated token; verified JACLYN OBERMEYER: showing grades
+2010-12-23 12:06:16,521 - MyLogger - INFO - Time to process student's grades = 0.368053913116
+2010-12-23 12:09:12,905 - MyLogger - INFO - POST-studentnum: 0451895
+2010-12-23 12:09:13,025 - MyLogger - INFO - Email sent successfully to student: lamss@mcmaster.ca
+2010-12-23 12:09:53,262 - MyLogger - INFO - Deactivated token; verified SHING LAM: showing grades
+2010-12-23 12:09:54,127 - MyLogger - INFO - Time to process student's grades = 0.863526821136
+2010-12-23 12:15:17,868 - MyLogger - INFO - POST-studentnum: 0570675
+2010-12-23 12:15:18,045 - MyLogger - INFO - Email sent successfully to student: markhas@mcmaster.ca
+2010-12-23 12:16:34,434 - MyLogger - INFO - Deactivated token; verified STEVEN MARKHAM: showing grades
+2010-12-23 12:16:35,323 - MyLogger - INFO - Time to process student's grades = 0.888430833817
+2010-12-23 12:19:04,609 - MyLogger - INFO - Used token received: BvqQ9nxmYSNE26E6dZjs4x6Wmmca8JUeEytRsrZe9a
+2010-12-23 12:19:13,206 - MyLogger - INFO - POST-studentnum: 0846205
+2010-12-23 12:19:13,583 - MyLogger - INFO - Email sent successfully to student: serana@mcmaster.ca
+2010-12-23 12:19:20,942 - MyLogger - INFO - POST-studentnum: 0861357
+2010-12-23 12:19:21,261 - MyLogger - INFO - Email sent successfully to student: najibs@mcmaster.ca
+2010-12-23 12:19:47,181 - MyLogger - INFO - Deactivated token; verified AMARJIT SERAN: showing grades
+2010-12-23 12:19:48,058 - MyLogger - INFO - Time to process student's grades = 0.876393079758
+2010-12-23 12:19:56,286 - MyLogger - INFO - Deactivated token; verified SARAH NAJIB: showing grades
+2010-12-23 12:19:57,178 - MyLogger - INFO - Time to process student's grades = 0.891050100327
+2010-12-23 12:25:22,432 - MyLogger - INFO - Used token received: 3BPSGEQa4sdb2Lmedd3J6FKUMdnacJVZzNSpnpgXM8
+2010-12-23 12:25:28,438 - MyLogger - INFO - POST-studentnum: 0846205
+2010-12-23 12:25:28,550 - MyLogger - INFO - Email sent successfully to student: serana@mcmaster.ca
+2010-12-23 12:27:00,357 - MyLogger - INFO - POST-studentnum: 0764877
+2010-12-23 12:27:00,522 - MyLogger - INFO - Email sent successfully to student: kirupan@mcmaster.ca
+2010-12-23 12:27:35,659 - MyLogger - INFO - POST-studentnum: 0869722
+2010-12-23 12:27:36,146 - MyLogger - INFO - Email sent successfully to student: hainea2@mcmaster.ca
+2010-12-23 12:28:03,753 - MyLogger - INFO - Deactivated token; verified ANDREW HAINES: showing grades
+2010-12-23 12:28:04,502 - MyLogger - INFO - Time to process student's grades = 0.748070001602
+2010-12-23 12:28:21,986 - MyLogger - INFO - Deactivated token; verified NIJASTAN KIRUPA: showing grades
+2010-12-23 12:28:22,849 - MyLogger - INFO - Time to process student's grades = 0.861702919006
+2010-12-23 12:28:31,705 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_close.png
+2010-12-23 12:28:31,987 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_loading.png
+2010-12-23 12:28:32,244 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_n.png
+2010-12-23 12:28:32,487 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_ne.png
+2010-12-23 12:28:32,758 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_e.png
+2010-12-23 12:28:33,045 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_se.png
+2010-12-23 12:28:33,291 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_s.png
+2010-12-23 12:28:33,555 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_sw.png
+2010-12-23 12:28:33,823 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_w.png
+2010-12-23 12:28:34,075 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_shadow_nw.png
+2010-12-23 12:28:34,358 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_nav_left.png
+2010-12-23 12:28:34,606 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_nav_right.png
+2010-12-23 12:28:54,022 - MyLogger - INFO - Deactivated token; verified AMARJIT SERAN: showing grades
+2010-12-23 12:28:54,875 - MyLogger - INFO - Time to process student's grades = 0.851881980896
+2010-12-23 12:30:29,844 - MyLogger - INFO - Invalid token received: 58tKcTcCG8TPuYv4v2mdMxCkNWt8cQe5MEZQN5apzW/fancybox/fancy_title_over.png
+2010-12-23 12:31:00,359 - MyLogger - INFO - POST-studentnum: 0851344
+2010-12-23 12:31:00,620 - MyLogger - INFO - Email sent successfully to student: nichoc3@mcmaster.ca
+2010-12-23 12:32:08,113 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-12-23 12:32:08,904 - MyLogger - INFO - Time to process student's grades = 0.789987802505
+2010-12-23 12:43:04,158 - MyLogger - INFO - POST-studentnum: 0843336
+2010-12-23 12:43:04,270 - MyLogger - INFO - Email sent successfully to student: yuebh@mcmaster.ca
+2010-12-23 12:43:11,089 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-12-23 12:43:11,950 - MyLogger - INFO - Time to process student's grades = 0.860251188278
+2010-12-23 12:43:34,689 - MyLogger - INFO - Deactivated token; verified BRYAN YUE: showing grades
+2010-12-23 12:43:35,397 - MyLogger - INFO - Time to process student's grades = 0.706944942474
+2010-12-23 12:47:34,145 - MyLogger - INFO - POST-studentnum: 0844511
+2010-12-23 12:47:34,310 - MyLogger - INFO - Email sent successfully to student: qiaoy2@mcmaster.ca
+2010-12-23 12:48:04,517 - MyLogger - INFO - Deactivated token; verified YAN QIAO: showing grades
+2010-12-23 12:48:05,633 - MyLogger - INFO - Time to process student's grades = 1.11382102966
+2010-12-23 12:51:54,051 - MyLogger - INFO - POST-studentnum: 0451895
+2010-12-23 12:51:54,168 - MyLogger - INFO - Email sent successfully to student: lamss@mcmaster.ca
+2010-12-23 12:52:28,047 - MyLogger - INFO - Deactivated token; verified SHING LAM: showing grades
+2010-12-23 12:52:29,042 - MyLogger - INFO - Time to process student's grades = 0.992569923401
+2010-12-23 12:56:32,832 - MyLogger - INFO - POST-studentnum: 0750019
+2010-12-23 12:56:33,344 - MyLogger - INFO - Email sent successfully to student: gnanapja@mcmaster.ca
+2010-12-23 12:56:40,313 - MyLogger - INFO - Deactivated token; verified CONNOR NICHOLSON: showing grades
+2010-12-23 12:56:41,171 - MyLogger - INFO - Time to process student's grades = 0.856429100037
+2010-12-23 12:57:38,855 - MyLogger - INFO - Deactivated token; verified JOY GNANAPRAGASAM: showing grades
+2010-12-23 12:57:39,733 - MyLogger - INFO - Time to process student's grades = 0.87656712532
+2010-12-23 12:59:58,314 - MyLogger - INFO - Deactivated token; verified JOY GNANAPRAGASAM: showing grades
+2010-12-23 12:59:59,011 - MyLogger - INFO - Time to process student's grades = 0.697296857834
+2010-12-23 13:02:32,788 - MyLogger - INFO - Time to process student's grades = 0.886224031448
+2010-12-23 13:02:33,486 - MyLogger - INFO - Time to process student's grades = 0.695812940598
+2010-12-23 13:02:33,826 - MyLogger - INFO - Time to process student's grades = 0.339474201202
+2010-12-23 13:02:34,156 - MyLogger - INFO - Time to process student's grades = 0.329833030701
+2010-12-23 13:02:34,499 - MyLogger - INFO - Time to process student's grades = 0.341550827026
+2010-12-23 13:02:34,829 - MyLogger - INFO - Time to process student's grades = 0.329720973969
+2010-12-23 13:02:35,474 - MyLogger - INFO - Time to process student's grades = 0.64438700676
+2010-12-23 13:02:35,803 - MyLogger - INFO - Time to process student's grades = 0.327922821045
+2010-12-23 13:02:36,134 - MyLogger - INFO - Time to process student's grades = 0.330820083618
+2010-12-23 13:02:36,479 - MyLogger - INFO - Time to process student's grades = 0.344162225723
+2010-12-23 13:02:36,818 - MyLogger - INFO - Time to process student's grades = 0.338552951813
+2010-12-23 13:02:37,147 - MyLogger - INFO - Time to process student's grades = 0.328483819962
+2010-12-23 13:02:37,476 - MyLogger - INFO - Time to process student's grades = 0.328727960587
+2010-12-23 13:02:37,820 - MyLogger - INFO - Time to process student's grades = 0.343185186386
+2010-12-23 13:02:38,160 - MyLogger - INFO - Time to process student's grades = 0.339513063431
+2010-12-23 13:02:38,538 - MyLogger - INFO - Time to process student's grades = 0.377175807953
+2010-12-23 13:02:39,128 - MyLogger - INFO - Time to process student's grades = 0.588783025742
+2010-12-23 13:02:39,460 - MyLogger - INFO - Time to process student's grades = 0.330918073654
+2010-12-23 13:02:39,801 - MyLogger - INFO - Time to process student's grades = 0.340451955795
+2010-12-23 13:02:40,134 - MyLogger - INFO - Time to process student's grades = 0.33186507225
+2010-12-23 13:02:40,477 - MyLogger - INFO - Time to process student's grades = 0.342505931854
+2010-12-23 13:02:40,818 - MyLogger - INFO - Time to process student's grades = 0.34032201767
+2010-12-23 13:02:41,448 - MyLogger - INFO - Time to process student's grades = 0.62952709198
+2010-12-23 13:02:41,801 - MyLogger - INFO - Time to process student's grades = 0.351858854294
+2010-12-23 13:02:42,145 - MyLogger - INFO - Time to process student's grades = 0.343128204346
+2010-12-23 13:02:42,474 - MyLogger - INFO - Time to process student's grades = 0.328187942505
+2010-12-23 13:02:42,816 - MyLogger - INFO - Time to process student's grades = 0.341159105301
+2010-12-23 13:02:43,388 - MyLogger - INFO - Time to process student's grades = 0.56636095047
+2010-12-23 13:02:44,065 - MyLogger - INFO - Time to process student's grades = 0.675894021988
+2010-12-23 13:02:44,395 - MyLogger - INFO - Time to process student's grades = 0.329267024994
+2010-12-23 13:02:44,725 - MyLogger - INFO - Time to process student's grades = 0.329176902771
+2010-12-23 13:02:45,064 - MyLogger - INFO - Time to process student's grades = 0.338563919067
+2010-12-23 13:02:45,406 - MyLogger - INFO - Time to process student's grades = 0.341507911682
+2010-12-23 13:02:45,747 - MyLogger - INFO - Time to process student's grades = 0.340354919434
+2010-12-23 13:02:46,083 - MyLogger - INFO - Time to process student's grades = 0.335744857788
+2010-12-23 13:02:46,458 - MyLogger - INFO - Time to process student's grades = 0.374200820923
+2010-12-23 13:02:46,848 - MyLogger - INFO - Time to process student's grades = 0.350157976151
+2010-12-23 13:02:47,403 - MyLogger - INFO - Time to process student's grades = 0.554681062698
+2010-12-23 13:02:47,803 - MyLogger - INFO - Time to process student's grades = 0.398636817932
+2010-12-23 13:02:48,146 - MyLogger - INFO - Time to process student's grades = 0.341411113739
+2010-12-23 13:02:48,478 - MyLogger - INFO - Time to process student's grades = 0.331655979156
+2010-12-23 13:02:48,807 - MyLogger - INFO - Time to process student's grades = 0.328846931458
+2010-12-23 13:02:49,138 - MyLogger - INFO - Time to process student's grades = 0.329660177231
+2010-12-23 13:02:49,477 - MyLogger - INFO - Time to process student's grades = 0.339298009872
+2010-12-23 13:02:49,808 - MyLogger - INFO - Time to process student's grades = 0.330228090286
+2010-12-23 13:02:50,140 - MyLogger - INFO - Time to process student's grades = 0.330952882767
+2010-12-23 13:02:50,471 - MyLogger - INFO - Time to process student's grades = 0.330104827881
+2010-12-23 13:02:50,816 - MyLogger - INFO - Time to process student's grades = 0.344388961792
+2010-12-23 13:02:51,145 - MyLogger - INFO - Time to process student's grades = 0.328590154648
+2010-12-23 13:02:51,473 - MyLogger - INFO - Time to process student's grades = 0.327572822571
+2010-12-23 13:02:51,804 - MyLogger - INFO - Time to process student's grades = 0.330132007599
+2010-12-23 13:02:52,135 - MyLogger - INFO - Time to process student's grades = 0.330345869064
+2010-12-23 13:02:52,473 - MyLogger - INFO - Time to process student's grades = 0.337974071503
+2010-12-23 13:02:52,803 - MyLogger - INFO - Time to process student's grades = 0.329226016998
+2010-12-23 13:02:53,133 - MyLogger - INFO - Time to process student's grades = 0.329090118408
+2010-12-23 13:02:53,463 - MyLogger - INFO - Time to process student's grades = 0.329132080078
+2010-12-23 13:02:53,807 - MyLogger - INFO - Time to process student's grades = 0.338469982147
+2010-12-23 13:02:54,137 - MyLogger - INFO - Time to process student's grades = 0.329351902008
+2010-12-23 13:02:54,466 - MyLogger - INFO - Time to process student's grades = 0.328628063202
+2010-12-23 13:02:54,795 - MyLogger - INFO - Time to process student's grades = 0.328768014908
+2010-12-23 13:02:55,137 - MyLogger - INFO - Time to process student's grades = 0.34058713913
+2010-12-23 13:02:55,469 - MyLogger - INFO - Time to process student's grades = 0.331408977509
+2010-12-23 13:02:55,798 - MyLogger - INFO - Time to process student's grades = 0.328667879105
+2010-12-23 13:02:56,128 - MyLogger - INFO - Time to process student's grades = 0.329218864441
+2010-12-23 13:02:56,467 - MyLogger - INFO - Time to process student's grades = 0.338848114014
+2010-12-23 13:02:56,799 - MyLogger - INFO - Time to process student's grades = 0.33088517189
+2010-12-23 13:02:57,130 - MyLogger - INFO - Time to process student's grades = 0.330250024796
+2010-12-23 13:02:57,459 - MyLogger - INFO - Time to process student's grades = 0.328577041626
+2010-12-23 13:02:57,798 - MyLogger - INFO - Time to process student's grades = 0.338318109512
+2010-12-23 13:02:58,128 - MyLogger - INFO - Time to process student's grades = 0.329972028732
+2010-12-23 13:02:58,458 - MyLogger - INFO - Time to process student's grades = 0.328904151917
+2010-12-23 13:02:58,789 - MyLogger - INFO - Time to process student's grades = 0.330098867416
+2010-12-23 13:02:59,129 - MyLogger - INFO - Time to process student's grades = 0.339765071869
+2010-12-23 13:02:59,460 - MyLogger - INFO - Time to process student's grades = 0.330138921738
+2010-12-23 13:02:59,790 - MyLogger - INFO - Time to process student's grades = 0.329376935959
+2010-12-23 13:03:00,121 - MyLogger - INFO - Time to process student's grades = 0.331001996994
+2010-12-23 13:03:00,460 - MyLogger - INFO - Time to process student's grades = 0.338320016861
+2010-12-23 13:03:00,804 - MyLogger - INFO - Time to process student's grades = 0.343319892883
+2010-12-23 13:03:01,140 - MyLogger - INFO - Time to process student's grades = 0.335388898849
+2010-12-23 13:03:01,471 - MyLogger - INFO - Time to process student's grades = 0.329832077026
+2010-12-23 13:03:01,804 - MyLogger - INFO - Time to process student's grades = 0.332216024399
+2010-12-23 13:03:02,178 - MyLogger - INFO - Time to process student's grades = 0.373878955841
+2010-12-23 13:03:02,514 - MyLogger - INFO - Time to process student's grades = 0.335382938385
+2010-12-23 13:03:02,847 - MyLogger - INFO - Time to process student's grades = 0.331955909729
+2010-12-23 13:03:03,197 - MyLogger - INFO - Time to process student's grades = 0.349439144135
+2010-12-23 13:03:03,562 - MyLogger - INFO - Time to process student's grades = 0.364713907242
+2010-12-23 13:03:03,898 - MyLogger - INFO - Time to process student's grades = 0.335052967072
+2010-12-23 13:03:04,233 - MyLogger - INFO - Time to process student's grades = 0.333909034729
+2010-12-23 13:03:04,565 - MyLogger - INFO - Time to process student's grades = 0.332031965256
+2010-12-23 13:03:04,926 - MyLogger - INFO - Time to process student's grades = 0.360471963882
+2010-12-23 13:03:05,285 - MyLogger - INFO - Time to process student's grades = 0.357536077499
+2010-12-23 13:03:05,647 - MyLogger - INFO - Time to process student's grades = 0.361317873001
+2010-12-23 13:03:06,006 - MyLogger - INFO - Time to process student's grades = 0.359175920486
+2010-12-23 13:03:06,375 - MyLogger - INFO - Time to process student's grades = 0.368171930313
+2010-12-23 13:03:06,734 - MyLogger - INFO - Time to process student's grades = 0.358099937439
+2010-12-23 13:03:07,097 - MyLogger - INFO - Time to process student's grades = 0.362576961517
+2010-12-23 13:03:07,459 - MyLogger - INFO - Time to process student's grades = 0.361108779907
+2010-12-23 13:03:07,829 - MyLogger - INFO - Time to process student's grades = 0.369041919708
+2010-12-23 13:03:08,189 - MyLogger - INFO - Time to process student's grades = 0.359544992447
+2010-12-23 13:03:08,530 - MyLogger - INFO - Time to process student's grades = 0.339970111847
+2010-12-23 13:05:26,281 - MyLogger - INFO - POST-studentnum: 0668046
+2010-12-23 13:05:26,486 - MyLogger - INFO - Email sent successfully to student: anwarbf@mcmaster.ca
+2010-12-23 13:06:23,186 - MyLogger - INFO - Deactivated token; verified FIZZA ANWAR: showing grades
+2010-12-23 13:06:24,042 - MyLogger - INFO - Time to process student's grades = 0.854547023773
+2010-12-23 13:06:26,095 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_close.png
+2010-12-23 13:06:27,242 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_loading.png
+2010-12-23 13:06:27,388 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_n.png
+2010-12-23 13:06:27,535 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_ne.png
+2010-12-23 13:06:27,687 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_e.png
+2010-12-23 13:06:27,831 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_se.png
+2010-12-23 13:06:27,989 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_s.png
+2010-12-23 13:06:28,155 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_sw.png
+2010-12-23 13:06:28,309 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_w.png
+2010-12-23 13:06:28,468 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_shadow_nw.png
+2010-12-23 13:06:28,629 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_nav_left.png
+2010-12-23 13:06:28,777 - MyLogger - INFO - Invalid token received: 82LnMRMmHyVTHUhWjKWTvH6HWNhypJFaMkbQFeW5kK/fancybox/fancy_nav_right.png
+2010-12-23 13:23:20,887 - MyLogger - INFO - Deactivated token; verified DANIEL COUTO: showing grades
+2010-12-23 13:23:21,371 - MyLogger - INFO - Time to process student's grades = 0.483392953873
+2010-12-23 13:28:40,804 - MyLogger - INFO - Used token received: 8khyVpRH3ZVXGsVnLwCEdKaF3rMNPC6GAxPnL5dnRT
+2010-12-23 13:28:43,285 - MyLogger - INFO - Used token received: 8khyVpRH3ZVXGsVnLwCEdKaF3rMNPC6GAxPnL5dnRT
+2010-12-23 13:28:52,684 - MyLogger - INFO - Used token received: 8khyVpRH3ZVXGsVnLwCEdKaF3rMNPC6GAxPnL5dnRT
+2010-12-23 13:29:07,912 - MyLogger - INFO - Deactivated token; verified DANIEL COUTO: showing grades
+2010-12-23 13:29:08,778 - MyLogger - INFO - Time to process student's grades = 0.864718914032
