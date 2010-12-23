@@ -7711,3 +7711,13 @@
 2010-12-22 23:16:48,498 - MyLogger - INFO - Time to process student's grades = 0.289131164551
 2010-12-22 23:16:48,797 - MyLogger - INFO - Time to process student's grades = 0.298769950867
 2010-12-22 23:16:49,091 - MyLogger - INFO - Time to process student's grades = 0.292685985565
+2010-12-22 23:23:35,244 - MyLogger - INFO - POST-studentnum: 1111111
+2010-12-22 23:23:38,134 - MyLogger - INFO - Email sent successfully to student: dunnkg@mcmaster.ca
+2010-12-22 23:25:12,430 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-12-22 23:25:13,313 - MyLogger - INFO - Time to process student's grades = 0.881680011749
+2010-12-22 23:25:48,640 - MyLogger - INFO - Deactivated token; verified KEVIN DUNN: showing grades
+2010-12-22 23:25:49,493 - MyLogger - INFO - Time to process student's grades = 0.852256059647
+2010-12-22 23:26:11,007 - MyLogger - INFO - Deactivated token; verified GREG ZEHNAL: showing grades
+2010-12-22 23:26:11,880 - MyLogger - INFO - Time to process student's grades = 0.872330904007
+2010-12-22 23:28:49,879 - MyLogger - INFO - Deactivated token; verified DAVID BENACQUISTA: showing grades
+2010-12-22 23:28:50,742 - MyLogger - INFO - Time to process student's grades = 0.861930847168
