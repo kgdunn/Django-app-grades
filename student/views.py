@@ -409,13 +409,17 @@ def process_student(the_student):
                'level': level, 
                'number': the_student.student_number, 
                'email': the_student.email_address, 
-               'special': the_student.special_case}
+               'special': the_student.special_case,
+               'cat_summary': {},
+              }
 
     categories = []
     for item in Category.objects.all():
         categories.append({'name': item.name, 'weight': item.fraction, 'grade': 'N/A', 'maxgrade': str(int(item.fraction*100)) + '%', 'summary': 'Summary coming soon'})
 
     workunits, categories, final_grade = get_workunit_list(student_number = the_student.student_number, categories=categories)
+    for item in categories:
+        student['cat_summary'][item['name']] = item['grade']
         
     if the_student.special_case:
         student['final_grade'] = the_student.manual_grade
@@ -439,13 +443,17 @@ def process_all_students():
         result = process_student(student)
         letter_grade = convert_percentage_to_letter(result['final_grade'])
         grade_letters[letter_grade] += 1
-        output[result['lastname']] = '%25s: %25s: %10.2f: %5s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
+        #output[result['lastname']] = '%25s: %25s: %10.2f: %5s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
+        output[result['lastname']] = '%30s: %30s: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %5s' % (result['name'], result['number'], 
+                                      result['cat_summary']['Assignments'], result['cat_summary']['Tutorials'], result['cat_summary']['Midterm: written'],
+                                      result['cat_summary']['Midterm: take-home'], result['cat_summary']['Final exam'], result['final_grade'], letter_grade)
+
         #output[result['lastname']] = '%0.2f' % (result['final_grade'])
         lastnames.append(result['lastname'])
-        #print(output[result['lastname']])
+        print(output[result['lastname']])
     
-    for student in sorted(lastnames):
-        print(output[student])
+#    for student in sorted(lastnames):
+#        print(output[student])
     print('\n')
     print(grade_letters)
 

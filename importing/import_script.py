@@ -45,7 +45,11 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
 
 # Manual final grades (if required adjustment)
 #                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
-manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 0.0,    'coutod@mcmaster.ca',  False,       True)]
+manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 60.06,  'coutod@mcmaster.ca',   False,       True),
+                  ('MATTHEW', 'SCOTTIE','0865591', 0.0,    'scottimr@mcmaster.ca', False,       True),
+                  ('PRATIK',  'MARATHE','0857383', 0.0,    'marathp@mcmaster.ca',  False,       True),
+                  ('FIZZA',   'ANWAR',  '0668046', 0.0,    'anwarbf@mcmaster.ca',  False,       True),
+                ]
 
 sys.path.append(django_dir)
 sys.path.append(app_dir)
@@ -260,6 +264,8 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                     Grade.objects.get_or_create(grade=None, student=student_object, question=q)
                 elif grade_string in ('a', 'b', 'g'):
                     Grade.objects.get_or_create(grade_char=grade_string, student=student_object, question=q)
+                elif grade_string in ('NA', 'DNW'):
+                    Grade.objects.get_or_create(grade=None, student=student_object, question=q)
                 else:
                     Grade.objects.get_or_create(grade=float(grade_string), student=student_object, question=q)
                     
