@@ -18,14 +18,13 @@ django_dir = '/home/kevindunn/webapps/modelling3e4_grades'
 app_dir    = '/home/kevindunn/webapps/modelling3e4_grades/grades/'
 
 # Categories for the course, as a list of 2-element tuples, containing the fraction of the grade 
-course_categories = [   ('Tutorials', 0.1), 
-                        ('Assignments', 0.2), 
-                        ('Midterm: take-home', 0.1), 
-                        ('Midterm: written', 0.15), 
+course_categories = [   ('Assignments', 0.2), 
+                        ('Take-home midterm and project', 0.25), 
+                        ('Midterm: written', 0.1), 
                         ('Final exam', 0.45)
                     ]
                     
-greek_categories = ['Tutorials', 'Assignments']
+greek_categories = ['Assignments']
                     
 # How are the columns layed out in the spreadsheet?
 column_layout = {'last_name': 0,
@@ -45,10 +44,7 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
 
 # Manual final grades (if required adjustment)
 #                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
-manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 60.06,  'coutod@mcmaster.ca',   False,       True),
-                  ('MATTHEW', 'SCOTTIE','0865591', 0.0,    'scottimr@mcmaster.ca', False,       True),
-                  ('PRATIK',  'MARATHE','0857383', 0.0,    'marathp@mcmaster.ca',  False,       True),
-                  ('FIZZA',   'ANWAR',  '0668046', 0.0,    'anwarbf@mcmaster.ca',  False,       True),
+manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 00.00,  'coutod@mcmaster.ca',   False,       True),
                 ]
 
 sys.path.append(django_dir)
@@ -66,7 +62,6 @@ from django.db.utils import IntegrityError
 
 def create_student_as_user(student_number, first_name, last_name, email):
     """ Create a new user with that student number, but watch incase the student already exists in the DB"""
-    import sqlite3
     user = User(username=student_number, first_name=first_name, last_name=last_name, email=email, password='<it does not matter what we use here - it will be ignored>')
     user.is_staff = False
     user.is_superuser = False
@@ -86,8 +81,8 @@ def create_image(data, image_type='default'):
     """
     Creates an image from the `data`, depending on the image_type.  
     
-        image_type = 'greek': creates an [alpha, beta, gamma, NA] barplot of counts
-                                   data is expected to be a string, e.g. '80,23,12,9' (no brackets, just a comma separated string)
+        image_type = 'greek': creates an [alpha, beta, delta, gamma, NA] barplot of counts
+                                   data is expected to be a string, e.g. '80,23,12,2,9' (no brackets, just a comma separated string)
         image_type = 'default': creates a horizontal histogram from the np array in `data`
         
     Returns the string of the image
@@ -102,13 +97,13 @@ def create_image(data, image_type='default'):
         rect = [0.2, 0.20, 0.75, 0.80]  # Left, bottom, width, height
         ax = fig.add_axes(rect, frameon=False)
 
-        alpha, beta, gamma, NA = [int(item) for item in data_string.split(',')]
-        counts = [NA, gamma, beta, alpha]
+        alpha, beta, delta, gamma, NA = [int(item) for item in data_string.split(',')]
+        counts = [NA, gamma, delta, beta, alpha]
         position = np.arange(4)+.5    # bar centers (y-axis)
 
         ax.barh(bottom=position, width=counts, align='center', color='blue', edgecolor="blue", linewidth=0)
         ax.yaxis.set_ticks(position)
-        ax.set_yticklabels(( 'N/A', r'$\gamma$', r'$\beta$', r'$\alpha$'), fontsize=15)
+        ax.set_yticklabels(( 'N/A', r'$\gamma$', r'$\delta', r'$\beta$', r'$\alpha$'), fontsize=15)
 
         # No tick marks (does not remove the ticklabels!)
         ax.xaxis.set_ticks_position('bottom')
@@ -284,6 +279,7 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
             for col, question in enumerate(questions_in_wu):        # for every question in that work unit
                 level_alpha = 0
                 level_beta = 0
+                level_delta = 0
                 level_gamma = 0
                 level_NA = 0
                 for row, student in enumerate(students):
@@ -302,10 +298,13 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                                 student_wu_grade = 1.00 * student_max_question_grade
                                 level_alpha += 1
                             elif grade_item.grade_char == 'b':
-                                student_wu_grade = 0.65 * student_max_question_grade
+                                student_wu_grade = 0.75 * student_max_question_grade
                                 level_beta += 1
+                            elif grade_item.grade_char == 'd':
+                                student_wu_grade = 0.50 * student_max_question_grade
+                                level_delta += 1
                             elif grade_item.grade_char == 'g':
-                                student_wu_grade = 0.40 * student_max_question_grade
+                                student_wu_grade = 0.25 * student_max_question_grade
                                 level_gamma += 1
                     else:
                         student_wu_grade = grade_item.grade
@@ -315,9 +314,9 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                     
                 # We've got all the student grades for this question, now compute the summary (just for that question) 
                 if category.name in greek_categories:
-                    counts = '%s,%s,%s,%s' % (level_alpha, level_beta, level_gamma, level_NA)
+                    counts = '%s,%s,%s,%s,%s' % (level_alpha, level_beta, level_delta, level_gamma, level_NA)
                     url_string = create_image(counts, image_type='greek')
-                    GradeSummary.objects.get_or_create(question=question, levels=4, level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts=counts, url_string=url_string)
+                    GradeSummary.objects.get_or_create(question=question, levels=5, level_names="['alpha', 'beta', 'delta', 'gamma', 'N/A']", level_counts=counts, url_string=url_string)
                 else:
                     summary_str = grade_matrix[:, col]
                     url_string = create_image(summary_str)

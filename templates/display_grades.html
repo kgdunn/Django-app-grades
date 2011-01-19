@@ -1,0 +1,125 @@
+{% extends "base_page.html" %}
+
+{% block content %}
+
+<div class="disclaimer">
+<b>Important notes:</b>
+<ul>
+<li> These grades should match those recorded on your tutorials, assignments, midterms and final exam.  If not, then it is your responsibility to bring this to the instructor's attention. Grades 
+for the final exam will be checked by 3 independent people to ensure they are entered accurately.
+<li> Unanswered questions are marked as NA; questions that were attempted, but with zero grade are marked as 0.0.
+<li> Extra grades from bonus marks accumulate.  For example, you can get 108% for the assignments, and the 8% gets carried forward, as in 
+0.2 x 108, since the assignments are weighted as 0.20.
+<li> The university's regulations require me to say: "<i>All grades posted here are unofficial until released by the Office of the Registrar</i>".
+
+</ul>
+<p>Thanks, Kevin.
+</div>
+
+<div id="student-details">
+<p>Name: {{Student.name}}
+<p>Student number: {{Student.number}}
+<p>Email address: {{Student.email}}
+<!--<p>Level: {{Student.level}} level student-->
+</div>
+
+<div class="grade-summary">
+<table class="gradetable">
+<tr>
+    <th>Category</th>
+    <th>Weight</th>
+    <th>Your grade</th>
+    </tr>
+{% for cat in Category %}
+	<tr class="summary-category-line">
+	<td>{{ cat.name }}</td>
+	<td>{{ cat.maxgrade }}</td>
+	<td>{{cat.grade|floatformat:1}}%</td>
+	</tr>
+{% endfor %}
+	<tr class="total-line {% if Student.special %}special-case{%endif%}">
+	<td>Final grade (percentage)</td>
+	<td>100%</td>
+	<td>{{Student.final_grade|floatformat:1}}%  {% if Student.special %}*{%endif%}</td>
+	</tr>
+	<tr class="total-line">
+	<td>Final grade (transcript record)</td>
+	<td></td>
+	<td>{{Student.final_grade_letter}}</td> 
+	</tr>  
+</table> 
+{% if Student.special %}
+<div class="special-case">
+<b>Class records show that you have missed work forms - your final grade will be processed manually (please email the instructor for details). If you missed the final exam, your grade 
+will be incorrectly calculated until you have completed the deferred exam.</b>
+</div>
+{%endif%}
+
+
+<div class="grades">
+<table class="gradetable">
+    <tr>
+    <th>Category</th>
+    <th>Question</th>
+    <th>Weight <!--[400,600]--></th>
+    <th>Your grade</th>
+    <th>Class summary</th>
+    </tr>
+
+	{% regroup Category|dictsort:"name" by name as category_list %}
+	{% regroup WorkUnit|dictsort:"name" by name as wu_list %}	
+	{% for cat in category_list %}   {% comment %} Assignments, Midterm, ... {% endcomment %}
+		{% spaceless %}
+		<tr class="category-line">
+			<td class="category">{{cat.grouper}}</td> {% comment %} Assignments, Midterm, ... {% endcomment %}
+			<td></td>
+			{% for item in cat.list %}   {% comment %} cat.list = {'maxgrade': ..., 'grade': ..., 'summary': ...} {% endcomment %}
+				<td class="max-grade">{{item.weight}}</td>
+				<td class="grade-column">{{item.grade|floatformat:1}}%</td>
+				<td>{%comment%}{{item.summary}}{%endcomment%}</td>
+			{% endfor %}
+		</tr>
+		{% for wu in wu_list %}             {% comment %}  wu_entry.name == wu.grouper = "Assignment 1", "Assignment 2", etc {% endcomment %} 
+			{% for wu_entry in wu.list %}   {% comment %}  wu.list = {'cattype': ... , 'grades': [...]} {% endcomment %} 
+				{% ifequal wu_entry.cattype cat.grouper %}
+				<tr class="workunit-line">
+					<td class="workunit">{{wu_entry.name}}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+					{% spaceless %}
+					{% for grade_item in Grade %}  {% comment %}  Iterates through the `Grade` list; grade_item is a dictionary with keys = ['wuname', 'maxgrade', 'grade', 'summary', 'name'] {% endcomment %}
+						{% for key, value in grade_item.items %}
+							{% ifequal key "wuname" %}
+								{% ifequal value wu_entry.name %} {% comment %} value = 'Assignment 1', 'Assignment 2', 'Take-home', 'Written', etc {% endcomment %}
+									<tr>
+										<td></td>
+										<td>{{grade_item.name}}</td>
+										<td class="max-grade">{{grade_item.maxgrade}}</td>
+										<td class="grade-letter-or-character grade-column">{{grade_item.grade|safe}}</td>
+										<td><a rel="example_group" href="{{grade_item.summary}}"><img src="{{grade_item.summary}}" width="150", alt="Class grades: {{grade_item.name}} on {{wu_entry.name}}; your grade: {{grade_item.grade|safe}}; max grade = {{grade_item.maxgrade}}"/></a></td>
+									</tr>
+								{% endifequal %}
+							{% endifequal %}
+						{% endfor %}
+					{% endfor %}
+					{% endspaceless %}
+				<tr class="total-line">
+					<td></td>
+					<td>Total</td>
+					<td class="max-grade">{{wu_entry.maxgrade}}</td>
+					<td class="grade-letter-or-character grade-column">{{wu_entry.grade}}%</td>
+					<td>{%comment%}{{wu_entry.summary}}{%endcomment%}</td>
+				</tr>
+				{% endifequal %}
+			{% endfor %}
+		{% endfor %}
+		{% endspaceless %}
+
+	{% endfor %}
+</table>
+</div>
+{% endblock %}
+

@@ -1,13 +1,12 @@
 from django.conf.urls.defaults import *
+from grades.student import views
 
-# Uncomment the next two lines to enable the admin:
-from django.contrib import admin
-admin.autodiscover()
-
-urlpatterns = patterns('',
-    # Example:
-    (r'', include('grades.student.urls')),
-
-    # Uncomment the next line to enable the admin:
-    (r'^admin/', include(admin.site.urls)),
+urlpatterns = patterns('grades.student',
+    (r'^$', views.sign_in),			
+    (r'^/$', views.sign_in),
+    (r'^not-registered', views.not_registered_sign_in),
+    (r'^sent-email', views.sent_email_sign_in),
+    (r'^error', views.generic_error),
+    (r'^tokens/(.*)/$', views.process_token),
 )
+
