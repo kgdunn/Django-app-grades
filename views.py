@@ -42,7 +42,7 @@ email_server = 'smtp.webfaction.com'
 email_port   = 25
 email_username = 'kevindunn'
 email_password = 'DrAD4dra'
-email_from = '4C3 course <kevin.dunn@connectmv.com>'
+email_from = '4C3/6C3 course <kevin.dunn@connectmv.com>'
 
 token_length = 24
 
