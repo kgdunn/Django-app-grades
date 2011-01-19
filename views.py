@@ -28,13 +28,14 @@ fh.setFormatter(formatter)
 my_logger.addHandler(fh)
 my_logger.debug('A new call to the views.py file')
 
-from grades.student.models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
+#from grades.student.models 
+import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 # TODO: 
 # Change email sending to using DJANGO's EMAIL_XXXXX settings
 
 # Settings
-website_base = 'http://grades.modelling3e4.connectmv.com/tokens/'
+website_base = 'http://grades.stats4eng.connectmv.com/tokens/'
 media_prefix = '/media/grades/'        # end with trailing slash; points to location where the summary PNG files are stored
 
 email_server = 'smtp.webfaction.com'
@@ -55,15 +56,15 @@ def email_token_to_student(to_address, token_address):
     
     message = '''\
 From: dunnkg@mcmaster.ca
-Subject: Access your 3E4 course grades
+Subject: Access your 4C3/6C3 course grades
 
-This message has been sent, at your request, to retrieve your grades for the course CHE3E4.
+This message has been sent, at your request, to retrieve your grades for the course CHE4C3/6C3.
 
 The web address will only work once: ''' + token_address + '''\
 
 You can re-request your grades as many times as you like.  There is no need to log in or log out afterwards - just close the web page.
 
-The http://modelling3e4.connectmv.com web server.
+The http://stats4eng.connectmv.com web server.
 '''
 
     import email, smtplib

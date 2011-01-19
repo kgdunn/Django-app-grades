@@ -14,8 +14,8 @@ from matplotlib.figure import Figure  # for plotting
 # =========
 # SETTINGS
 # =========
-django_dir = '/home/kevindunn/webapps/modelling3e4_grades'
-app_dir    = '/home/kevindunn/webapps/modelling3e4_grades/grades/'
+django_dir = '/home/kevindunn/webapps/cmv_django_apps/all_django_apps/'
+app_dir    = '/home/kevindunn/webapps/cmv_django_apps/all_django_apps/gradesapp/'
 
 # Categories for the course, as a list of 2-element tuples, containing the fraction of the grade 
 course_categories = [   ('Assignments', 0.2), 
