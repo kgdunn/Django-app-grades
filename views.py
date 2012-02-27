@@ -2,8 +2,8 @@
 
 # Command line use
 import sys, os
-sys.path.extend(['/home/kevindunn/webapps/cmv_django_apps/all_django_apps/'])
-sys.path.extend(['/home/kevindunn/webapps/cmv_django_apps/all_django_apps/gradesapp/'])
+sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/'])
+sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/grades'])
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
 from django.template import loader, Context
@@ -18,7 +18,7 @@ import numpy as np
 from collections import defaultdict
 
 # Logging
-LOG_FILENAME = '/home/kevindunn/webapps/cmv_django_apps/all_django_apps/gradesapp/django-log.log'
+LOG_FILENAME = '/home/kevindunn/webapps/grades_stats4eng/grades/grades.log'
 import logging.handlers
 my_logger = logging.getLogger('MyLogger')   
 my_logger.setLevel(logging.INFO)
@@ -28,11 +28,7 @@ fh.setFormatter(formatter)
 my_logger.addHandler(fh)
 my_logger.debug('A new call to the views.py file')
 
-#from grades.student.models 
-import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
-
-# TODO: 
-# Change email sending to using DJANGO's EMAIL_XXXXX settings
+from models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 # Settings
 website_base = 'http://grades.stats4eng.connectmv.com/tokens/'
