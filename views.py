@@ -6,6 +6,9 @@ sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/'])
 sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/grades'])
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
+BASE_URL = '/'  # depending on where the app is mounted
+BEST_N = 6      # if you only use the best 6 assigments of 7, put a "6" here
+
 from django.template import loader, Context
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
@@ -31,7 +34,7 @@ my_logger.debug('A new call to the views.py file')
 from models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 # Settings
-website_base = 'http://grades.stats4eng.connectmv.com/tokens/'
+website_base = 'http://grades.connectmv.com/tokens/'  # location to sign in with token
 media_prefix = '/media/grades/'        # end with trailing slash; points to location where the summary PNG files are stored
 
 email_server = 'smtp.webfaction.com'
@@ -115,8 +118,8 @@ def convert_percentage_to_letter(grade):
     return letter
     
 
-def calculate_assignment_grade(grade_list=None, best_n=5):
-    """ Calculates the best N assignments out of the total number of assignments (2010).  
+def calculate_assignment_grade(grade_list=None, best_n=BEST_N):
+    """ Calculates the best N assignments out of the total number of assignments.
     Assignments not handed in are counted as 0.0.
     
     Returns a tuple: (list of top N assignments, average of the top N assignments)
@@ -375,15 +378,15 @@ def sign_in(request, next_page=''):
             the_student = Student.objects.get(student_number=form_student_number)
         except Student.DoesNotExist:
             # If student number not in list, tell them they are not registered
-            return HttpResponseRedirect('/not-registered')
+            return HttpResponseRedirect(BASE_URL + 'not-registered')
         else:
             token_address = generate_random_token(website_base)
             Token.objects.get_or_create(token_address=token_address, student=the_student, has_been_used=False)
             result = email_token_to_student(the_student.email_address, token_address)
             if result:
-                return HttpResponseRedirect('/sent-email')
+                return HttpResponseRedirect(BASE_URL + 'sent-email')
             else:
-                return HttpResponseRedirect('/error')
+                return HttpResponseRedirect(BASE_URL + 'error')
     
     # Non-POST access of the sign-in page: display the login page to the user
     else:

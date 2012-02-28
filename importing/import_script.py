@@ -14,25 +14,25 @@ from matplotlib.figure import Figure  # for plotting
 # =========
 # SETTINGS
 # =========
-django_dir = '/home/kevindunn/webapps/cmv_django_apps/all_django_apps/'
-app_dir    = '/home/kevindunn/webapps/cmv_django_apps/all_django_apps/gradesapp/'
+django_dir = '/home/kevindunn/webapps/grades_stats4eng/'
+app_dir    = '/home/kevindunn/webapps/grades_stats4eng/grades/'
 
 # Categories for the course, as a list of 2-element tuples, containing the fraction of the grade 
 course_categories = [   ('Assignments', 0.2), 
-                        ('Take-home midterm and project', 0.25), 
-                        ('Midterm: written', 0.1), 
+                        ('Take-home midterm and project', 0.20), 
+                        ('Midterm: written', 0.15), 
                         ('Final exam', 0.45)
                     ]
                     
-greek_categories = ['Assignments']
+greek_categories = ['']
                     
 # How are the columns layed out in the spreadsheet?
 column_layout = {'last_name': 0,
                  'first_name': 1,
-                 'email_address': 2,
-                 'student_number': 3,
-                 'grad_student': 4,         # column can be left empty for undergraduates
-                 'special_case': 5,         # must be "Yes" or blank.  If "Yes", then provide an entry in the ``manual_grades`` list below
+                 'email_address': 3,
+                 'student_number': 2,
+                 'grad_student': 5,         # column can be left empty for undergraduates
+                 'special_case': 6,         # If "Yes", then provide an entry in the ``manual_grades`` list below
                 }
                 
 row_layout = {   'category': 0,             # must be spelt exactly like entries in ``course_categories``
@@ -43,9 +43,8 @@ row_layout = {   'category': 0,             # must be spelt exactly like entries
              }
 
 # Manual final grades (if required adjustment)
-#                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case)
-manual_grades = [ ('DANIEL',  'COUTO',  '0747368', 00.00,  'coutod@mcmaster.ca',   False,       True),
-                ]
+#                 ('FIRST',   'LAST',   'StudNum', Grade,  'email__@mcmaster.ca', GradStudent, Special_case), ( ... )
+manual_grades = [ ]
 
 sys.path.append(django_dir)
 sys.path.append(app_dir)
@@ -250,10 +249,12 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
             
             # Import all the grades, going along the columns:
             for row in grading:
+
                 student_number = row[column_layout['student_number']].strip()
                 if len(student_number) == 6:
                     student_number = '0' + student_number
                 student_object = Student.objects.filter(student_number=student_number)[0] 
+                print student_object
                 grade_string = row[index]
                 if grade_string == '':
                     Grade.objects.get_or_create(grade=None, student=student_object, question=q)
