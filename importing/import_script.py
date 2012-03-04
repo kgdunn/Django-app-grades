@@ -254,7 +254,7 @@ def process_csvfile(csvf, skip_header_rows=5, skip_header_columns=6):
                 if len(student_number) == 6:
                     student_number = '0' + student_number
                 student_object = Student.objects.filter(student_number=student_number)[0] 
-                print student_object
+
                 grade_string = row[index]
                 if grade_string == '':
                     Grade.objects.get_or_create(grade=None, student=student_object, question=q)
