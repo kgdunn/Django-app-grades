@@ -123,7 +123,7 @@ def create_image(data, image_type='default'):
         fig.savefig(filename, dpi=300, facecolor='w', edgecolor='w', orientation='portrait', papertype=None, format=None, transparent=True)
         
     if image_type.lower() == 'default':
-        mind, maxd = np.nanmin(data), np.nanmax(data)
+        mind, maxd = np.int(np.nanmin(data)), np.int(np.nanmax(data))
         fig = Figure(figsize=(2,1))
         rect = [0.2, 0.20, 0.75, 0.70]  # Left, bottom, width, height
         ax = fig.add_axes(rect, frameon=False)
