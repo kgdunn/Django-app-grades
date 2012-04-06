@@ -1,5 +1,11 @@
 #!/usr/local/bin/python2.6
 
+# TODO: make the app generic so it can work with multiple courses
+# TODO: prevent token requests with 1 hour of each other, to prevent spam
+# TODO: track token request IP numbers, date time
+
+
+
 # Command line use
 import sys, os
 sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/'])
