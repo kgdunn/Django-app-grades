@@ -1,19 +1,22 @@
-#!/usr/local/bin/python2.6
+#!/home/kevindunn/epd611-64/bin/python
+
 
 # TODO: make the app generic so it can work with multiple courses
 # TODO: prevent token requests with 1 hour of each other, to prevent spam
 # TODO: track token request IP numbers, date time
 
-
-
-# Command line use
-import sys, os
-sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/'])
-sys.path.extend(['/home/kevindunn/webapps/grades_stats4eng/grades'])
+import os
+import sys
+this_dir = os.path.dirname(__file__) + os.sep
+django_dir = os.path.abspath(this_dir + '..' + os.sep + '..' + os.sep )
+app_dir    = os.path.abspath(this_dir + '..' + os.sep)
+sys.path.insert(0, django_dir)
+sys.path.insert(1, app_dir)
+os.environ['DJANGO_SITENAME'] = 'grades'
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
-BASE_URL = '/'  # depending on where the app is mounted
-BEST_N = 6      # if you only use the best 6 assigments of 7, put a "6" here
+# You can only perform these imports after specifying the SETTINGS_MODULE above
+
 
 from django.template import loader, Context
 from django.http import HttpResponseRedirect, HttpResponse
@@ -28,7 +31,6 @@ import numpy as np
 from collections import defaultdict
 
 # Logging
-
 import logging.handlers
 my_logger = logging.getLogger('MyLogger')
 my_logger.setLevel(logging.DEBUG)
@@ -39,9 +41,13 @@ fh.setFormatter(formatter)
 my_logger.addHandler(fh)
 my_logger.debug('A new call to the views.py file')
 
-from models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
+from grades.student.models  import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
+#from models import Student, Grade, Question, WorkUnit, Category, GradeSummary, WorkUnitSummary, CategorySummary, Token
 
 # Settings
+BASE_URL = '/'  # depending on where the app is mounted
+BEST_N = 6      # if you only use the best 6 assigments of 7, put a "6" here
+
 website_base = 'http://grades.connectmv.com/tokens/'  # location to sign in with token
 media_prefix = '/media/grades/'        # end with trailing slash; points to location where the summary PNG files are stored
 
@@ -125,7 +131,6 @@ def convert_percentage_to_letter(grade):
 
     return letter
 
-
 def calculate_assignment_grade(grade_list=None, best_n=BEST_N):
     """ Calculates the best N assignments out of the total number of assignments.
     Assignments not handed in are counted as 0.0.
@@ -145,8 +150,6 @@ def calculate_tutorial_grade(grade_list=None):
     grades = np.array(grade_list)
     best = np.sort(grades)[len(grades)-best_n:]
     return np.mean(np.array(grade_list))
-    #print(best)
-    #return np.mean(best)
 
 def get_workunit_list(student_number, categories):
     """
@@ -216,6 +219,7 @@ def get_workunit_list(student_number, categories):
 
     # Process each category for the student
     final_grade = 0.0
+    cat_weight_midterm = None
     for catdict in categories:
         cat_name = catdict['name']
         cat_weight = catdict['weight']
@@ -240,6 +244,18 @@ def get_workunit_list(student_number, categories):
             for entry in workunits:
                 if entry['cattype'] == cat_name:
                     cat_grade += entry['grade_numeric']
+
+        # Student didn't write midterm: their weight is zero:
+        if cat_name == 'Midterm: written':
+            if cat_grade == 0.0:
+                catdict['weight'] = 0.0
+                catdict['maxgrade'] = '0%'
+                cat_weight = cat_weight_midterm = 0.0
+
+        if cat_weight_midterm == 0.0 and cat_name == 'Final exam':
+            cat_weight = 0.15 + 0.45
+            catdict['weight'] = cat_weight
+            catdict['maxgrade'] = str(int(cat_weight*100)) + '%'
 
         catdict['grade'] = cat_grade
 
@@ -273,7 +289,9 @@ def process_token(request, token):
     """
     Returns the web-page for the student if the token is valid
     """
-    my_logger.debug('About to process received token: ' + token)
+
+    # Get the student's details
+    my_logger.debug('About to process received token: ' + str(token))
     token_item = Token.objects.filter(token_address=website_base+token)
 
     if len(token_item) == 0:
@@ -288,90 +306,93 @@ def process_token(request, token):
         t = loader.get_template("token_has_expired.html")
         c = Context({})
         return HttpResponse(t.render(c))
+
+    # Valid token
+    student_number = token_item[0].student.student_number
+
+    # Method 1 to update the record
+    #t_updated = Token(token_item[0].id, has_been_used=True, token_address=token_item[0].token_address, student=token_item[0].student)
+    #t_updated.save()
+
+    # Method 2 to update the record
+    token_item[0].has_been_used = not(F('has_been_used'))
+    token_item[0].save()
+
+    the_student = Student.objects.get(student_number=student_number)
+    my_logger.info('Deactivated token; verified ' + the_student.first_name + ' ' + the_student.last_name + ': showing grades')
+
+    if the_student.grad_student:
+        level = '600'
     else:
-        # Valid taken
-        student_number = token_item[0].student.student_number
+        level = '400'
+    student = {'name': the_student.first_name + ' ' + the_student.last_name,
+               'level': level,
+               'number': the_student.student_number,
+               'email': the_student.email_address,
+               'special': the_student.special_case}
 
-        # Method 1 to update the record
-        #t_updated = Token(token_item[0].id, has_been_used=True, token_address=token_item[0].token_address, student=token_item[0].student)
-        #t_updated.save()
+    # Part 1, categories (e.g. Assignments, Midterm, Project, Final exam)
+    # `categories` is a list that is sent to the template.  Entries in the list are dictionaries.
+    # The template expects 4 keys:
+    #       `name`: the name of the category (e.g. "Assignments", "Midterm", "Project", etc)
+    #       `maxgrade`: the grade (out of 100%) which that category counts to the final mark
+    #       `grade`: the actual grade the student achieved
+    #       `summary`: a URI to an image (PNG) file that shows how the student performed relative to the class
+    # categories = [{'name': 'Assignments',         'grade': 18,  'maxgrade': 20,  'summary': 'URL1'},
+    #           {'name': 'In-class quizzes ',   'grade':  5,  'maxgrade':  5,  'summary': 'URL2'},
+    #           {'name': 'Mini-project',        'grade':  7,  'maxgrade': 10,  'summary': 'URL4'},
+    #           {'name': 'Overall exam',        'grade': 25,  'maxgrade': 25,  'summary': 'URL5'},
+    #           {'name': 'Midterm',             'grade': 17,  'maxgrade': 15,  'summary': 'URL3'},
+    #          ]
+    categories = []
+    for item in Category.objects.all():
+        categories.append({'name': item.name, 'weight': item.fraction, 'grade': 'N/A', 'maxgrade': str(int(item.fraction*100)) + '%', 'summary': 'Summary coming soon'})
 
-        # Method 2 to update the record
-        token_item[0].has_been_used = not(F('has_been_used'))
-        token_item[0].save()
+    # Part 2, work units (e.g. assignment 4)
+    workunits, categories, final_grade = get_workunit_list(student_number = the_student.student_number, categories=categories)
 
-        the_student = Student.objects.get(student_number=student_number)
-        my_logger.info('Deactivated token; verified ' + the_student.first_name + ' ' + the_student.last_name + ': showing grades')
+    if the_student.special_case:
+        student['final_grade'] = the_student.manual_grade
+    else:
+        student['final_grade'] = final_grade
 
-        if the_student.grad_student:
-            level = '600'
-        else:
-            level = '400'
-        student = {'name': the_student.first_name + ' ' + the_student.last_name,
-                   'level': level, 'number': student_number, 'email': the_student.email_address, 'special': the_student.special_case}
+    # Rounding to one decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
+    student['final_grade'] = np.round(student['final_grade'], 1)
 
-        # Part 1, categories (e.g. Assignments, Midterm, Project, Final exam)
-        # `categories` is a list that is sent to the template.  Entries in the list are dictionaries.
-        # The template expects 4 keys:
-        #       `name`: the name of the category (e.g. "Assignments", "Midterm", "Project", etc)
-        #       `maxgrade`: the grade (out of 100%) which that category counts to the final mark
-        #       `grade`: the actual grade the student achieved
-        #       `summary`: a URI to an image (PNG) file that shows how the student performed relative to the class
-        # categories = [{'name': 'Assignments',         'grade': 18,  'maxgrade': 20,  'summary': 'URL1'},
-        #           {'name': 'In-class quizzes ',   'grade':  5,  'maxgrade':  5,  'summary': 'URL2'},
-        #           {'name': 'Mini-project',        'grade':  7,  'maxgrade': 10,  'summary': 'URL4'},
-        #           {'name': 'Overall exam',        'grade': 25,  'maxgrade': 25,  'summary': 'URL5'},
-        #           {'name': 'Midterm',             'grade': 17,  'maxgrade': 15,  'summary': 'URL3'},
-        #          ]
-        categories = []
-        for item in Category.objects.all():
-            categories.append({'name': item.name, 'weight': item.fraction, 'grade': 'N/A', 'maxgrade': str(int(item.fraction*100)) + '%', 'summary': 'Summary coming soon'})
+    student['final_grade_letter'] = convert_percentage_to_letter(student['final_grade'])
 
-        # Part 2, work units (e.g. assignment 4)
-        workunits, categories, final_grade = get_workunit_list(student_number = student_number, categories=categories)
+    my_logger.debug('Final grade for ' + the_student.first_name + ' ' + the_student.last_name + ': ' + str(student['final_grade']) + '; reported as: ' + student['final_grade_letter'])
 
-        if the_student.special_case:
-            student['final_grade'] = the_student.manual_grade
-        else:
-            student['final_grade'] = final_grade
-
-        # Rounding to one decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
-        student['final_grade'] = np.round(student['final_grade'], 1)
-
-        student['final_grade_letter'] = convert_percentage_to_letter(student['final_grade'])
-
-        my_logger.debug('Final grade for ' + the_student.first_name + ' ' + the_student.last_name + ': ' + str(student['final_grade']) + '; reported as: ' + student['final_grade_letter'])
-
-        # Part 3, grades (e.g. Question 2 in Assignment 4)
-        #         Extra complexity here is to account for assignment grades vs midterm grades
-        grades = []
-        for item in Grade.objects.select_related().filter(student=student_number):
-            question_name = item.question.name
-            wuname = item.question.workunit.name
-            max_grade = '['+ str(item.question.max_grade_400) + ', ' + str(item.question.max_grade_600)  + ']'
-            # How did the whole class perform on this question?
-            rest_of_class = GradeSummary.objects.filter(question=item.question)[0]
-            if item.grade is None:
-                if item.grade_char is None:
-                    grade_str = 'N/A'
-                else:
-                    if item.grade_char == 'a':
-                        grade_str = '&alpha;'
-                    elif item.grade_char == 'b':
-                        grade_str = '&beta;'
-                    elif item.grade_char == 'g':
-                        grade_str = '&gamma;'
+    # Part 3, grades (e.g. Question 2 in Assignment 4)
+    #         Extra complexity here is to account for assignment grades vs midterm grades
+    grades = []
+    for item in Grade.objects.select_related().filter(student=the_student.student_number):
+        question_name = item.question.name
+        wuname = item.question.workunit.name
+        max_grade = '['+ str(item.question.max_grade_400) + ', ' + str(item.question.max_grade_600)  + ']'
+        # How did the whole class perform on this question?
+        rest_of_class = GradeSummary.objects.filter(question=item.question)[0]
+        if item.grade is None:
+            if item.grade_char is None:
+                grade_str = 'N/A'
             else:
-                grade_str = str(item.grade)
+                if item.grade_char == 'a':
+                    grade_str = '&alpha;'
+                elif item.grade_char == 'b':
+                    grade_str = '&beta;'
+                elif item.grade_char == 'g':
+                    grade_str = '&gamma;'
+        else:
+            grade_str = str(item.grade)
 
-            # TODO: level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts = 23,13,2,53
-            # Make an alt string for the image from these entities
-            grades.append({'name': question_name, 'wuname': wuname, 'maxgrade': max_grade, 'grade': grade_str, 'summary': media_prefix+rest_of_class.url_string})
+        # TODO: level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts = 23,13,2,53
+        # Make an alt string for the image from these entities
+        grades.append({'name': question_name, 'wuname': wuname, 'maxgrade': max_grade, 'grade': grade_str, 'summary': media_prefix+rest_of_class.url_string})
 
-        # Send the 3 parts to the template for rendering to HTML
-        t = loader.get_template("display_grades.html")
-        c = Context({'Category': categories, 'WorkUnit': workunits, 'Grade': grades, 'Student': student})
-        return HttpResponse(t.render(c))
+    # Send the 3 parts to the template for rendering to HTML
+    t = loader.get_template("display_grades.html")
+    c = Context({'Category': categories, 'WorkUnit': workunits, 'Grade': grades, 'Student': student})
+    return HttpResponse(t.render(c))
 
 def sign_in(request, next_page=''):
     """
@@ -449,12 +470,16 @@ def process_all_students():
     grade_letters = defaultdict(int)
     for student in all_students:
         result = process_student(student)
-        letter_grade = convert_percentage_to_letter(result['final_grade'])
-        grade_letters[letter_grade] += 1
-        #output[result['lastname']] = '%25s: %25s: %10.2f: %5s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
-        output[result['lastname']] = '%30s: %30s: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %5s' % (result['name'], result['number'],
-                                                                                                          result['cat_summary']['Assignments'], result['cat_summary']['Tutorials'], result['cat_summary']['Midterm: written'],
-                                                                                                          result['cat_summary']['Midterm: take-home'], result['cat_summary']['Final exam'], result['final_grade'], letter_grade)
+        result['grade_letter'] = convert_percentage_to_letter(result['final_grade'])
+        grade_letters[result['grade_letter']] += 1
+        output[result['lastname']] = '%40s: %30s: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %5s' % (result['name'],
+                                                                                                   result['number'],
+                                                                                                   result['cat_summary']['Assignments'],
+                                                                                                   result['cat_summary']['Midterm: written'],
+                                                                                                   result['cat_summary']['Take-home midterm and project'],
+                                                                                                   result['cat_summary']['Final exam'],
+                                                                                                   result['final_grade'],
+                                                                                                   result['grade_letter'])
 
         #output[result['lastname']] = '%0.2f' % (result['final_grade'])
         lastnames.append(result['lastname'])

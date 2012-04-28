@@ -15,8 +15,8 @@ from matplotlib.figure import Figure  # for plotting
 # SETTINGS
 # =========
 this_dir = __file__[0:__file__.find('import_script.py')]
-django_dir = os.path.abspath(this_dir + '..' + os.sep + '..' + os.sep)
-app_dir    = os.path.abspath(this_dir + '..' + os.sep)
+django_dir = os.path.abspath(this_dir + '..' + os.sep + '..' + os.sep + '..' + os.sep)
+app_dir    = os.path.abspath(this_dir + '..' + os.sep + '..' + os.sep)
 
 # Categories for the course, as a list of 2-element tuples, containing the fraction of the grade
 course_categories = [   ('Assignments', 0.2),
@@ -52,6 +52,7 @@ sys.path.append(app_dir)
 os.environ['DJANGO_SETTINGS_MODULE'] = 'grades.settings'
 
 # You can only perform these imports after specifying the SETTINGS_MODULE above
+from django.shortcuts import render_to_response
 from grades.student.models import Grade, Question, WorkUnit, Category, Student, GradeSummary, WorkUnitSummary, CategorySummary, Token
 from django.contrib.auth.models import User
 from django.db.utils import IntegrityError
