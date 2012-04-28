@@ -18,6 +18,7 @@ BEST_N = 6      # if you only use the best 6 assigments of 7, put a "6" here
 from django.template import loader, Context
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render_to_response
+from django.conf import settings as DJANGO_SETTINGS
 from django.contrib.auth.decorators import login_required
 from django.contrib import auth
 from django.contrib.auth.models import User
@@ -27,11 +28,12 @@ import numpy as np
 from collections import defaultdict
 
 # Logging
-LOG_FILENAME = '/home/kevindunn/webapps/grades_stats4eng/grades/grades.log'
+
 import logging.handlers
-my_logger = logging.getLogger('MyLogger')   
-my_logger.setLevel(logging.INFO)
-fh = logging.handlers.RotatingFileHandler(LOG_FILENAME, maxBytes=5000000, backupCount=5)
+my_logger = logging.getLogger('MyLogger')
+my_logger.setLevel(logging.DEBUG)
+fh = logging.handlers.RotatingFileHandler(DJANGO_SETTINGS.LOG_FILENAME,
+                                          maxBytes=2000000, backupCount=5)
 formatter = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
 fh.setFormatter(formatter)
 my_logger.addHandler(fh)
@@ -58,7 +60,7 @@ def generate_random_token(base_address):
 
 def email_token_to_student(to_address, token_address):
     """ Sends an email to the student with the web address to log in."""
-    
+
     message = '''\
 From: dunnkg@mcmaster.ca
 Subject: Access your 4C3/6C3 course grades
@@ -78,7 +80,7 @@ The http://stats4eng.connectmv.com web server.
     s = smtplib.SMTP()
     s.connect(email_server, port=email_port)
     s.login(user=email_username, password=email_password)
-    
+
     out = s.sendmail(email_from, to_address, m.as_string())
     s.quit()
     if len(out) == 0:
@@ -86,54 +88,54 @@ The http://stats4eng.connectmv.com web server.
         return True
     else:
         return False
-        
+
 def convert_percentage_to_letter(grade):
-   
+
     if grade >= 0.0:
         letter = 'F'
-        
+
     if grade >= 50.0:
-        letter = 'D-'   
+        letter = 'D-'
     if grade >= 53.0:
         letter = 'D'
     if grade >= 57.0:
         letter = 'D+'
-        
+
     if grade >= 60.0:
         letter = 'C-'
     if grade >= 63.0:
         letter = 'C'
     if grade >= 67.0:
         letter = 'C+'
-        
-    
+
+
     if grade >= 70.0:
         letter = 'B-'
     if grade >= 73.0:
         letter = 'B'
     if grade >= 77.0:
         letter = 'B+'
-        
+
     if grade >= 80.0:
         letter = 'A-'
     if grade >= 85.0:
         letter = 'A'
     if grade >= 90.0:
         letter = 'A+'
-    
+
     return letter
-    
+
 
 def calculate_assignment_grade(grade_list=None, best_n=BEST_N):
     """ Calculates the best N assignments out of the total number of assignments.
     Assignments not handed in are counted as 0.0.
-    
+
     Returns a tuple: (list of top N assignments, average of the top N assignments)
     """
     grades = np.array(grade_list)
     best = np.sort(grades)[len(grades)-best_n:]
     return(best, np.mean(best))
-    
+
 def calculate_tutorial_grade(grade_list=None):
     """ Calculates the average of all tutorials.   Tutorials not handed in are counted as 0.0.
 
@@ -145,32 +147,32 @@ def calculate_tutorial_grade(grade_list=None):
     return np.mean(np.array(grade_list))
     #print(best)
     #return np.mean(best)
-    
+
 def get_workunit_list(student_number, categories):
-    """ 
+    """
     Workunit = e.g. Assignment 4
-    
+
     Also receives a list, `categories` = [
            {'name': 'Assignments',         'grade': NA,  'weight': 0.20,  'summary': 'URL1'},
            {'name': 'In-class quizzes ',   'grade': NA,  'weight': 0.05,  'summary': 'URL2'},
            {'name': 'Mini-project',        'grade': NA,  'weight': 0.10,  'summary': 'URL4'},
            {'name': 'Overall exam',        'grade': NA,  'weight': 0.25,  'summary': 'URL5'},
            {'name': 'Midterm',             'grade': NA,  'weight': 0.15,  'summary': 'URL3'}, ....]
-    
-    Fill in the 'grade' key in the WorkUnit dictionary for the student.    
-    
+
+    Fill in the 'grade' key in the WorkUnit dictionary for the student.
+
     Return `workunits` is a list that is sent to the template.  Entries in the list are dictionaries.
-    The template expects 4 keys in each dictionary: 
+    The template expects 4 keys in each dictionary:
           `name`: the name of the work unit (e.g. Assignment 1, Written midterm, etc)
           `cattype`: the category to which the work unit belongs (e.g. "Assignments", "Midterm", "Project", etc)
           `maxgrade`: a string [400, 600] which contains the 400 and 600 level maximum available grade for the workunit
           `grade`: the student's actual grade for this work unit
           `summary`: a URL to an image that summarizes the class performance for this work unit
     """
-    from time import time 
+    from time import time
     t=time()
     workunits = []
-    
+
     for wu_item in WorkUnit.objects.all():
         max_grade = '['+ str(wu_item.max_grade_400) + ', ' + str(wu_item.max_grade_600)  + ']'
         grad_student = Student.objects.filter(student_number=student_number)[0].grad_student
@@ -178,11 +180,11 @@ def get_workunit_list(student_number, categories):
             student_max_wu_grade = wu_item.max_grade_600
         else:
             student_max_wu_grade = wu_item.max_grade_400
-    
+
         student_wu_grade = 0.0
         for grade_item in Grade.objects.select_related().filter(student=student_number):
             wuname = grade_item.question.workunit.name
-            
+
             # Only count that grade if it is part of the current work unit
             if wuname == wu_item.name:
                 # if they attempt those questions
@@ -199,61 +201,61 @@ def get_workunit_list(student_number, categories):
                             student_wu_grade += 0.40 * student_max_question_grade
                 else:
                     student_wu_grade += grade_item.grade
-          
-        # Now that all questions (grades) have been added up for that work unit, compute 
+
+        # Now that all questions (grades) have been added up for that work unit, compute
         # the final grade for that work unit
         student_wu_grade = student_wu_grade / float(student_max_wu_grade) * 100
         student_wu_grade_str = str(round(student_wu_grade,1))
 
-        workunits.append({'name': wu_item.name, 
-                          'cattype': wu_item.category.name, 
-                          'maxgrade': max_grade, 
-                          'grade': student_wu_grade_str, 
-                          'grade_numeric': student_wu_grade, 
+        workunits.append({'name': wu_item.name,
+                          'cattype': wu_item.category.name,
+                          'maxgrade': max_grade,
+                          'grade': student_wu_grade_str,
+                          'grade_numeric': student_wu_grade,
                           'summary': 'Summary coming soon'})
-    
+
     # Process each category for the student
     final_grade = 0.0
     for catdict in categories:
         cat_name = catdict['name']
         cat_weight = catdict['weight']
         catdict['grade'] = 0.0
-        
-        cat_grade = 0.0        
+
+        cat_grade = 0.0
         if cat_name == 'Assignments':
             assignment_grade_list = []
             for entry in workunits:
                 if entry['cattype'] == 'Assignments':
-                    assignment_grade_list.append(entry['grade_numeric'])   
+                    assignment_grade_list.append(entry['grade_numeric'])
             catdict['best_assignments'], cat_grade = calculate_assignment_grade(assignment_grade_list)
-            
+
         elif cat_name == 'Tutorials':
             tutorial_grade_list = []
             for entry in workunits:
                 if entry['cattype'] == 'Tutorials':
-                    tutorial_grade_list.append(entry['grade_numeric'])   
+                    tutorial_grade_list.append(entry['grade_numeric'])
             cat_grade = calculate_tutorial_grade(tutorial_grade_list)
 
         else:
             for entry in workunits:
                 if entry['cattype'] == cat_name:
                     cat_grade += entry['grade_numeric']
-                    
+
         catdict['grade'] = cat_grade
-                
-        # Sum up the final grade      
+
+        # Sum up the final grade
         my_logger.debug('Cat=' + cat_name +'; weight=' + str(cat_weight) + '; grade=' +str(cat_grade))
         final_grade += cat_weight*cat_grade
-                
+
     my_logger.info("Time to process student's grades = " + str(time()-t))
     return workunits, categories, final_grade
-    
+
 def generic_error(request):
     """ Returns this when an error occurs"""
     t = loader.get_template("generic_error.html")
     c = Context({})
     return HttpResponse(t.render(c))
-    
+
 def not_registered_sign_in(request):
     """ Invalid student number received"""
     t = loader.get_template("not_registered_sign_in.html")
@@ -289,28 +291,28 @@ def process_token(request, token):
     else:
         # Valid taken
         student_number = token_item[0].student.student_number
-        
+
         # Method 1 to update the record
         #t_updated = Token(token_item[0].id, has_been_used=True, token_address=token_item[0].token_address, student=token_item[0].student)
         #t_updated.save()
-        
+
         # Method 2 to update the record
         token_item[0].has_been_used = not(F('has_been_used'))
         token_item[0].save()
-        
+
         the_student = Student.objects.get(student_number=student_number)
         my_logger.info('Deactivated token; verified ' + the_student.first_name + ' ' + the_student.last_name + ': showing grades')
-                
+
         if the_student.grad_student:
             level = '600'
         else:
             level = '400'
         student = {'name': the_student.first_name + ' ' + the_student.last_name,
-                  'level': level, 'number': student_number, 'email': the_student.email_address, 'special': the_student.special_case}
+                   'level': level, 'number': student_number, 'email': the_student.email_address, 'special': the_student.special_case}
 
         # Part 1, categories (e.g. Assignments, Midterm, Project, Final exam)
         # `categories` is a list that is sent to the template.  Entries in the list are dictionaries.
-        # The template expects 4 keys: 
+        # The template expects 4 keys:
         #       `name`: the name of the category (e.g. "Assignments", "Midterm", "Project", etc)
         #       `maxgrade`: the grade (out of 100%) which that category counts to the final mark
         #       `grade`: the actual grade the student achieved
@@ -327,14 +329,14 @@ def process_token(request, token):
 
         # Part 2, work units (e.g. assignment 4)
         workunits, categories, final_grade = get_workunit_list(student_number = student_number, categories=categories)
-        
+
         if the_student.special_case:
             student['final_grade'] = the_student.manual_grade
         else:
-            student['final_grade'] = final_grade  
+            student['final_grade'] = final_grade
 
-	# Rounding to one decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
-	student['final_grade'] = np.round(student['final_grade'], 1)
+        # Rounding to one decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
+        student['final_grade'] = np.round(student['final_grade'], 1)
 
         student['final_grade_letter'] = convert_percentage_to_letter(student['final_grade'])
 
@@ -361,16 +363,16 @@ def process_token(request, token):
                         grade_str = '&gamma;'
             else:
                 grade_str = str(item.grade)
-                
+
             # TODO: level_names="['alpha', 'beta', 'gamma', 'N/A']", level_counts = 23,13,2,53
             # Make an alt string for the image from these entities
             grades.append({'name': question_name, 'wuname': wuname, 'maxgrade': max_grade, 'grade': grade_str, 'summary': media_prefix+rest_of_class.url_string})
-        
+
         # Send the 3 parts to the template for rendering to HTML
         t = loader.get_template("display_grades.html")
         c = Context({'Category': categories, 'WorkUnit': workunits, 'Grade': grades, 'Student': student})
         return HttpResponse(t.render(c))
-        
+
 def sign_in(request, next_page=''):
     """
     Verifies the user. If they are registered, then they are emailed a token to view their grades.
@@ -393,7 +395,7 @@ def sign_in(request, next_page=''):
                 return HttpResponseRedirect(BASE_URL + 'sent-email')
             else:
                 return HttpResponseRedirect(BASE_URL + 'error')
-    
+
     # Non-POST access of the sign-in page: display the login page to the user
     else:
         my_logger.debug('Non-POST sign-in page request')
@@ -412,12 +414,12 @@ def process_student(the_student):
         level = '400'
     student = {'name': the_student.first_name + ' ' + the_student.last_name,
                'lastname': the_student.last_name,
-               'level': level, 
-               'number': the_student.student_number, 
-               'email': the_student.email_address, 
+               'level': level,
+               'number': the_student.student_number,
+               'email': the_student.email_address,
                'special': the_student.special_case,
                'cat_summary': {},
-              }
+               }
 
     categories = []
     for item in Category.objects.all():
@@ -426,19 +428,19 @@ def process_student(the_student):
     workunits, categories, final_grade = get_workunit_list(student_number = the_student.student_number, categories=categories)
     for item in categories:
         student['cat_summary'][item['name']] = item['grade']
-        
+
     if the_student.special_case:
         student['final_grade'] = the_student.manual_grade
     else:
-        student['final_grade'] = final_grade  
-        
+        student['final_grade'] = final_grade
+
     # Rounding to the second decimal place: e.g. 76.98 is actually a B, but rounded to 1 decimal place, that's a 77% average, with a B+.
     student['final_grade'] = np.round(student['final_grade'], 1)
 
     return student
-    
+
 def process_all_students():
-    """ 
+    """
     Gets a list of all students, calculates their grades, shows the list and makes a CSV file
     """
     all_students = Student.objects.all()
@@ -450,14 +452,14 @@ def process_all_students():
         letter_grade = convert_percentage_to_letter(result['final_grade'])
         grade_letters[letter_grade] += 1
         #output[result['lastname']] = '%25s: %25s: %10.2f: %5s:' % (result['name'], result['number'], result['final_grade'], letter_grade)
-        output[result['lastname']] = '%30s: %30s: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %5s' % (result['name'], result['number'], 
-                                      result['cat_summary']['Assignments'], result['cat_summary']['Tutorials'], result['cat_summary']['Midterm: written'],
-                                      result['cat_summary']['Midterm: take-home'], result['cat_summary']['Final exam'], result['final_grade'], letter_grade)
+        output[result['lastname']] = '%30s: %30s: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %10.2f: %5s' % (result['name'], result['number'],
+                                                                                                          result['cat_summary']['Assignments'], result['cat_summary']['Tutorials'], result['cat_summary']['Midterm: written'],
+                                                                                                          result['cat_summary']['Midterm: take-home'], result['cat_summary']['Final exam'], result['final_grade'], letter_grade)
 
         #output[result['lastname']] = '%0.2f' % (result['final_grade'])
         lastnames.append(result['lastname'])
         print(output[result['lastname']])
-    
+
 #    for student in sorted(lastnames):
 #        print(output[student])
     print('\n')
@@ -465,4 +467,3 @@ def process_all_students():
 
 if __name__ == '__main__':
     process_all_students()
-
